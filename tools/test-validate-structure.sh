@@ -16,6 +16,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 cleanup() {
+    # shellcheck disable=SC2317
     rm -rf "$TEST_DIR"
 }
 trap cleanup EXIT
@@ -129,8 +130,7 @@ test_exit_code_success() {
     touch "$TEST_DIR/sources/testsource/store/testsource.yaml"
     touch "$TEST_DIR/sources/testsource/upstream/source.yaml"
 
-    cd "$TEST_DIR" && "$VALIDATE_SCRIPT" testsource >/dev/null 2>&1
-    if [ $? -eq 0 ]; then
+    if ( cd "$TEST_DIR" && "$VALIDATE_SCRIPT" testsource >/dev/null 2>&1 ); then
         pass "Exit code is 0 on successful validation"
     else
         fail "Exit code should be 0 on successful validation"
