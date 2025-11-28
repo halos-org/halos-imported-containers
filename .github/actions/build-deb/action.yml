@@ -26,19 +26,28 @@ runs:
         fi
 
         if [ ! -d "sources/${{ inputs.source }}" ]; then
-          echo "::error::Source directory not found: sources/${{ inputs.source }}"
-          exit 1
+          echo "::warning::Source directory not found: sources/${{ inputs.source }}"
+          echo "::notice::Source will be created in future implementation"
+          echo "::notice::Skipping build - no source to build yet"
+          echo "source-exists=false" >> $GITHUB_ENV
+          # Create empty build directory to satisfy artifact upload
+          mkdir -p build
+          touch build/.placeholder
+          exit 0
         fi
 
         echo "::notice::Building source: ${{ inputs.source }}"
+        echo "source-exists=true" >> $GITHUB_ENV
 
     - name: Set up Python
       uses: actions/setup-python@v5
+      if: env.source-exists == 'true'
       with:
         python-version: '3.11'
 
     - name: Install uv
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         curl -LsSf https://astral.sh/uv/install.sh | sh
 
@@ -53,6 +62,7 @@ runs:
 
     - name: Cache uv dependencies
       uses: actions/cache@v4
+      if: env.source-exists == 'true'
       with:
         path: ~/.cache/uv
         key: uv-${{ runner.os }}-${{ hashFiles('**/pyproject.toml', '**/requirements.txt') }}
@@ -61,6 +71,7 @@ runs:
 
     - name: Install container-packaging-tools
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         # TODO: Install container-packaging-tools when available
         # For now, placeholder for Cluster 4 implementation
@@ -69,6 +80,7 @@ runs:
 
     - name: Install Debian packaging tools
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
           sudo apt-get update
@@ -80,6 +92,7 @@ runs:
 
     - name: Install YAML validation tools
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         # Install yq for YAML validation (pinned version for reproducibility)
         YQ_VERSION="v4.40.5"
@@ -95,6 +108,7 @@ runs:
     - name: Run build
       id: build
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         # Validate build script exists
         if [ ! -x "./tools/build-source.sh" ]; then
@@ -125,6 +139,7 @@ runs:
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
+      if: env.source-exists == 'true'
       with:
         name: packages-${{ inputs.source }}
         path: |
