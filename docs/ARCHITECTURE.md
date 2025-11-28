@@ -283,25 +283,31 @@ App packages track upstream versions:
 
 The repository uses per-source workflows for build isolation. Each source has its own set of workflows, allowing independent building, failure isolation, and easier debugging.
 
-**Per-Source Structure**:
+**Architecture Pattern**: Repository-specific build, shared publish
+- Per-source workflows handle source-specific build logic
+- Shared workflows handle standardized publishing/releasing
+- Build artifacts passed between jobs via GitHub Actions artifacts
+
+**Per-Source Workflows**:
 
 - **PR Workflow (.github/workflows/pr-{source}.yml)**: Runs on pull requests affecting this source
   - Validates directory structure for this source
   - Validates all app definitions in this source
+  - Calls repository build action: `.github/actions/build-deb` with `source: {source}`
   - Builds packages for this source only (but doesn't publish)
   - Reports status to PR
 
 - **Main Workflow (.github/workflows/main-{source}.yml)**: Runs on merge to main when this source changes
-  - Builds packages for this source only
-  - Publishes to unstable channel
+  - Calls repository build action to build packages for this source
+  - Uploads build artifacts (all .deb, .buildinfo, .changes files)
+  - Calls shared workflow for publishing to unstable channel
   - Source failures don't block other sources
 
 - **Release Workflow (.github/workflows/release-{source}.yml)**: Runs on release publication
-  - Builds packages for this source for stable channel
-  - Publishes to stable component
+  - Calls repository build action to build packages for stable
+  - Uploads build artifacts
+  - Calls shared workflow for publishing to stable component
   - Creates source-specific release artifacts
-
-**Shared Workflows**:
 
 - **Sync Workflow (.github/workflows/sync-{source}.yml)**: Scheduled daily per source (planned)
   - Checks this source for upstream changes
@@ -311,25 +317,40 @@ The repository uses per-source workflows for build isolation. Each source has it
 **Benefits of Per-Source Workflows**:
 
 - **Isolation**: One source's build failure doesn't affect others
-- **Debugging**: Clear which source is failing
+- **Debugging**: Clear which source is failing, build logic is explicit
 - **Parallelism**: All sources build concurrently
 - **Selective builds**: Can rebuild just one source
 - **Path filtering**: Workflows only trigger on relevant file changes
+- **Flexibility**: Source-specific build requirements easily accommodated
 
 ### Shared Workflows
 
-The repository uses Hat Labs shared workflows:
+The repository uses Hat Labs shared workflows for standardized publishing only. Build logic is handled by per-source workflows using repository-specific actions.
 
-- **pr-checks.yml**: Standard PR validation pattern
-- **build-release.yml**: Build and publish to unstable
-- **publish-stable.yml**: Promote packages to stable
+**Shared workflows used**:
 
-Benefits:
+- **publish-unstable.yml**: Publish built packages to unstable channel
+  - Called by main-{source}.yml workflows after successful build
+  - Downloads build artifacts from previous job
+  - Uploads to apt.hatlabs.fi with _pre suffix
 
-- Consistent CI/CD across all HaLOS repositories
-- Centralized workflow maintenance
-- Reduced duplication
-- Standard release process
+- **publish-stable.yml**: Publish built packages to stable channel
+  - Called by release-{source}.yml workflows after successful build
+  - Downloads build artifacts from previous job
+  - Uploads to apt.hatlabs.fi without _pre suffix
+
+**Not using shared workflows for**:
+
+- **Building packages**: Source-specific logic handled in per-source workflows
+- **Validation**: Repository-specific validation in per-source workflows
+- **Source-specific operations**: Conversion, sync, etc.
+
+**Benefits**:
+
+- Consistent publishing across all HaLOS repositories
+- Centralized maintenance of publishing logic
+- Flexibility for source-specific build requirements
+- Clear separation between build and publish concerns
 
 ### GitHub Actions Structure
 
@@ -340,14 +361,28 @@ Benefits:
 - sync-casaos-official.yml: Upstream sync for CasaOS Official source
 - (Repeat pattern for each source: runtipi, casaos-community, etc.)
 
-**Actions (.github/actions/)**: Reusable action definitions
-- build-deb/: Build Debian packages action
-- run-tests/: Run validation tests action
+**Actions (.github/actions/)**: Repository-specific reusable actions
+
+- **build-deb/action.yml**: Build Debian packages for a specific source
+  - Input: `source` (required) - Source name (e.g., "casaos-official")
+  - Runs: `./tools/build-source.sh ${{ inputs.source }}`
+  - Outputs: All .deb, .buildinfo, .changes files in build/ directory
+  - Used by all per-source workflows
+
+- **validate-source/action.yml**: Validate source structure and app definitions
+  - Input: `source` (required) - Source name to validate
+  - Runs: `./tools/validate-structure.sh ${{ inputs.source }}`
+  - Fails if validation errors found
 
 **Scripts (.github/scripts/)**: Helper scripts for workflows
 - rename-packages.sh: Add distribution/component suffix to packages
 - generate-changelog.sh: Generate changelog from git history
 - generate-release-notes.sh: Create release notes from changes
+
+**Build Tools (tools/)**: Source-aware build scripts
+- build-source.sh: Build a single source (called by build-deb action)
+- build-all.sh: Build all sources (for testing)
+- validate-structure.sh: Validate a source's structure
 
 **Path Filtering**: Each workflow uses GitHub Actions path filtering to trigger only on changes to its source:
 - pr-casaos-official.yml triggers on: sources/casaos-official/**
