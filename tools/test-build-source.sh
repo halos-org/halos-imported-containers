@@ -16,6 +16,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 cleanup() {
+    # shellcheck disable=SC2317
     rm -rf "$TEST_DIR"
 }
 trap cleanup EXIT

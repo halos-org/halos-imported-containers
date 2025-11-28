@@ -1,0 +1,56 @@
+id: casaos-official
+name: CasaOS Official
+description: |
+  Auto-imported applications from the CasaOS Official App Store.
+  147+ community applications including media servers, home automation,
+  productivity tools, and utilities.
+
+  All apps are automatically converted and packaged from the upstream
+  CasaOS App Store repository maintained by IceWhale Tech.
+
+icon: /usr/share/container-stores/casaos-official/icon.svg
+
+filters:
+  # Repository origins (from APT Release file "Origin:" field)
+  include_origins:
+    - "Hat Labs"
+
+  # Package name patterns - all casaos-*-container packages
+  include_patterns:
+    - "casaos-*-container"
+
+category_metadata:
+  - id: media
+    label: Media & Entertainment
+    icon: PlayCircleIcon
+    description: Media servers, streaming, and entertainment applications
+
+  - id: utilities
+    label: Utilities & Tools
+    icon: WrenchIcon
+    description: System utilities, productivity tools, and general-purpose applications
+
+  - id: automation
+    label: Home Automation
+    icon: HomeIcon
+    description: Smart home automation and IoT platforms
+
+  - id: networking
+    label: Networking & Security
+    icon: NetworkIcon
+    description: Network tools, VPNs, DNS, and security applications
+
+  - id: storage
+    label: Storage & Backup
+    icon: DatabaseIcon
+    description: File storage, backup solutions, and data management
+
+  - id: development
+    label: Development & Code
+    icon: CodeIcon
+    description: Development tools, version control, and CI/CD platforms
+
+  - id: monitoring
+    label: Monitoring & Analytics
+    icon: ChartLineIcon
+    description: System monitoring, logging, and analytics dashboards

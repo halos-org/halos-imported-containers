@@ -16,6 +16,7 @@ RED='\033[0;31m'
 NC='\033[0m' # No Color
 
 cleanup() {
+    # shellcheck disable=SC2317
     rm -rf "$TEST_DIR"
 }
 trap cleanup EXIT
@@ -112,7 +113,8 @@ test_packages_collected() {
     ( cd "$TEST_DIR" && "$BUILD_ALL_SCRIPT" >/dev/null 2>&1 )
 
     if [ -d "$TEST_DIR/build" ]; then
-        local deb_count=$(find "$TEST_DIR/build" -name "*.deb" 2>/dev/null | wc -l)
+        local deb_count
+        deb_count=$(find "$TEST_DIR/build" -name "*.deb" 2>/dev/null | wc -l)
         if [ "$deb_count" -ge 2 ]; then
             pass "Packages from all sources collected in build/ directory"
         else

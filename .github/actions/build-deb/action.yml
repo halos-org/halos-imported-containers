@@ -52,11 +52,15 @@ runs:
         curl -LsSf https://astral.sh/uv/install.sh | sh
 
         # Verify installation and add to PATH
+        # uv may install to ~/.cargo/bin or ~/.local/bin depending on version
         if [ -f "$HOME/.cargo/bin/uv" ]; then
           echo "$HOME/.cargo/bin" >> $GITHUB_PATH
           "$HOME/.cargo/bin/uv" --version
+        elif [ -f "$HOME/.local/bin/uv" ]; then
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          "$HOME/.local/bin/uv" --version
         else
-          echo "::error::uv installation failed - binary not found at expected location"
+          echo "::error::uv installation failed - binary not found at expected locations"
           exit 1
         fi
 
