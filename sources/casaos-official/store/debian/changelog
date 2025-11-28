@@ -1,0 +1,9 @@
+casaos-official-container-store (0.1.0-1) stable; urgency=medium
+
+  * Initial release
+  * Store definition for CasaOS Official applications
+  * Filtering configuration for cockpit-apt
+  * Support for 147+ auto-imported CasaOS apps
+  * Branding assets (icon and banner)
+
+ -- Hat Labs <info@hatlabs.fi>  Thu, 28 Nov 2025 12:00:00 +0200

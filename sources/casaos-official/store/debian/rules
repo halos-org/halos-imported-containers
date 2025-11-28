@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	# Install store configuration
+	install -D -m 644 casaos-official.yaml debian/casaos-official-container-store/etc/container-apps/stores/casaos-official.yaml
+
+	# Install branding assets
+	install -D -m 644 icon.svg debian/casaos-official-container-store/usr/share/container-stores/casaos-official/icon.svg
+
+	# Install banner if it exists
+	[ -f banner.png ] && install -D -m 644 banner.png debian/casaos-official-container-store/usr/share/container-stores/casaos-official/banner.png || true

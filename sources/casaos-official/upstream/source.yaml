@@ -1,0 +1,65 @@
+# CasaOS Official App Store - Upstream Source Configuration
+#
+# This configuration defines how to sync with the upstream CasaOS Official
+# app store repository.
+
+# Source metadata
+source_id: casaos-official
+source_name: "CasaOS Official"
+source_description: "Official CasaOS App Store - 147+ community applications"
+
+# Upstream repository configuration
+upstream:
+  type: github
+  repository: "IceWhaleTech/CasaOS-AppStore"
+  branch: "main"
+  path: "Apps"  # Directory within repo containing app definitions
+
+# Converter configuration
+converter:
+  type: casaos  # Use CasaOS converter from container-packaging-tools
+  version: "2.0"  # CasaOS app manifest version
+
+  # Converter options
+  options:
+    # Package name prefix for all apps from this source
+    package_prefix: "casaos"
+
+    # Apply intelligent fallbacks for missing data
+    use_fallbacks: true
+
+    # Validation strictness (warn, error, ignore)
+    validation_mode: "warn"
+
+# Sync schedule (for future automated sync implementation)
+sync:
+  # How often to check for upstream changes
+  schedule: "daily"  # daily, weekly, manual
+
+  # Time of day to run sync (UTC)
+  time: "02:00"
+
+  # Enable automatic PR creation on changes
+  auto_pr: true
+
+  # PR settings
+  pr_options:
+    title_prefix: "sync(casaos-official):"
+    auto_merge: false  # Require manual review
+    labels:
+      - "automated"
+      - "casaos-official"
+      - "sync"
+
+# Package metadata defaults
+defaults:
+  origin: "Hat Labs"
+  maintainer: "Hat Labs <info@hatlabs.fi>"
+  section: "admin"
+  priority: "optional"
+
+# Statistics (updated by sync process)
+stats:
+  total_apps: 147
+  last_sync: null  # Updated by sync workflow
+  last_sync_commit: null  # Upstream commit hash from last sync
