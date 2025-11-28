@@ -1,0 +1,21 @@
+name: navidrome
+services:
+  navidrome:
+    environment:
+      ND_BASEURL: ${ND_BASEURL}
+      ND_LOGLEVEL: ${ND_LOGLEVEL}
+      ND_SCANSCHEDULE: ${ND_SCANSCHEDULE}
+      ND_SESSIONTIMEOUT: ${ND_SESSIONTIMEOUT}
+      TZ: ${TZ}
+    image: deluan/navidrome:0.55.1
+    ports:
+    - protocol: tcp
+      published: 4533
+      target: 4533
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /data
+      type: bind
+    - source: /Media/Music
+      target: /music
+      type: bind

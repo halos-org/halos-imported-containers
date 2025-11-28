@@ -1,0 +1,29 @@
+name: emulatorjs
+services:
+  emulatorjs:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      SUBFOLDER: ${SUBFOLDER}
+      TZ: ${TZ}
+    image: linuxserver/emulatorjs:1.9.2
+    ports:
+    - protocol: tcp
+      published: 3001
+      target: 3000
+    - protocol: tcp
+      published: 4001
+      target: 4001
+    - protocol: tcp
+      published: 88
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /AppData/$AppID/data
+      target: /data
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/ROMS/nes
+      target: /data/nes/roms
+      type: bind

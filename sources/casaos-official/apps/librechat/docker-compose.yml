@@ -1,0 +1,113 @@
+name: librechat
+services:
+  librechat-api:
+    environment:
+      ALLOW_EMAIL_LOGIN: ${ALLOW_EMAIL_LOGIN}
+      ALLOW_PASSWORD_RESET: ${ALLOW_PASSWORD_RESET}
+      ALLOW_REGISTRATION: ${ALLOW_REGISTRATION}
+      ALLOW_SOCIAL_LOGIN: ${ALLOW_SOCIAL_LOGIN}
+      ALLOW_SOCIAL_REGISTRATION: ${ALLOW_SOCIAL_REGISTRATION}
+      ALLOW_UNVERIFIED_EMAIL_LOGIN: ${ALLOW_UNVERIFIED_EMAIL_LOGIN}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      ASSISTANTS_API_KEY: ${ASSISTANTS_API_KEY}
+      BAN_DURATION: ${BAN_DURATION}
+      BAN_INTERVAL: ${BAN_INTERVAL}
+      BAN_VIOLATIONS: ${BAN_VIOLATIONS}
+      CONCURRENT_MESSAGE_MAX: ${CONCURRENT_MESSAGE_MAX}
+      CONCURRENT_VIOLATION_SCORE: ${CONCURRENT_VIOLATION_SCORE}
+      CONSOLE_JSON: ${CONSOLE_JSON}
+      CREDS_IV: ${CREDS_IV}
+      CREDS_KEY: ${CREDS_KEY}
+      DEBUG_CONSOLE: ${DEBUG_CONSOLE}
+      DEBUG_LOGGING: ${DEBUG_LOGGING}
+      DEBUG_OPENAI: ${DEBUG_OPENAI}
+      DEBUG_PLUGINS: ${DEBUG_PLUGINS}
+      DOMAIN_CLIENT: ${DOMAIN_CLIENT}
+      DOMAIN_SERVER: ${DOMAIN_SERVER}
+      FILE_UPLOAD_VIOLATION_SCORE: ${FILE_UPLOAD_VIOLATION_SCORE}
+      FORK_VIOLATION_SCORE: ${FORK_VIOLATION_SCORE}
+      GOOGLE_KEY: ${GOOGLE_KEY}
+      HOST: ${HOST}
+      ILLEGAL_MODEL_REQ_SCORE: ${ILLEGAL_MODEL_REQ_SCORE}
+      IMPORT_VIOLATION_SCORE: ${IMPORT_VIOLATION_SCORE}
+      JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
+      JWT_SECRET: ${JWT_SECRET}
+      LIMIT_CONCURRENT_MESSAGES: ${LIMIT_CONCURRENT_MESSAGES}
+      LIMIT_MESSAGE_IP: ${LIMIT_MESSAGE_IP}
+      LIMIT_MESSAGE_USER: ${LIMIT_MESSAGE_USER}
+      LOGIN_MAX: ${LOGIN_MAX}
+      LOGIN_VIOLATION_SCORE: ${LOGIN_VIOLATION_SCORE}
+      LOGIN_WINDOW: ${LOGIN_WINDOW}
+      MEILI_HOST: ${MEILI_HOST}
+      MEILI_NO_ANALYTICS: ${MEILI_NO_ANALYTICS}
+      MESSAGE_IP_MAX: ${MESSAGE_IP_MAX}
+      MESSAGE_IP_WINDOW: ${MESSAGE_IP_WINDOW}
+      MESSAGE_USER_MAX: ${MESSAGE_USER_MAX}
+      MESSAGE_USER_WINDOW: ${MESSAGE_USER_WINDOW}
+      MESSAGE_VIOLATION_SCORE: ${MESSAGE_VIOLATION_SCORE}
+      MONGO_URI: ${MONGO_URI}
+      NON_BROWSER_VIOLATION_SCORE: ${NON_BROWSER_VIOLATION_SCORE}
+      NO_INDEX: ${NO_INDEX}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODERATION: ${OPENAI_MODERATION}
+      PORT: ${PORT}
+      RAG_API_URL: ${RAG_API_URL}
+      RAG_PORT: ${RAG_PORT}
+      REFRESH_TOKEN_EXPIRY: ${REFRESH_TOKEN_EXPIRY}
+      REGISTER_MAX: ${REGISTER_MAX}
+      REGISTER_WINDOW: ${REGISTER_WINDOW}
+      REGISTRATION_VIOLATION_SCORE: ${REGISTRATION_VIOLATION_SCORE}
+      SEARCH: ${SEARCH}
+      SESSION_EXPIRY: ${SESSION_EXPIRY}
+      STT_VIOLATION_SCORE: ${STT_VIOLATION_SCORE}
+      TRUST_PROXY: ${TRUST_PROXY}
+      TTS_VIOLATION_SCORE: ${TTS_VIOLATION_SCORE}
+    image: ghcr.io/danny-avila/librechat-dev:latest
+    ports:
+    - protocol: tcp
+      published: 3080
+      target: 3080
+    volumes:
+    - source: /AppData/$AppID/images
+      target: /app/client/public/images
+      type: bind
+    - source: /AppData/$AppID/uploads
+      target: /app/uploads
+      type: bind
+    - source: /AppData/$AppID/logs
+      target: /app/api/logs
+      type: bind
+  librechat-meilisearch:
+    environment:
+      MEILI_HOST: ${MEILI_HOST}
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+      MEILI_NO_ANALYTICS: ${MEILI_NO_ANALYTICS}
+    image: getmeili/meilisearch:v1.12.3
+    volumes:
+    - source: /AppData/$AppID/meili_data_v1.12
+      target: /meili_data
+      type: bind
+  librechat-mongodb:
+    command:
+    - mongod
+    - --noauth
+    image: mongo:6.0
+    volumes:
+    - source: /AppData/$AppID/data-node
+      target: /data/db
+      type: bind
+  librechat-rag-api:
+    environment:
+      DB_HOST: ${DB_HOST}
+      RAG_PORT: ${RAG_PORT}
+    image: ghcr.io/danny-avila/librechat-rag-api-dev-lite:v0.6.0
+  librechat-vectordb:
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+    image: ankane/pgvector:v0.5.1
+    volumes:
+    - source: /AppData/$AppID/postgresql/data
+      target: /var/lib/postgresql/data
+      type: bind

@@ -1,0 +1,16 @@
+name: memos
+services:
+  memos:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: neosmemo/memos:0.24
+    ports:
+    - protocol: tcp
+      published: 5230
+      target: 5230
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/memos
+      target: /var/opt/memos
+      type: bind

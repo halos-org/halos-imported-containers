@@ -1,0 +1,12 @@
+name: grafana
+services:
+  grafana:
+    image: grafana/grafana:11.5.2
+    ports:
+    - protocol: tcp
+      published: 3003
+      target: 3000
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /var/lib/grafana
+      type: bind

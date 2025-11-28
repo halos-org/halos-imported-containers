@@ -1,0 +1,17 @@
+name: siyuan-note
+services:
+  siyuan-note:
+    command:
+    - --accessAuthCode=casaos --workspace=/siyuan/workspace/
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+    image: b3log/siyuan:v3.0.1
+    ports:
+    - protocol: tcp
+      published: 6806
+      target: 6806
+    volumes:
+    - source: /AppData/$AppID/workspace
+      target: /siyuan/workspace
+      type: bind

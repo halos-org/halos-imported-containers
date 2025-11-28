@@ -1,0 +1,16 @@
+name: overseerr
+services:
+  overseerr:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/overseerr:1.33.2
+    ports:
+    - protocol: tcp
+      published: 5055
+      target: 5055
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind

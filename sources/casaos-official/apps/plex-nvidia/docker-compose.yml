@@ -1,0 +1,17 @@
+name: plex-nvidia
+services:
+  plex:
+    environment:
+      CPU_FALLBACK: ${CPU_FALLBACK}
+      NVIDIA_VISIBLE_DEVICES: ${NVIDIA_VISIBLE_DEVICES}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      VERSION: ${VERSION}
+    image: lscr.io/linuxserver/plex:1.41.3
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media
+      target: /Media
+      type: bind

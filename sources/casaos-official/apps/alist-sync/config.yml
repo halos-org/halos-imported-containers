@@ -1,0 +1,12 @@
+groups:
+- description: null
+  fields:
+  - default: Asia/Shanghai
+    description: ''
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+version: '1.0'

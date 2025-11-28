@@ -1,0 +1,12 @@
+groups:
+- description: null
+  fields:
+  - default: /var/lib/tailscale
+    description: Tailscale State Directory Path
+    id: TS_STATE_DIR
+    label: TS_STATE_DIR
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+version: '1.0'

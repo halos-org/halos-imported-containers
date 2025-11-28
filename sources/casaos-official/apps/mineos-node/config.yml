@@ -1,0 +1,54 @@
+groups:
+- description: null
+  fields:
+  - default: 'true'
+    description: Should the web interface use HTTPS or HTTP? Valid entries are "true"
+      and "false" (with quotes)
+    id: USE_HTTPS
+    label: USE_HTTPS
+    required: false
+    type: string
+  - default: mc
+    description: On startup, mineos will check if an account of the name "mc" exists.
+      If it does not exist, one will be created. This account, and any other created
+      with this variable will be permitted to login to the web interface.
+    id: USER_NAME
+    label: USER_NAME
+    required: false
+    type: string
+  - default: '1000'
+    description: If the "mc" account does not already exist, when mineos creates it,
+      it will do so with UID same as the value of the variable. If an account with
+      this UID already exists, account creation will be aborted.
+    id: USER_UID
+    label: USER_UID
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: '8443'
+    description: What port should the web interface listen on? This is independent
+      of the USE_HTTPS setting.
+    id: SERVER_PORT
+    label: SERVER_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: root
+    description: If the "mc" account is being created, it will use the default password
+      "root" (without quotes). It is recommended to change this to something more
+      secure.
+    id: USER_PASSWORD
+    label: USER_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+version: '1.0'

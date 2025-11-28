@@ -1,0 +1,19 @@
+name: albyhub
+services:
+  albyhub:
+    environment:
+      LOG_EVENTS: ${LOG_EVENTS}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+      UMASK: ${UMASK}
+      WORK_DIR: ${WORK_DIR}
+    image: ghcr.io/getalby/hub:v1.20.0
+    ports:
+    - protocol: tcp
+      published: 58000
+      target: 8080
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /data
+      type: bind

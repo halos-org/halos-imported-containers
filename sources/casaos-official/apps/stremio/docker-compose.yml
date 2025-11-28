@@ -1,0 +1,18 @@
+name: stremio
+services:
+  stremio:
+    environment:
+      AUTO_SERVER_URL: ${AUTO_SERVER_URL}
+      NO_CORS: ${NO_CORS}
+    image: tsaridas/stremio-docker:v1.2.5
+    ports:
+    - protocol: tcp
+      published: 11470
+      target: 11470
+    - protocol: tcp
+      published: 8100
+      target: 8080
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /root/.stremio-server
+      type: bind

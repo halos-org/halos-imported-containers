@@ -1,0 +1,18 @@
+name: webdav
+services:
+  webdav:
+    environment:
+      GID: ${GID}
+      PASSWORD: ${PASSWORD}
+      TZ: ${TZ}
+      UDI: ${UDI}
+      USERNAME: ${USERNAME}
+    image: ugeek/webdav:amd64
+    ports:
+    - protocol: tcp
+      published: 5005
+      target: 80
+    volumes:
+    - source: /media/ZimaOS-HD/Media
+      target: /media
+      type: bind

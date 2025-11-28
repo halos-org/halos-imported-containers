@@ -1,0 +1,15 @@
+name: esphome
+services:
+  esphome:
+    environment:
+      ESPHOME_DASHBOARD_USE_PING: ${ESPHOME_DASHBOARD_USE_PING}
+      TZ: ${TZ}
+    image: ghcr.io/esphome/esphome:2025.2
+    ports:
+    - protocol: tcp
+      published: 6052
+      target: 6052
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind

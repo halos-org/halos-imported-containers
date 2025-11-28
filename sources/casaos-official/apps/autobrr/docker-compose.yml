@@ -1,0 +1,14 @@
+name: autobrr
+services:
+  autobrr:
+    environment:
+      TZ: ${TZ}
+    image: ghcr.io/autobrr/autobrr:v1.69.0
+    ports:
+    - protocol: tcp
+      published: 7474
+      target: 7474
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind

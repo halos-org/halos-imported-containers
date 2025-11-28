@@ -1,0 +1,21 @@
+name: nzbget
+services:
+  nzbget:
+    environment:
+      NZBGET_PASS: ${NZBGET_PASS}
+      NZBGET_USER: ${NZBGET_USER}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/nzbget:24.8.20250318
+    ports:
+    - protocol: tcp
+      published: 6789
+      target: 6789
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

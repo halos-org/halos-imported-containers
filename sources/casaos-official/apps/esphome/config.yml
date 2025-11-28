@@ -1,0 +1,22 @@
+groups:
+- description: null
+  fields:
+  - default: 'false'
+    description: Ping IP addresses instead of mDNS
+    id: ESPHOME_DASHBOARD_USE_PING
+    label: ESPHOME_DASHBOARD_USE_PING
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: $TZ
+    description: TimeZone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+version: '1.0'

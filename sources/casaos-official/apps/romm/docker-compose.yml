@@ -1,0 +1,46 @@
+name: romm
+services:
+  romm:
+    environment:
+      DB_HOST: ${DB_HOST}
+      DB_NAME: ${DB_NAME}
+      DB_PASSWD: ${DB_PASSWD}
+      DB_USER: ${DB_USER}
+      IGDB_CLIENT_ID: ${IGDB_CLIENT_ID}
+      IGDB_CLIENT_SECRET: ${IGDB_CLIENT_SECRET}
+      ROMM_AUTH_SECRET_KEY: ${ROMM_AUTH_SECRET_KEY}
+      SCREENSCRAPER_PASSWORD: ${SCREENSCRAPER_PASSWORD}
+      SCREENSCRAPER_USER: ${SCREENSCRAPER_USER}
+      STEAMGRIDDB_API_KEY: ${STEAMGRIDDB_API_KEY}
+    image: rommapp/romm:4.0.1
+    ports:
+    - protocol: tcp
+      published: 8285
+      target: 8080
+    volumes:
+    - source: /AppData/$AppID/resources
+      target: /romm/resources
+      type: bind
+    - source: /AppData/$AppID/redis-data
+      target: /redis-data
+      type: bind
+    - source: /AppData/$AppID/library
+      target: /romm/library
+      type: bind
+    - source: /AppData/$AppID/assets
+      target: /romm/assets
+      type: bind
+    - source: /AppData/$AppID/config
+      target: /romm/config
+      type: bind
+  romm-db:
+    environment:
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      MARIADB_USER: ${MARIADB_USER}
+    image: mariadb:11.8.2
+    volumes:
+    - source: /AppData/$AppID/mysql
+      target: /var/lib/mysql
+      type: bind

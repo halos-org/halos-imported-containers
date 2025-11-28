@@ -1,0 +1,118 @@
+groups:
+- description: null
+  fields:
+  - default: casaos
+    description: Admin Username for Authentication
+    id: ADMIN_USERNAME
+    label: ADMIN_USERNAME
+    required: false
+    type: string
+  - default: casaos
+    description: Admin Password for Authentication
+    id: ADMIN_PASSWORD
+    label: ADMIN_PASSWORD
+    required: false
+    type: password
+  - default: SomeSecretPassword
+    description: Search Backend Password
+    id: SEARCH_BACKEND_PASSWORD
+    label: SEARCH_BACKEND_PASSWORD
+    required: false
+    type: password
+  - default: SomeSecretPassword
+    description: Search Backend Password
+    id: SEARCH_BACKEND_PASSWORD
+    label: SEARCH_BACKEND_PASSWORD
+    required: false
+    type: password
+  - default: SomeSecretPassword
+    description: Search Backend Password
+    id: SEARCH_BACKEND_PASSWORD
+    label: SEARCH_BACKEND_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: '*'
+    description: Allowed Hosts for Web Interface
+    id: ALLOWED_HOSTS
+    label: ALLOWED_HOSTS
+    required: false
+    type: string
+  - default: '*'
+    description: Trusted Origins for CSRF Protection
+    id: CSRF_TRUSTED_ORIGINS
+    label: CSRF_TRUSTED_ORIGINS
+    required: false
+    type: string
+  - default: 'True'
+    description: Allow Public Access to Snapshot List
+    id: PUBLIC_INDEX
+    label: PUBLIC_INDEX
+    required: false
+    type: string
+  - default: 'True'
+    description: Allow Public Access to Snapshot Content
+    id: PUBLIC_SNAPSHOTS
+    label: PUBLIC_SNAPSHOTS
+    required: false
+    type: string
+  - default: 'False'
+    description: Allow Public URL Submission
+    id: PUBLIC_ADD_VIEW
+    label: PUBLIC_ADD_VIEW
+    required: false
+    type: string
+  - default: sonic
+    description: Search Backend Engine
+    id: SEARCH_BACKEND_ENGINE
+    label: SEARCH_BACKEND_ENGINE
+    required: false
+    type: string
+  - default: archivebox_sonic
+    description: Search Backend Host Name
+    id: SEARCH_BACKEND_HOST_NAME
+    label: SEARCH_BACKEND_HOST_NAME
+    required: false
+    type: string
+  - default: '120'
+    description: Timeout for Download Operations
+    id: TIMEOUT
+    label: TIMEOUT
+    required: false
+    type: integer
+  - default: sonic
+    description: Search Backend Engine
+    id: SEARCH_BACKEND_ENGINE
+    label: SEARCH_BACKEND_ENGINE
+    required: false
+    type: string
+  - default: archivebox_sonic
+    description: Search Backend Host Name
+    id: SEARCH_BACKEND_HOST_NAME
+    label: SEARCH_BACKEND_HOST_NAME
+    required: false
+    type: string
+  - default: '1920'
+    description: Display Width in Pixels
+    id: DISPLAY_WIDTH
+    label: DISPLAY_WIDTH
+    required: false
+    type: string
+  - default: '1080'
+    description: Display Height in Pixels
+    id: DISPLAY_HEIGHT
+    label: DISPLAY_HEIGHT
+    required: false
+    type: string
+  - default: 'no'
+    description: Run XTerm Terminal
+    id: RUN_XTERM
+    label: RUN_XTERM
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

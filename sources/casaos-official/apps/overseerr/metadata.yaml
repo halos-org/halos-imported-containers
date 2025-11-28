@@ -1,0 +1,24 @@
+architecture: all
+debian_section: video
+description: Overseerr is a request management and media discovery tool built to work...
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/icon.png
+license: Unknown
+long_description: 'Overseerr is a request management and media discovery tool built
+  to work with your existing Plex ecosystem.
+
+
+  Overseerr is a free and open source software application for managing requests for
+  your media library. It integrates with your existing services, such as Sonarr, Radarr,
+  and Plex!'
+maintainer: LinuxServer.io <auto-converted@casaos.io>
+name: overseerr
+package_name: casaos-overseerr-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Overseerr/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

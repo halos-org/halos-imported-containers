@@ -1,0 +1,38 @@
+name: lyrionmusicserver
+services:
+  lyrionmusicserver:
+    environment:
+      HTTP_PORT: ${HTTP_PORT}
+    image: lmscommunity/lyrionmusicserver:9.1.0
+    ports:
+    - protocol: tcp
+      published: 9000
+      target: 9000
+    - protocol: tcp
+      published: 9090
+      target: 9090
+    - protocol: tcp
+      published: 3483
+      target: 3483
+    - protocol: udp
+      published: 3483
+      target: 3483
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - read_only: true
+      source: /Media/Music
+      target: /music
+      type: bind
+    - source: /AppData/$AppID/playlists
+      target: /playlist
+      type: bind
+    - read_only: true
+      source: /etc/localtime
+      target: /etc/localtime
+      type: bind
+    - read_only: true
+      source: /etc/timezone
+      target: /etc/timezone
+      type: bind

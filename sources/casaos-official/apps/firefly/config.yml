@@ -1,0 +1,12 @@
+groups:
+- description: null
+  fields:
+  - default: firefly
+    description: ''
+    id: FIREFLY_PASSWORD
+    label: FIREFLY_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+version: '1.0'

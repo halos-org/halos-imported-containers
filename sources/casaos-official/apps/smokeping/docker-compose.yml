@@ -1,0 +1,19 @@
+name: smokeping
+services:
+  smokeping:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/smokeping:2.8.2
+    ports:
+    - protocol: tcp
+      published: 10280
+      target: 80
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/data
+      target: /data
+      type: bind

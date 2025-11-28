@@ -1,0 +1,28 @@
+name: syncthing
+services:
+  syncthing:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/syncthing:1.29.7
+    ports:
+    - protocol: tcp
+      published: 8384
+      target: 8384
+    - protocol: tcp
+      published: 22000
+      target: 22000
+    - protocol: udp
+      published: 22000
+      target: 22000
+    - protocol: udp
+      published: 21027
+      target: 21027
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/DATA
+      target: /DATA
+      type: bind

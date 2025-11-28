@@ -1,0 +1,15 @@
+name: swingmusic
+services:
+  swingmusic:
+    image: ghcr.io/swingmx/swingmusic:v1.4.8
+    ports:
+    - protocol: tcp
+      published: 1970
+      target: 1970
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media/Music
+      target: /music
+      type: bind

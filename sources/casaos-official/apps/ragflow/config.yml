@@ -1,0 +1,288 @@
+groups:
+- description: null
+  fields:
+  - default: ragflow-es01
+    description: Elasticsearch Host
+    id: ES_HOST
+    label: ES_HOST
+    required: false
+    type: string
+  - default: ragflow-infinity
+    description: Infinity Host
+    id: INFINITY_HOST
+    label: INFINITY_HOST
+    required: false
+    type: string
+  - default: ragflow-minio
+    description: MinIO Host
+    id: MINIO_HOST
+    label: MINIO_HOST
+    required: false
+    type: string
+  - default: ragflow-mysql
+    description: MySQL Host
+    id: MYSQL_HOST
+    label: MYSQL_HOST
+    required: false
+    type: string
+  - default: ragflow-opensearch01
+    description: OpenSearch Host
+    id: OS_HOST
+    label: OS_HOST
+    required: false
+    type: string
+  - default: ragflow-redis
+    description: Redis Host
+    id: REDIS_HOST
+    label: REDIS_HOST
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: $TZ
+    description: Zeitzone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  - default: $TZ
+    description: Zeitzone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  - default: $TZ
+    description: Zeitzone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  - default: $TZ
+    description: Zeitzone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  - default: $TZ
+    description: Zeitzone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  - default: $TZ
+    description: Zeitzone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  - default: $TZ
+    description: Zeitzone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: infini_rag_flow
+    description: Elasticsearch-Passwort
+    id: ELASTIC_PASSWORD
+    label: ELASTIC_PASSWORD
+    required: false
+    type: password
+  - default: infini_rag_flow
+    description: MinIO Root Passwort
+    id: MINIO_ROOT_PASSWORD
+    label: MINIO_ROOT_PASSWORD
+    required: false
+    type: password
+  - default: rag_flow
+    description: MinIO Root Benutzer
+    id: MINIO_ROOT_USER
+    label: MINIO_ROOT_USER
+    required: false
+    type: string
+  - default: infini_rag_flow
+    description: MySQL Benutzerpasswort
+    id: MYSQL_PASSWORD
+    label: MYSQL_PASSWORD
+    required: false
+    type: password
+  - default: mysql
+    description: MySQL Root Passwort
+    id: MYSQL_ROOT_PASSWORD
+    label: MYSQL_ROOT_PASSWORD
+    required: false
+    type: password
+  - default: infini_rag_flow_OS_01
+    description: Initiales OpenSearch-Administratorpasswort
+    id: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+    label: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+    required: false
+    type: password
+  - default: infini_rag_flow_OS_01
+    description: OpenSearch-Passwort
+    id: OPENSEARCH_PASSWORD
+    label: OPENSEARCH_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: 'false'
+    description: ''
+    id: BOOTSTRAP_MEMORY_LOCK
+    label: bootstrap.memory_lock
+    required: false
+    type: string
+  - default: 2gb
+    description: ''
+    id: CLUSTER_ROUTING_ALLOCATION_DISK_WATERMARK_FLOOD_STAGE
+    label: cluster.routing.allocation.disk.watermark.flood_stage
+    required: false
+    type: string
+  - default: 3gb
+    description: ''
+    id: CLUSTER_ROUTING_ALLOCATION_DISK_WATERMARK_HIGH
+    label: cluster.routing.allocation.disk.watermark.high
+    required: false
+    type: string
+  - default: 5gb
+    description: ''
+    id: CLUSTER_ROUTING_ALLOCATION_DISK_WATERMARK_LOW
+    label: cluster.routing.allocation.disk.watermark.low
+    required: false
+    type: string
+  - default: single-node
+    description: Discovery-Typ
+    id: DISCOVERY_TYPE
+    label: discovery.type
+    required: false
+    type: string
+  - default: es01
+    description: Knotenname
+    id: NODE_NAME
+    label: node.name
+    required: false
+    type: string
+  - default: 'true'
+    description: X-Pack-Sicherheit aktivieren
+    id: XPACK_SECURITY_ENABLED
+    label: xpack.security.enabled
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: XPACK_SECURITY_HTTP_SSL_ENABLED
+    label: xpack.security.http.ssl.enabled
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: XPACK_SECURITY_TRANSPORT_SSL_ENABLED
+    label: xpack.security.transport.ssl.enabled
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: BOOTSTRAP_MEMORY_LOCK
+    label: bootstrap.memory_lock
+    required: false
+    type: string
+  - default: 2gb
+    description: ''
+    id: CLUSTER_ROUTING_ALLOCATION_DISK_WATERMARK_FLOOD_STAGE
+    label: cluster.routing.allocation.disk.watermark.flood_stage
+    required: false
+    type: string
+  - default: 3gb
+    description: ''
+    id: CLUSTER_ROUTING_ALLOCATION_DISK_WATERMARK_HIGH
+    label: cluster.routing.allocation.disk.watermark.high
+    required: false
+    type: string
+  - default: 5gb
+    description: ''
+    id: CLUSTER_ROUTING_ALLOCATION_DISK_WATERMARK_LOW
+    label: cluster.routing.allocation.disk.watermark.low
+    required: false
+    type: string
+  - default: single-node
+    description: Discovery-Typ
+    id: DISCOVERY_TYPE
+    label: discovery.type
+    required: false
+    type: string
+  - default: '9201'
+    description: HTTP-Port
+    id: HTTP_PORT
+    label: http.port
+    required: false
+    type: string
+  - default: opensearch01
+    description: Knotenname
+    id: NODE_NAME
+    label: node.name
+    required: false
+    type: string
+  - default: 'false'
+    description: Plugin-Sicherheit deaktivieren
+    id: PLUGINS_SECURITY_DISABLED
+    label: plugins.security.disabled
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: PLUGINS_SECURITY_SSL_HTTP_ENABLED
+    label: plugins.security.ssl.http.enabled
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: PLUGINS_SECURITY_SSL_TRANSPORT_ENABLED
+    label: plugins.security.ssl.transport.enabled
+    required: false
+    type: string
+  - default: infiniflow/sandbox-base-nodejs:latest
+    description: Sandbox Base NodeJS Image
+    id: SANDBOX_BASE_NODEJS_IMAGE
+    label: SANDBOX_BASE_NODEJS_IMAGE
+    required: false
+    type: string
+  - default: infiniflow/sandbox-base-python:latest
+    description: Sandbox Base Python Image
+    id: SANDBOX_BASE_PYTHON_IMAGE
+    label: SANDBOX_BASE_PYTHON_IMAGE
+    required: false
+    type: string
+  - default: 'false'
+    description: Seccomp aktivieren
+    id: SANDBOX_ENABLE_SECCOMP
+    label: SANDBOX_ENABLE_SECCOMP
+    required: false
+    type: string
+  - default: '3'
+    description: Sandbox Executor Manager Pool Größe
+    id: SANDBOX_EXECUTOR_MANAGER_POOL_SIZE
+    label: SANDBOX_EXECUTOR_MANAGER_POOL_SIZE
+    required: false
+    type: integer
+  - default: 256m
+    description: Sandbox Max Speicher
+    id: SANDBOX_MAX_MEMORY
+    label: SANDBOX_MAX_MEMORY
+    required: false
+    type: string
+  - default: 10s
+    description: Sandbox Timeout
+    id: SANDBOX_TIMEOUT
+    label: SANDBOX_TIMEOUT
+    required: false
+    type: integer
+  id: configuration
+  label: General Configuration
+version: '1.0'

@@ -1,0 +1,27 @@
+architecture: all
+debian_section: video
+description: Free and easy binary newsreader
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/icon.png
+license: Unknown
+long_description: SABnzbd is an Open Source Binary Newsreader written in Python. It's
+  totally free, easy to use, and works practically everywhere. SABnzbd makes Usenet
+  as simple and streamlined as possible by automating everything we can. All you have
+  to do is add an .nzb. SABnzbd takes over from there, where it will be automatically
+  downloaded, verified, repaired, extracted and filed away with zero human interaction.
+  SABnzbd offers an easy setup wizard and has self-analysis tools to verify your setup.
+maintainer: Sabnzbd Team <auto-converted@casaos.io>
+name: sabnzbd
+package_name: casaos-sabnzbd-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/screenshot-5.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/screenshot-6.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sabnzbd/screenshot-7.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

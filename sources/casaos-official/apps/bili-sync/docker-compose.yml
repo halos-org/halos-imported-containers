@@ -1,0 +1,15 @@
+name: bili-sync
+services:
+  bili-sync-rs:
+    image: amtoaer/bili-sync-rs:v2.5.0
+    ports:
+    - protocol: tcp
+      published: 12345
+      target: 12345
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}
+      target: /app/.config/bili-sync
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/DATA
+      target: /DATA
+      type: bind

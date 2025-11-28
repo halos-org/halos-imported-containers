@@ -1,0 +1,20 @@
+architecture: all
+debian_section: net
+description: FileDrop is a free, open source file sharing service
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Filedrop/icon.png
+license: Unknown
+long_description: 'FileDrop is a self-hosted file sharing service that allows you
+  to easily share files with family, friends, or colleagues. It''s been designed to
+  be easy to use and light on resources.
+
+  '
+maintainer: Noé Favier (noe.favier@outlook.com) <auto-converted@casaos.io>
+name: filedrop
+package_name: casaos-filedrop-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Filedrop/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

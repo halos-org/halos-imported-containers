@@ -1,0 +1,21 @@
+name: openhands
+services:
+  openhands:
+    environment:
+      SANDBOX_RUNTIME_CONTAINER_IMAGE: ${SANDBOX_RUNTIME_CONTAINER_IMAGE}
+      WORKSPACE_MOUNT_PATH: ${WORKSPACE_MOUNT_PATH}
+    image: docker.all-hands.dev/all-hands-ai/openhands:0.49
+    ports:
+    - protocol: tcp
+      published: 13333
+      target: 3000
+    volumes:
+    - source: /var/run/docker.sock
+      target: /var/run/docker.sock
+      type: bind
+    - source: /AppData/$AppID/openhands
+      target: /.openhands
+      type: bind
+    - source: /AppData/$AppID/workspace
+      target: /opt/workspace_base
+      type: bind

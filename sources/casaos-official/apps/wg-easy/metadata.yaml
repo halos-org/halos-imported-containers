@@ -1,0 +1,19 @@
+architecture: all
+debian_section: net
+description: WEB UI to manage WireGuard VPN.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/icon.png
+license: Unknown
+long_description: You have found the easiest way to install & manage WireGuard on
+  any Linux host!
+maintainer: WeejeWel <auto-converted@casaos.io>
+name: wg-easy
+package_name: casaos-wg-easy-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WireGuardEasy/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

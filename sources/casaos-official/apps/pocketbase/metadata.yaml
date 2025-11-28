@@ -1,0 +1,20 @@
+architecture: all
+debian_section: devel
+description: Open Source realtime backend in 1 file
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PocketBase/icon.png
+license: Unknown
+long_description: PocketBase is an open-source backend solution that combines a real-time
+  database, authentication, file storage, and an admin dashboard into a single, portable
+  executable.
+maintainer: Gani Georgiev <auto-converted@casaos.io>
+name: pocketbase
+package_name: casaos-pocketbase-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PocketBase/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PocketBase/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PocketBase/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

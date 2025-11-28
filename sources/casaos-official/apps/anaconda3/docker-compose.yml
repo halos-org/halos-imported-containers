@@ -1,0 +1,21 @@
+name: anaconda3
+services:
+  anaconda3:
+    command:
+    - /bin/bash
+    - -c
+    - conda install -c conda-forge jupyterlab -y --quiet && jupyter lab --notebook-dir=/opt/notebooks
+      --ip='*' --port=8888 --no-browser --allow-root
+    environment:
+      LANG: ${LANG}
+      LC_ALL: ${LC_ALL}
+      PATH: ${PATH}
+    image: continuumio/anaconda3:2024.10-1
+    ports:
+    - protocol: tcp
+      published: 8888
+      target: 8888
+    volumes:
+    - source: /AppData/$AppID/notebooks
+      target: /opt/notebooks
+      type: bind

@@ -1,0 +1,60 @@
+groups:
+- description: null
+  fields:
+  - default: casaos
+    description: ''
+    id: PASS
+    label: PASS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: '51413'
+    description: ''
+    id: PEERPORT
+    label: PEERPORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: '1000'
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: '1000'
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: Europe/London
+    description: ''
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: casaos
+    description: ''
+    id: USER
+    label: USER
+    required: false
+    type: string
+  id: authentication
+  label: Authentication
+version: '1.0'

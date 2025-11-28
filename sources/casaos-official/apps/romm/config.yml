@@ -1,0 +1,99 @@
+groups:
+- description: null
+  fields:
+  - default: romm-db
+    description: Database Host
+    id: DB_HOST
+    label: DB_HOST
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: romm
+    description: Database Name
+    id: DB_NAME
+    label: DB_NAME
+    required: false
+    type: string
+  - default: '""'
+    description: IGDB Client ID
+    id: IGDB_CLIENT_ID
+    label: IGDB_CLIENT_ID
+    required: false
+    type: string
+  - default: romm
+    description: Database Name
+    id: MARIADB_DATABASE
+    label: MARIADB_DATABASE
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: romm-user
+    description: Database User
+    id: DB_USER
+    label: DB_USER
+    required: false
+    type: string
+  - default: casaos
+    description: Database Password
+    id: DB_PASSWD
+    label: DB_PASSWD
+    required: false
+    type: password
+  - default: '""'
+    description: 'Authentication Secret Key: Generate a key with `openssl rand -hex
+      32`'
+    id: ROMM_AUTH_SECRET_KEY
+    label: ROMM_AUTH_SECRET_KEY
+    required: false
+    type: password
+  - default: '""'
+    description: 'IGDB Client Secret: https://api-docs.igdb.com/#account-creation'
+    id: IGDB_CLIENT_SECRET
+    label: IGDB_CLIENT_SECRET
+    required: false
+    type: password
+  - default: '""'
+    description: ScreenScraper Username
+    id: SCREENSCRAPER_USER
+    label: SCREENSCRAPER_USER
+    required: false
+    type: string
+  - default: '""'
+    description: 'ScreenScraper Password: https://docs.romm.app/latest/Getting-Started/Metadata-Providers/#screenscraper'
+    id: SCREENSCRAPER_PASSWORD
+    label: SCREENSCRAPER_PASSWORD
+    required: false
+    type: password
+  - default: '""'
+    description: 'SteamGridDB API Key: https://github.com/rommapp/romm/wiki/Generate-API-Keys#steamgriddb'
+    id: STEAMGRIDDB_API_KEY
+    label: STEAMGRIDDB_API_KEY
+    required: false
+    type: password
+  - default: casaos
+    description: Root Password
+    id: MARIADB_ROOT_PASSWORD
+    label: MARIADB_ROOT_PASSWORD
+    required: false
+    type: password
+  - default: romm-user
+    description: Database User
+    id: MARIADB_USER
+    label: MARIADB_USER
+    required: false
+    type: string
+  - default: casaos
+    description: Database Password
+    id: MARIADB_PASSWORD
+    label: MARIADB_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+version: '1.0'

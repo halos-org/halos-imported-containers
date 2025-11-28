@@ -1,0 +1,21 @@
+architecture: all
+debian_section: video
+description: Letter generators for Sonarr and Radarr
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/icon.png
+license: Unknown
+long_description: Bazarr is a companion application to Sonarr and Radarr. It can manage
+  and download subtitles based on your requirements. You define your preferences by
+  TV show or movie and Bazarr takes care of everything for you.
+maintainer: Sabnzbd Team <auto-converted@casaos.io>
+name: bazarr
+package_name: casaos-bazarr-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/screenshot-4.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

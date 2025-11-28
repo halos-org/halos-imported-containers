@@ -1,0 +1,26 @@
+architecture: all
+debian_section: video
+description: The movie collection manager for Usenet and BitTorrent users
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/icon.png
+license: Unknown
+long_description: Radarr is a movie collection manager for Usenet and BitTorrent users.
+  It can monitor multiple RSS feeds for new movies and will interface with clients
+  and indexers to grab, sort, and rename them. It can also be configured to automatically
+  upgrade the quality of existing files in the library when a better quality format
+  becomes available. Note that only one type of a given movie is supported. If you
+  want both an 4k version and 1080p version of a given movie you will need multiple
+  instances.
+maintainer: Radarr <auto-converted@casaos.io>
+name: radarr
+package_name: casaos-radarr-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/screenshot-1.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/screenshot-2.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/screenshot-3.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/screenshot-4.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/screenshot-5.jpg
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

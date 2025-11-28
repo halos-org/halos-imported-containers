@@ -1,0 +1,21 @@
+name: obsidian
+services:
+  obsidian:
+    environment:
+      CUSTOM_USER: ${CUSTOM_USER}
+      PASSWORD: ${PASSWORD}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: lscr.io/linuxserver/obsidian:1.8.10
+    ports:
+    - protocol: tcp
+      published: 15323
+      target: 3000
+    - protocol: tcp
+      published: 15324
+      target: 3001
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind

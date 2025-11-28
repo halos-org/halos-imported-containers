@@ -1,0 +1,15 @@
+name: plex
+services:
+  plex:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      VERSION: ${VERSION}
+    image: lscr.io/linuxserver/plex:1.41.3
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media
+      target: /Media
+      type: bind

@@ -1,0 +1,25 @@
+name: pihole
+services:
+  pihole:
+    environment:
+      FTLCONF_DNS_LISTENINGMODE: ${FTLCONF_DNS_LISTENINGMODE}
+      FTLCONF_WEBSERVER_API_PASSWORD: ${FTLCONF_WEBSERVER_API_PASSWORD}
+      TZ: ${TZ}
+    image: pihole/pihole:2025.07.1
+    ports:
+    - protocol: tcp
+      published: 8800
+      target: 80
+    - protocol: tcp
+      published: 53
+      target: 53
+    - protocol: udp
+      published: 53
+      target: 53
+    - protocol: tcp
+      published: 8443
+      target: 443
+    volumes:
+    - source: /AppData/$AppID/etc/pihole/
+      target: /etc/pihole
+      type: bind

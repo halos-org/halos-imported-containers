@@ -1,0 +1,23 @@
+architecture: all
+debian_section: misc
+description: A web app to listen Youtube audio source.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/icon.png
+license: Unknown
+long_description: HoloPlay is a web based self-hosted using Invidious API for listening
+  Youtube audio source.
+maintainer: Stéphane Richin <auto-converted@casaos.io>
+name: holoplay
+package_name: casaos-holoplay-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/screenshot-5.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/screenshot-6.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HoloPlay/screenshot-7.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

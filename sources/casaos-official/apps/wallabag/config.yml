@@ -1,0 +1,18 @@
+groups:
+- description: null
+  fields:
+  - default: http://<IP>:25661
+    description: Instance domain name
+    id: SYMFONY__ENV__DOMAIN_NAME
+    label: SYMFONY__ENV__DOMAIN_NAME
+    required: false
+    type: string
+  - default: Wallabag
+    description: Server name
+    id: SYMFONY__ENV__SERVER_NAME
+    label: SYMFONY__ENV__SERVER_NAME
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

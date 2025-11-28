@@ -1,0 +1,10 @@
+name: retroarch
+services:
+  retroarch:
+    environment:
+      ROOT_WWW_PATH: ${ROOT_WWW_PATH}
+    image: inglebard/retroarch-web:latest
+    ports:
+    - protocol: tcp
+      published: 8183
+      target: 80

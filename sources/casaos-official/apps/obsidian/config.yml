@@ -1,0 +1,45 @@
+groups:
+- description: null
+  fields:
+  - default: '1000'
+    description: User ID for file permissions
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: '1000'
+    description: Group ID for file permissions
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: System timezone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: casaos
+    description: HTTP Basic auth username, abc is default.
+    id: CUSTOM_USER
+    label: CUSTOM_USER
+    required: false
+    type: string
+  - default: casaos
+    description: HTTP Basic auth password, abc is default. If unset there will be
+      no auth.
+    id: PASSWORD
+    label: PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+version: '1.0'

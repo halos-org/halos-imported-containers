@@ -1,0 +1,48 @@
+groups:
+- description: null
+  fields:
+  - default: tegbzn6789
+    description: ''
+    id: NZBGET_PASS
+    label: NZBGET_PASS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: nzbget
+    description: ''
+    id: NZBGET_USER
+    label: NZBGET_USER
+    required: false
+    type: string
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: '1000'
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: '1000'
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: Europe/London
+    description: ''
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+version: '1.0'

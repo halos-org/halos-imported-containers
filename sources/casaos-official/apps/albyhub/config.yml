@@ -1,0 +1,54 @@
+groups:
+- description: null
+  fields:
+  - default: $PGID
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PUID
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: ''
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: '002'
+    description: ''
+    id: UMASK
+    label: UMASK
+    required: false
+    type: string
+  - default: 'True'
+    description: ''
+    id: LOG_EVENTS
+    label: LOG_EVENTS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: /data/albyhub
+    description: ''
+    id: WORK_DIR
+    label: WORK_DIR
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+version: '1.0'

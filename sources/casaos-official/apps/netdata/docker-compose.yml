@@ -1,0 +1,36 @@
+name: netdata
+services:
+  app:
+    image: netdata/netdata:stable
+    ports:
+    - protocol: tcp
+      published: 19999
+      target: 19999
+    volumes:
+    - source: /AppData/Netdata/config
+      target: /etc/netdata
+      type: bind
+    - source: /AppData/Netdata/lib
+      target: /var/lib/netdata
+      type: bind
+    - source: /AppData/Netdata/cache
+      target: /var/cache/netdata
+      type: bind
+    - source: /etc/passwd
+      target: /host/etc/passwd
+      type: bind
+    - source: /etc/group
+      target: /host/etc/group
+      type: bind
+    - source: /proc
+      target: /host/proc
+      type: bind
+    - source: /sys
+      target: /host/sys
+      type: bind
+    - source: /etc/os-release
+      target: /host/etc/os-release
+      type: bind
+    - source: /var/run/docker.sock
+      target: /var/run/docker.sock
+      type: bind

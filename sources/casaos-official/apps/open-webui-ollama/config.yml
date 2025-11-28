@@ -1,0 +1,18 @@
+groups:
+- description: null
+  fields:
+  - default: 'true'
+    description: ''
+    id: CPU_FALLBACK
+    label: CPU_FALLBACK
+    required: false
+    type: string
+  - default: all
+    description: ''
+    id: NVIDIA_VISIBLE_DEVICES
+    label: NVIDIA_VISIBLE_DEVICES
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

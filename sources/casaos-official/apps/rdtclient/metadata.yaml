@@ -1,0 +1,16 @@
+architecture: all
+debian_section: misc
+description: CasaOS Container App for rdtclient
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RDTClient/icon.png
+license: Unknown
+long_description: CasaOS Container App for rdtclient
+maintainer: Unknown <auto-converted@casaos.io>
+name: rdtclient
+package_name: casaos-rdtclient-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RDTClient/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

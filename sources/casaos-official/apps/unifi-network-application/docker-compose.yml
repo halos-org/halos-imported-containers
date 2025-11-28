@@ -1,0 +1,44 @@
+name: unifi-network-application
+services:
+  unifi-db:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: docker.io/mongo:3.6
+    ports:
+    - protocol: tcp
+      published: 27017
+      target: 27017
+    volumes:
+    - source: /AppData/unifi-db
+      target: /data/db
+      type: bind
+  unifi-network-application:
+    environment:
+      MONGO_DBNAME: ${MONGO_DBNAME}
+      MONGO_HOST: ${MONGO_HOST}
+      MONGO_PASS: ${MONGO_PASS}
+      MONGO_PORT: ${MONGO_PORT}
+      MONGO_USER: ${MONGO_USER}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: lscr.io/linuxserver/unifi-network-application:latest
+    ports:
+    - protocol: tcp
+      published: 8443
+      target: 8443
+    - protocol: udp
+      published: 3478
+      target: 3478
+    - protocol: udp
+      published: 10001
+      target: 10001
+    - protocol: tcp
+      published: 8080
+      target: 8080
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}
+      target: /config
+      type: bind

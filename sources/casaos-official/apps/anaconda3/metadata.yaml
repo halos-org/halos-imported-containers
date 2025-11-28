@@ -1,0 +1,18 @@
+architecture: all
+debian_section: misc
+description: Your machine learning Env work with Jupyter Lab
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/icon.png
+license: Unknown
+long_description: Your machine learning Env work with Jupyter Lab
+maintainer: LisonEvf <auto-converted@casaos.io>
+name: anaconda3
+package_name: casaos-anaconda3-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Anaconda3/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

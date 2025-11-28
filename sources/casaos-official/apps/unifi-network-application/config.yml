@@ -1,0 +1,94 @@
+groups:
+- description: null
+  fields:
+  - default: unifi-db
+    description: ''
+    id: MONGO_DBNAME
+    label: MONGO_DBNAME
+    required: false
+    type: string
+  - default: pass
+    description: ''
+    id: MONGO_PASS
+    label: MONGO_PASS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: unifi-db
+    description: ''
+    id: MONGO_HOST
+    label: MONGO_HOST
+    required: false
+    type: string
+  - default: '27017'
+    description: ''
+    id: MONGO_PORT
+    label: MONGO_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: unifi
+    description: ''
+    id: MONGO_USER
+    label: MONGO_USER
+    required: false
+    type: string
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: $PGID
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PUID
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: timezone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  - default: $PGID
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PUID
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: ''
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+version: '1.0'

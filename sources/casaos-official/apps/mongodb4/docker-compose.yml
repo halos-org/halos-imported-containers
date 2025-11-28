@@ -1,0 +1,19 @@
+name: mongodb4
+services:
+  mongodb4:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: mongo:4.4.22
+    ports:
+    - protocol: tcp
+      published: 27017
+      target: 27017
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/data/configdb
+      target: /data/configdb
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/data/db
+      target: /data/db
+      type: bind

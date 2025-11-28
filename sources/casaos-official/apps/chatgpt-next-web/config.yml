@@ -1,0 +1,54 @@
+groups:
+- description: null
+  fields:
+  - default: $PGID
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PUID
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: timezone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: ''
+    description: Access password, separated by comma.
+    id: CODE
+    label: CODE
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: ''
+    description: http proxy
+    id: PROXY_URL
+    label: PROXY_URL
+    required: false
+    type: string
+  - default: https://api.openai.com
+    description: Override OpenAI API request base URL.
+    id: BASE_URL
+    label: BASE_URL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+version: '1.0'

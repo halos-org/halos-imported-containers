@@ -1,0 +1,116 @@
+groups:
+- description: null
+  fields:
+  - default: /updater/data
+    description: ''
+    id: BACKUP_DIRECTORY
+    label: BACKUP_DIRECTORY
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+- description: null
+  fields:
+  - default: '0'
+    description: ''
+    id: BACKUP_PERIOD
+    label: BACKUP_PERIOD
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: CONFIG
+    label: CONFIG
+    required: false
+    type: string
+  - default: 10s
+    description: ''
+    id: HTTP_TIMEOUT
+    label: HTTP_TIMEOUT
+    required: false
+    type: integer
+  - default: :8000
+    description: ''
+    id: LISTENING_ADDRESS
+    label: LISTENING_ADDRESS
+    required: false
+    type: string
+  - default: hidden
+    description: ''
+    id: LOG_CALLER
+    label: LOG_CALLER
+    required: false
+    type: string
+  - default: info
+    description: ''
+    id: LOG_LEVEL
+    label: LOG_LEVEL
+    required: false
+    type: string
+  - default: 5m
+    description: ''
+    id: PERIOD
+    label: PERIOD
+    required: false
+    type: string
+  - default: all
+    description: ''
+    id: PUBLICIP_DNS_PROVIDERS
+    label: PUBLICIP_DNS_PROVIDERS
+    required: false
+    type: string
+  - default: 3s
+    description: ''
+    id: PUBLICIP_DNS_TIMEOUT
+    label: PUBLICIP_DNS_TIMEOUT
+    required: false
+    type: integer
+  - default: all
+    description: ''
+    id: PUBLICIP_FETCHERS
+    label: PUBLICIP_FETCHERS
+    required: false
+    type: string
+  - default: all
+    description: ''
+    id: PUBLICIP_HTTP_PROVIDERS
+    label: PUBLICIP_HTTP_PROVIDERS
+    required: false
+    type: string
+  - default: all
+    description: ''
+    id: PUBLICIPV4_HTTP_PROVIDERS
+    label: PUBLICIPV4_HTTP_PROVIDERS
+    required: false
+    type: string
+  - default: all
+    description: ''
+    id: PUBLICIPV6_HTTP_PROVIDERS
+    label: PUBLICIPV6_HTTP_PROVIDERS
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: SHOUTRRR_ADDRESSES
+    label: SHOUTRRR_ADDRESSES
+    required: false
+    type: string
+  - default: 5m
+    description: ''
+    id: UPDATE_COOLDOWN_PERIOD
+    label: UPDATE_COOLDOWN_PERIOD
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: /
+    description: ''
+    id: ROOT_URL
+    label: ROOT_URL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+version: '1.0'

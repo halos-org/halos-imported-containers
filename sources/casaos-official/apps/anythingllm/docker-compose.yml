@@ -1,0 +1,12 @@
+name: anythingllm
+services:
+  anythingllm:
+    image: mintplexlabs/anythingllm
+    ports:
+    - protocol: tcp
+      published: 3051
+      target: 3001
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/storage
+      target: /app/server/storage
+      type: bind

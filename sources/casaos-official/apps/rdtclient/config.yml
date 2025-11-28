@@ -1,0 +1,38 @@
+groups:
+- description: null
+  fields:
+  - default: $PGID
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PUID
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: ''
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: '002'
+    description: ''
+    id: UMASK
+    label: UMASK
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

@@ -1,0 +1,38 @@
+groups:
+- description: null
+  fields:
+  - default: '1024'
+    description: ''
+    id: MEM_LIMIT
+    label: MEM_LIMIT
+    required: false
+    type: integer
+  - default: '1024'
+    description: ''
+    id: MEM_STARTUP
+    label: MEM_STARTUP
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: '1000'
+    description: ''
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: '1000'
+    description: ''
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  id: system
+  label: System Settings
+version: '1.0'

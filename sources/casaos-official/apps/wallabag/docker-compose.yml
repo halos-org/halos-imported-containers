@@ -1,0 +1,15 @@
+name: wallabag
+services:
+  wallabag:
+    environment:
+      SYMFONY__ENV__DOMAIN_NAME: ${SYMFONY__ENV__DOMAIN_NAME}
+      SYMFONY__ENV__SERVER_NAME: ${SYMFONY__ENV__SERVER_NAME}
+    image: wallabag/wallabag:2.6.13
+    ports:
+    - protocol: tcp
+      published: 25661
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/images
+      target: /var/www/wallabag/web/assets/images
+      type: bind

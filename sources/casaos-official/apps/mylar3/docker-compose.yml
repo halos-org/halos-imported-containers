@@ -1,0 +1,22 @@
+name: mylar3
+services:
+  mylar3:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/mylar3:0.8.2
+    ports:
+    - protocol: tcp
+      published: 8090
+      target: 8090
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind
+    - source: /Media/Comics
+      target: /comics
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

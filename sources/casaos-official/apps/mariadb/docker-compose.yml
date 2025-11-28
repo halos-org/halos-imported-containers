@@ -1,0 +1,21 @@
+name: mariadb
+services:
+  mariadb:
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      REMOTE_SQL: ${REMOTE_SQL}
+      TZ: ${TZ}
+    image: linuxserver/mariadb:11.4.5
+    ports:
+    - protocol: tcp
+      published: 3306
+      target: 3306
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind

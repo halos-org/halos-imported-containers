@@ -1,0 +1,24 @@
+groups:
+- description: null
+  fields:
+  - default: C.UTF-8
+    description: ''
+    id: LANG
+    label: LANG
+    required: false
+    type: string
+  - default: C.UTF-8
+    description: ''
+    id: LC_ALL
+    label: LC_ALL
+    required: false
+    type: string
+  - default: /opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    description: ''
+    id: PATH
+    label: PATH
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

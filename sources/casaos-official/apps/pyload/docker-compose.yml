@@ -1,0 +1,22 @@
+name: pyload
+services:
+  pyload:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/pyload-ng:0.5.0
+    ports:
+    - protocol: tcp
+      published: 8000
+      target: 8000
+    - protocol: tcp
+      published: 9666
+      target: 9666
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

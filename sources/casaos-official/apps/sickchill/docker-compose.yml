@@ -1,0 +1,22 @@
+name: sickchill
+services:
+  sickchill:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/sickchill:2023.6.27
+    ports:
+    - protocol: tcp
+      published: 8081
+      target: 8081
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind
+    - source: /Media/TV Shows
+      target: /tv
+      type: bind

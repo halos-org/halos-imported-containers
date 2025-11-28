@@ -1,0 +1,18 @@
+architecture: all
+debian_section: video
+description: Liberate your videos and unleash infinite possibilities.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Handbrake/icon.png
+license: Unknown
+long_description: Handbrake is a Docker-based application for video transcoding and
+  compression, offering powerful and flexible multimedia processing across multiple
+  platforms.
+maintainer: Unknown <auto-converted@casaos.io>
+name: handbrake
+package_name: casaos-handbrake-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Handbrake/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

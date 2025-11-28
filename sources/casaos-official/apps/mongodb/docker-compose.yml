@@ -1,0 +1,19 @@
+name: mongodb
+services:
+  mongo:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: mongo:8.0.5
+    ports:
+    - protocol: tcp
+      published: 27017
+      target: 27017
+    volumes:
+    - source: /AppData/mongo/data/configdb
+      target: /data/configdb
+      type: bind
+    - source: /AppData/mongo/data/db
+      target: /data/db
+      type: bind

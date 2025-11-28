@@ -1,0 +1,170 @@
+name: dify
+services:
+  api:
+    environment:
+      APP_WEB_URL: ${APP_WEB_URL}
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      CODE_EXECUTION_API_KEY: ${CODE_EXECUTION_API_KEY}
+      CODE_EXECUTION_ENDPOINT: ${CODE_EXECUTION_ENDPOINT}
+      CODE_MAX_NUMBER: ${CODE_MAX_NUMBER}
+      CODE_MAX_NUMBER_ARRAY_LENGTH: ${CODE_MAX_NUMBER_ARRAY_LENGTH}
+      CODE_MAX_OBJECT_ARRAY_LENGTH: ${CODE_MAX_OBJECT_ARRAY_LENGTH}
+      CODE_MAX_STRING_ARRAY_LENGTH: ${CODE_MAX_STRING_ARRAY_LENGTH}
+      CODE_MAX_STRING_LENGTH: ${CODE_MAX_STRING_LENGTH}
+      CODE_MIN_NUMBER: ${CODE_MIN_NUMBER}
+      CONSOLE_API_URL: ${CONSOLE_API_URL}
+      CONSOLE_CORS_ALLOW_ORIGINS: ${CONSOLE_CORS_ALLOW_ORIGINS}
+      CONSOLE_WEB_URL: ${CONSOLE_WEB_URL}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_HOST: ${DB_HOST}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      FILES_ACCESS_TIMEOUT: ${FILES_ACCESS_TIMEOUT}
+      FILES_URL: ${FILES_URL}
+      INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH: ${INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH}
+      INIT_PASSWORD: ${INIT_PASSWORD}
+      LOG_LEVEL: ${LOG_LEVEL}
+      MIGRATION_ENABLED: ${MIGRATION_ENABLED}
+      MODE: ${MODE}
+      REDIS_DB: ${REDIS_DB}
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      REDIS_PORT: ${REDIS_PORT}
+      SECRET_KEY: ${SECRET_KEY}
+      SERVICE_API_URL: ${SERVICE_API_URL}
+      SSRF_PROXY_HTTPS_URL: ${SSRF_PROXY_HTTPS_URL}
+      SSRF_PROXY_HTTP_URL: ${SSRF_PROXY_HTTP_URL}
+      STORAGE_LOCAL_PATH: ${STORAGE_LOCAL_PATH}
+      STORAGE_TYPE: ${STORAGE_TYPE}
+      TEMPLATE_TRANSFORM_MAX_LENGTH: ${TEMPLATE_TRANSFORM_MAX_LENGTH}
+      VECTOR_STORE: ${VECTOR_STORE}
+      WEAVIATE_API_KEY: ${WEAVIATE_API_KEY}
+      WEAVIATE_ENDPOINT: ${WEAVIATE_ENDPOINT}
+      WEB_API_CORS_ALLOW_ORIGINS: ${WEB_API_CORS_ALLOW_ORIGINS}
+    image: langgenius/dify-api:0.12.1
+    volumes:
+    - source: /AppData/$AppID/data/app/api/storage
+      target: /app/api/storage
+      type: bind
+  config:
+    image: ns2kracy/dify-config:latest
+    volumes:
+    - source: /AppData/$AppID/data/nginx
+      target: /configs/nginx
+      type: bind
+    - source: /AppData/$AppID/data/ssrf_proxy
+      target: /configs/ssrf_proxy
+      type: bind
+    - source: /AppData/$AppID/data/sandbox
+      target: /configs/sandbox
+      type: bind
+  db:
+    command:
+    - "postgres -c 'max_connections=100'\n         -c 'shared_buffers=128MB'\n   \
+      \      -c 'work_mem=4MB'\n         -c 'maintenance_work_mem=64MB'\n        \
+      \ -c 'effective_cache_size=4096MB'\n"
+    environment:
+      PGDATA: ${PGDATA}
+      PGUSER: ${PGUSER}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    image: postgres:15-alpine
+    volumes:
+    - source: /AppData/$AppID/data/db/data
+      target: /var/lib/postgresql/data
+      type: bind
+  nginx:
+    image: nginx:latest
+    ports:
+    - protocol: tcp
+      published: 3701
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/data/nginx
+      target: /etc/nginx
+      type: bind
+  redis:
+    command:
+    - redis-server --requirepass difyai123456
+    environment:
+      REDISCLI_AUTH: ${REDISCLI_AUTH}
+    image: redis:6-alpine
+    volumes:
+    - source: /AppData/$AppID/data/redis/data
+      target: /data
+      type: bind
+  sandbox:
+    environment:
+      API_KEY: ${API_KEY}
+      ENABLE_NETWORK: ${ENABLE_NETWORK}
+      GIN_MODE: ${GIN_MODE}
+      HTTPS_PROXY: ${HTTPS_PROXY}
+      HTTP_PROXY: ${HTTP_PROXY}
+      SANDBOX_PORT: ${SANDBOX_PORT}
+      WORKER_TIMEOUT: ${WORKER_TIMEOUT}
+    image: langgenius/dify-sandbox:0.2.10
+    volumes:
+    - source: /AppData/$AppID/data/sandbox/dependencies
+      target: /dependencies
+      type: bind
+  ssrf_proxy:
+    environment:
+      COREDUMP_DIR: ${COREDUMP_DIR}
+      HTTP_PORT: ${HTTP_PORT}
+      REVERSE_PROXY_PORT: ${REVERSE_PROXY_PORT}
+      SANDBOX_HOST: ${SANDBOX_HOST}
+      SANDBOX_PORT: ${SANDBOX_PORT}
+    image: ubuntu/squid:latest
+    volumes:
+    - source: /AppData/$AppID/data/ssrf_proxy
+      target: /etc/squid
+      type: bind
+  weaviate:
+    environment:
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: ${AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED}
+      AUTHENTICATION_APIKEY_ALLOWED_KEYS: ${AUTHENTICATION_APIKEY_ALLOWED_KEYS}
+      AUTHENTICATION_APIKEY_ENABLED: ${AUTHENTICATION_APIKEY_ENABLED}
+      AUTHENTICATION_APIKEY_USERS: ${AUTHENTICATION_APIKEY_USERS}
+      AUTHORIZATION_ADMINLIST_ENABLED: ${AUTHORIZATION_ADMINLIST_ENABLED}
+      AUTHORIZATION_ADMINLIST_USERS: ${AUTHORIZATION_ADMINLIST_USERS}
+      CLUSTER_HOSTNAME: ${CLUSTER_HOSTNAME}
+      DEFAULT_VECTORIZER_MODULE: ${DEFAULT_VECTORIZER_MODULE}
+      PERSISTENCE_DATA_PATH: ${PERSISTENCE_DATA_PATH}
+      QUERY_DEFAULTS_LIMIT: ${QUERY_DEFAULTS_LIMIT}
+    image: semitechnologies/weaviate:1.19.0
+    volumes:
+    - source: /AppData/$AppID/data/weaviate
+      target: /var/lib/weaviate
+      type: bind
+  web:
+    environment:
+      APP_API_URL: ${APP_API_URL}
+      CONSOLE_API_URL: ${CONSOLE_API_URL}
+    image: langgenius/dify-web:0.12.1
+  worker:
+    environment:
+      CELERY_BROKER_URL: ${CELERY_BROKER_URL}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_HOST: ${DB_HOST}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_PORT: ${DB_PORT}
+      DB_USERNAME: ${DB_USERNAME}
+      LOG_LEVEL: ${LOG_LEVEL}
+      MODE: ${MODE}
+      REDIS_DB: ${REDIS_DB}
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PASSWORD: ${REDIS_PASSWORD}
+      REDIS_PORT: ${REDIS_PORT}
+      REDIS_USE_SSL: ${REDIS_USE_SSL}
+      SECRET_KEY: ${SECRET_KEY}
+      STORAGE_LOCAL_PATH: ${STORAGE_LOCAL_PATH}
+      STORAGE_TYPE: ${STORAGE_TYPE}
+      VECTOR_STORE: ${VECTOR_STORE}
+      WEAVIATE_API_KEY: ${WEAVIATE_API_KEY}
+      WEAVIATE_ENDPOINT: ${WEAVIATE_ENDPOINT}
+    image: langgenius/dify-api:0.12.1
+    volumes:
+    - source: /AppData/$AppID/data/app/api/storage
+      target: /app/api/storage
+      type: bind

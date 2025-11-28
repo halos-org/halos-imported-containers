@@ -1,0 +1,32 @@
+groups:
+- description: null
+  fields:
+  - default: casaos
+    description: The password of admin
+    id: PHOTOPRISM_ADMIN_PASSWORD
+    label: PHOTOPRISM_ADMIN_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: 'true'
+    description: true or false, is it possible to upload NSFW
+    id: PHOTOPRISM_UPLOAD_NSFW
+    label: PHOTOPRISM_UPLOAD_NSFW
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: $TZ
+    description: TimeZone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+version: '1.0'

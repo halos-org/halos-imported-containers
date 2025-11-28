@@ -1,0 +1,25 @@
+name: resilio-sync
+services:
+  resilio-sync:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/resilio-sync:2.7.3
+    ports:
+    - protocol: tcp
+      published: 55555
+      target: 55555
+    - protocol: tcp
+      published: 8888
+      target: 8888
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /sync
+      type: bind
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

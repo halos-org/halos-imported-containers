@@ -1,0 +1,28 @@
+name: monica
+services:
+  monica:
+    environment:
+      APP_KEY: ${APP_KEY}
+      DB_HOST: ${DB_HOST}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_USERNAME: ${DB_USERNAME}
+    image: monica:4.1.2
+    ports:
+    - protocol: tcp
+      published: 18930
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/storage
+      target: /var/www/html/storage
+      type: bind
+  monica-db:
+    environment:
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_RANDOM_ROOT_PASSWORD: ${MARIADB_RANDOM_ROOT_PASSWORD}
+      MARIADB_USER: ${MARIADB_USER}
+    image: mariadb:11.8.2
+    volumes:
+    - source: /AppData/$AppID/mysql
+      target: /var/lib/mysql
+      type: bind

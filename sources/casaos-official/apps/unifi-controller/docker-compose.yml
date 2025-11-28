@@ -1,0 +1,41 @@
+name: unifi-controller
+services:
+  unifi-controller:
+    environment:
+      MEM_LIMIT: ${MEM_LIMIT}
+      MEM_STARTUP: ${MEM_STARTUP}
+      PGID: ${PGID}
+      PUID: ${PUID}
+    image: linuxserver/unifi-controller:8.0.7
+    ports:
+    - protocol: udp
+      published: 3478
+      target: 3478
+    - protocol: udp
+      published: 10001
+      target: 10001
+    - protocol: tcp
+      published: 8383
+      target: 8080
+    - protocol: tcp
+      published: 8443
+      target: 8443
+    - protocol: udp
+      published: 1900
+      target: 1900
+    - protocol: tcp
+      published: 8843
+      target: 8843
+    - protocol: tcp
+      published: 8880
+      target: 8880
+    - protocol: tcp
+      published: 6789
+      target: 6789
+    - protocol: udp
+      published: 5514
+      target: 5514
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind

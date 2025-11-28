@@ -1,0 +1,20 @@
+name: jackett
+services:
+  jackett:
+    environment:
+      AUTO_UPDATE: ${AUTO_UPDATE}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/jackett:0.22.1660
+    ports:
+    - protocol: tcp
+      published: 9117
+      target: 9117
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

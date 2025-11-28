@@ -1,0 +1,22 @@
+architecture: all
+debian_section: devel
+description: Easy access to the host terminal in web
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ttydbridge/icon.png
+license: Unknown
+long_description: 'ttydBridge acts as a "bridge" to the host environment, allowing
+  you to easily access and use the host terminal in a web. It is built on ttyd and
+  runs in a containerized manner, providing a secure and convenient remote endpoint
+  experience.
+
+  '
+maintainer: Cp0204 <auto-converted@casaos.io>
+name: ttydbridge
+package_name: casaos-ttydbridge-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ttydbridge/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ttydbridge/screenshot-2.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

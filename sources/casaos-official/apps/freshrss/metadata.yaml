@@ -1,0 +1,17 @@
+architecture: all
+debian_section: utils
+description: A free, self-hostable news aggregator…
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FreshRSS/icon.png
+license: Unknown
+long_description: FreshRSS is a self-hosted RSS and Atom feed aggregator. It is lightweight,
+  easy to work with, powerful, and customizable.
+maintainer: FreshRSS <auto-converted@casaos.io>
+name: freshrss
+package_name: casaos-freshrss-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FreshRSS/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

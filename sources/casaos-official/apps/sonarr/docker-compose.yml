@@ -1,0 +1,22 @@
+name: sonarr
+services:
+  sonarr:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/sonarr:4.0.15
+    ports:
+    - protocol: tcp
+      published: 8989
+      target: 8989
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media/TV Shows
+      target: /tv
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

@@ -1,0 +1,19 @@
+name: pinchflat
+services:
+  pinchflat:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: ghcr.io/kieraneglin/pinchflat:latest
+    ports:
+    - protocol: tcp
+      published: 8945
+      target: 8945
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media/Downloads
+      target: /downloads
+      type: bind

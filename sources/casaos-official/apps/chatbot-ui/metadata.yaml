@@ -1,0 +1,16 @@
+architecture: all
+debian_section: comm
+description: Open source chat UI for AI models
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatbotUI/icon.jpg
+license: Unknown
+long_description: Chatbot UI is an open source chat UI for AI models.
+maintainer: Mckay Wrigley <auto-converted@casaos.io>
+name: chatbot-ui
+package_name: casaos-chatbot-ui-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatbotUI/screenshot-1.jpg
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

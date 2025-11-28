@@ -1,0 +1,22 @@
+groups:
+- description: null
+  fields:
+  - default: aLongAndSecretStringUsedToSignTheJSONWebToken1234
+    description: JWT Secret Key
+    id: JWT_SECRET
+    label: JWT_SECRET
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: 'true'
+    description: Allow HTTP Connections
+    id: HTTP_ALLOWED
+    label: HTTP_ALLOWED
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

@@ -1,0 +1,8 @@
+name: homebridge
+services:
+  homebridge:
+    image: homebridge/homebridge:latest
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /homebridge
+      type: bind

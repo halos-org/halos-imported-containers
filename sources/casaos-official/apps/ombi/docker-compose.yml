@@ -1,0 +1,17 @@
+name: ombi
+services:
+  ombi:
+    environment:
+      BASE_URL: ${BASE_URL}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/ombi:4.47.1
+    ports:
+    - protocol: tcp
+      published: 3579
+      target: 3579
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind

@@ -1,0 +1,26 @@
+name: deluge
+services:
+  deluge:
+    environment:
+      DELUGE_LOGLEVEL: ${DELUGE_LOGLEVEL}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/deluge:2.1.1
+    ports:
+    - protocol: tcp
+      published: 8112
+      target: 8112
+    - protocol: tcp
+      published: 6881
+      target: 6881
+    - protocol: udp
+      published: 6881
+      target: 6881
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/DATA
+      target: /DATA
+      type: bind

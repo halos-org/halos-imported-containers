@@ -1,0 +1,15 @@
+name: chatgpt-next-web
+services:
+  chatgpt-next-web:
+    environment:
+      BASE_URL: ${BASE_URL}
+      CODE: ${CODE}
+      PGID: ${PGID}
+      PROXY_URL: ${PROXY_URL}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: yidadaa/chatgpt-next-web:v2.16.0
+    ports:
+    - protocol: tcp
+      published: 3000
+      target: 3000

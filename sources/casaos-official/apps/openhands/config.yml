@@ -1,0 +1,22 @@
+groups:
+- description: null
+  fields:
+  - default: docker.all-hands.dev/all-hands-ai/runtime:0.49-nikolaik
+    description: Container Image for Runtime Environment
+    id: SANDBOX_RUNTIME_CONTAINER_IMAGE
+    label: SANDBOX_RUNTIME_CONTAINER_IMAGE
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: /DATA/AppData/$AppID/workspace
+    description: Mount Path for Workspace Directory
+    id: WORKSPACE_MOUNT_PATH
+    label: WORKSPACE_MOUNT_PATH
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+version: '1.0'

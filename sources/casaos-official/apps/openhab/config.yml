@@ -1,0 +1,32 @@
+groups:
+- description: null
+  fields:
+  - default: unlimited
+    description: Crypto Policy
+    id: CRYPTO_POLICY
+    label: CRYPTO_POLICY
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: $PGID
+    description: Run OpenHAB as specified gid.
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PUID
+    description: Run OpenHAB as specified uid.
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  id: system
+  label: System Settings
+version: '1.0'

@@ -1,0 +1,18 @@
+name: gitea
+services:
+  gitea:
+    environment:
+      USER_GID: ${USER_GID}
+      USER_UID: ${USER_UID}
+    image: gitea/gitea:1.24.6
+    ports:
+    - protocol: tcp
+      published: 3002
+      target: 3000
+    - protocol: tcp
+      published: 222
+      target: 22
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /data
+      type: bind

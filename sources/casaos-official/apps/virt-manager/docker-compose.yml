@@ -1,0 +1,21 @@
+name: virt-manager
+services:
+  virt-manager:
+    environment:
+      DARK_MODE: ${DARK_MODE}
+      HOSTS: ${HOSTS}
+    image: mber5/virt-manager:latest
+    ports:
+    - protocol: tcp
+      published: 8185
+      target: 80
+    volumes:
+    - source: /var/run/libvirt/libvirt-sock
+      target: /var/run/libvirt/libvirt-sock
+      type: bind
+    - source: /var/lib/libvirt
+      target: /var/lib/libvirt
+      type: bind
+    - source: /Downloads
+      target: /DATA/Downloads
+      type: bind

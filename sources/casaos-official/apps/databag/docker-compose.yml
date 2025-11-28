@@ -1,0 +1,12 @@
+name: databag
+services:
+  databag:
+    image: balzack/databag:0.1.17
+    ports:
+    - protocol: tcp
+      published: 7000
+      target: 7000
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/data
+      target: /var/lib/databag
+      type: bind

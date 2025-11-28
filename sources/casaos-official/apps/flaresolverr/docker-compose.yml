@@ -1,0 +1,16 @@
+name: flaresolverr
+services:
+  flaresolverr:
+    environment:
+      CAPTCHA_SOLVER: ${CAPTCHA_SOLVER}
+      LOG_HTML: ${LOG_HTML}
+      LOG_LEVEL: ${LOG_LEVEL}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+      UMASK: ${UMASK}
+    image: ghcr.io/flaresolverr/flaresolverr:v3.3.25
+    ports:
+    - protocol: tcp
+      published: 8191
+      target: 8191

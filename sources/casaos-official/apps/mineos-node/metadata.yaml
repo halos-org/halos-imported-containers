@@ -1,0 +1,17 @@
+architecture: all
+debian_section: games
+description: Free and easy to use Minecraft server management tool.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MineOS/icon.png
+license: Unknown
+long_description: MineOS is a server front-end to ease managing Minecraft administrative
+  tasks. This iteration using Node.js aims to enhance previous MineOS scripts (Python-based),
+  by leveraging the event-triggering, asyncronous model of Node.JS and websockets.
+maintainer: hexparrot <auto-converted@casaos.io>
+name: mineos-node
+package_name: casaos-mineos-node-container
+screenshots: null
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

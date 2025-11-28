@@ -1,0 +1,26 @@
+architecture: all
+debian_section: video
+description: Automatic video library manager for TV Shows
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/icon.png
+license: Unknown
+long_description: 'SickChill is an automatic Video Library Manager for TV Shows. It
+  watches for new episodes of your favorite shows, and when they are posted it does
+  its magic: automatic torrent/nzb searching, downloading, and processing at the qualities
+  you want.
+
+  '
+maintainer: Sickchill Team <auto-converted@casaos.io>
+name: sickchill
+package_name: casaos-sickchill-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-5.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sickchill/screenshot-6.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

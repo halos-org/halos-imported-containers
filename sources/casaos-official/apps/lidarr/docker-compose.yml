@@ -1,0 +1,22 @@
+name: lidarr
+services:
+  lidarr:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/lidarr:2.9.6
+    ports:
+    - protocol: tcp
+      published: 8686
+      target: 8686
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind
+    - source: /Media/Music
+      target: /music
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

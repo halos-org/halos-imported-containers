@@ -1,0 +1,19 @@
+architecture: all
+debian_section: utils
+description: Real-time Performance Monitoring
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/icon.png
+license: Unknown
+long_description: Netdata is a real-time performance and health monitoring solution
+  that helps you visualize and understand the behavior of your systems.
+maintainer: Unknown <auto-converted@casaos.io>
+name: netdata
+package_name: casaos-netdata-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/screenshot-1.jpg
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Netdata/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

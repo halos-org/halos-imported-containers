@@ -1,0 +1,19 @@
+name: snapdrop
+services:
+  snapdrop:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/snapdrop:version-eac78009
+    ports:
+    - protocol: tcp
+      published: 443
+      target: 443
+    - protocol: tcp
+      published: 89
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind

@@ -1,0 +1,16 @@
+name: duckdns
+services:
+  duckdns:
+    environment:
+      LOG_FILE: ${LOG_FILE}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      SUBDOMAINS: ${SUBDOMAINS}
+      TOKEN: ${TOKEN}
+      TZ: ${TZ}
+      UPDATE_IP: ${UPDATE_IP}
+    image: lscr.io/linuxserver/duckdns:latest
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}
+      target: /config
+      type: bind

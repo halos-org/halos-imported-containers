@@ -1,0 +1,42 @@
+architecture: all
+debian_section: misc
+description: Browse Your Life in Images
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PhotoPrism/icon.png
+license: Unknown
+long_description: 'Your AI-Powered Photos App for the Decentralized Web
+
+
+  PhotoPrism brings the magic of AI to your home TV, phone, and multiple devices,
+  revolutionizing the way you manage and share your photos. Unlike traditional photo
+  albums that require manual organization, PhotoPrism automatically tags and finds
+  your pictures, making it easier than ever to relive your memories. Whether you''re
+  showing family photos on your TV or sharing vacation snapshots on your phone, PhotoPrism
+  makes the experience seamless and enjoyable.
+
+
+  PhotoPrism offers a host of features designed to enhance your photo management experience.
+  With powerful search capabilities, automatic tagging, and a user-friendly interface,
+  you''ll find it easy to keep your photo collection organized. The app is free to
+  use, with premium options available for those seeking additional features and support.
+  Users can expect a smooth, intuitive experience that blends cutting-edge technology
+  with everyday convenience.
+
+
+  Deploying PhotoPrism on Zima private cloud devices offers unparalleled convenience.
+  Enjoy unlimited storage capacity, the speed of your local network, and access from
+  multiple devices without the need for the internet. It''s the perfect solution for
+  NAS enthusiasts who value privacy and performance.
+
+  '
+maintainer: PhotoPrism <auto-converted@casaos.io>
+name: photoprism
+package_name: casaos-photoprism-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PhotoPrism/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PhotoPrism/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PhotoPrism/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

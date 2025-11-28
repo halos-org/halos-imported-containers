@@ -1,0 +1,21 @@
+architecture: all
+debian_section: video
+description: Friendly media request tool, automatically syncs with your media servers!
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/icon.png
+license: Unknown
+long_description: Ombi is a self-hosted web application that automatically gives your
+  shared Plex or Emby users the ability to request content by themselves! Ombi can
+  be linked to multiple TV Show and Movie DVR tools to create a seamless end-to-end
+  experience for your users.
+maintainer: Sabnzbd Team <auto-converted@casaos.io>
+name: ombi
+package_name: casaos-ombi-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ombi/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

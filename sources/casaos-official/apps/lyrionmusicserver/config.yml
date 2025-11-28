@@ -1,0 +1,14 @@
+groups:
+- description: null
+  fields:
+  - default: '9000'
+    description: HTTP Port for Web Interface
+    id: HTTP_PORT
+    label: HTTP_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+version: '1.0'

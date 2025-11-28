@@ -1,0 +1,15 @@
+architecture: all
+debian_section: utils
+description: A free reverse proxy for tunneling services (not self-hosted).
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/playit-agent/icon.png
+license: Unknown
+long_description: A free reverse proxy for tunneling services (not self-hosted).
+maintainer: Patrick Lorio <auto-converted@casaos.io>
+name: playit-agent
+package_name: casaos-playit-agent-container
+screenshots: null
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

@@ -1,0 +1,28 @@
+groups:
+- description: null
+  fields:
+  - default: $PUID
+    description: for UserID
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PGID
+    description: for GroupID
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: Specify a timezone to use, see this list.
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+version: '1.0'

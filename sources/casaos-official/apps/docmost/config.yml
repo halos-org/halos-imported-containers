@@ -1,0 +1,56 @@
+groups:
+- description: null
+  fields:
+  - default: http://localhost:3000
+    description: The base URL of your application
+    id: APP_URL
+    label: APP_URL
+    required: false
+    type: string
+  - default: postgresql://docmost:jcui51lw747yuuk4zrpm@docmost-db:5432/docmost?schema=public
+    description: Database Connection URL
+    id: DATABASE_URL
+    label: DATABASE_URL
+    required: false
+    type: string
+  - default: redis://docmost-redis:6379
+    description: Redis Connection URL
+    id: REDIS_URL
+    label: REDIS_URL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: gxahngf9wc9ak9ahgpjp03zp1akcr7ry
+    description: Application Secret Key
+    id: APP_SECRET
+    label: APP_SECRET
+    required: false
+    type: password
+  - default: docmost
+    description: PostgreSQL User
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: jcui51lw747yuuk4zrpm
+    description: PostgreSQL Password
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: docmost
+    description: PostgreSQL Database Name
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

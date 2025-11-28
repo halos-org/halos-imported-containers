@@ -1,0 +1,12 @@
+groups:
+- description: null
+  fields:
+  - default: -w
+    description: Glances mode
+    id: GLANCES_OPT
+    label: GLANCES_OPT
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

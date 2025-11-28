@@ -1,0 +1,20 @@
+architecture: all
+debian_section: video
+description: TAKE YOUR MEDIA ANYWHERE WITH EMBY
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
+license: Unknown
+long_description: Bringing all of your home videos, music, and photos together into
+  one place has never been easier. Your personal Emby Server automatically converts
+  and streams your media on-the-fly to play on any device.
+maintainer: linuxserver <auto-converted@casaos.io>
+name: emby-nvidia
+package_name: casaos-emby-nvidia-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

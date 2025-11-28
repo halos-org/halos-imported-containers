@@ -1,0 +1,21 @@
+architecture: all
+debian_section: net
+description: Firefly, the easiest using of WireGuard VPN server, plus version of wg-easy.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Firefly/icon.png
+license: Unknown
+long_description: Firefly is a simple and easy to install WireGuard server software,
+  which can be widely used in scenarios such as remote networking, remote work, and
+  expose a local server behind a NAT or firewall to the internet.  🎯 Features 🟢 Provide
+  a simple and easy-to-use web management UI  🟣 Supports access to all WireGuard clients  🟡
+  No need for system installation of WireGuard components  🟠 Single file, no additional
+  library dependencies  🔴 Automatically apply for free SSL certificate
+maintainer: Safe3 <auto-converted@casaos.io>
+name: firefly
+package_name: casaos-firefly-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Firefly/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

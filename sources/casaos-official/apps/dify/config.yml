@@ -1,0 +1,562 @@
+groups:
+- description: null
+  fields:
+  - default: api
+    description: ''
+    id: MODE
+    label: MODE
+    required: false
+    type: string
+  - default: INFO
+    description: ''
+    id: LOG_LEVEL
+    label: LOG_LEVEL
+    required: false
+    type: string
+  - default: '300'
+    description: ''
+    id: FILES_ACCESS_TIMEOUT
+    label: FILES_ACCESS_TIMEOUT
+    required: false
+    type: integer
+  - default: 'true'
+    description: ''
+    id: MIGRATION_ENABLED
+    label: MIGRATION_ENABLED
+    required: false
+    type: boolean
+  - default: dify
+    description: ''
+    id: DB_DATABASE
+    label: DB_DATABASE
+    required: false
+    type: string
+  - default: '0'
+    description: ''
+    id: REDIS_DB
+    label: REDIS_DB
+    required: false
+    type: string
+  - default: '*'
+    description: ''
+    id: WEB_API_CORS_ALLOW_ORIGINS
+    label: WEB_API_CORS_ALLOW_ORIGINS
+    required: false
+    type: string
+  - default: '*'
+    description: ''
+    id: CONSOLE_CORS_ALLOW_ORIGINS
+    label: CONSOLE_CORS_ALLOW_ORIGINS
+    required: false
+    type: string
+  - default: local
+    description: ''
+    id: STORAGE_TYPE
+    label: STORAGE_TYPE
+    required: false
+    type: string
+  - default: weaviate
+    description: ''
+    id: VECTOR_STORE
+    label: VECTOR_STORE
+    required: false
+    type: string
+  - default: http://weaviate:8080
+    description: ''
+    id: WEAVIATE_ENDPOINT
+    label: WEAVIATE_ENDPOINT
+    required: false
+    type: string
+  - default: http://sandbox:8194
+    description: ''
+    id: CODE_EXECUTION_ENDPOINT
+    label: CODE_EXECUTION_ENDPOINT
+    required: false
+    type: string
+  - default: '9223372036854775807'
+    description: ''
+    id: CODE_MAX_NUMBER
+    label: CODE_MAX_NUMBER
+    required: false
+    type: string
+  - default: '-9223372036854775808'
+    description: ''
+    id: CODE_MIN_NUMBER
+    label: CODE_MIN_NUMBER
+    required: false
+    type: string
+  - default: '80000'
+    description: ''
+    id: CODE_MAX_STRING_LENGTH
+    label: CODE_MAX_STRING_LENGTH
+    required: false
+    type: string
+  - default: '80000'
+    description: ''
+    id: TEMPLATE_TRANSFORM_MAX_LENGTH
+    label: TEMPLATE_TRANSFORM_MAX_LENGTH
+    required: false
+    type: string
+  - default: '30'
+    description: ''
+    id: CODE_MAX_STRING_ARRAY_LENGTH
+    label: CODE_MAX_STRING_ARRAY_LENGTH
+    required: false
+    type: string
+  - default: '30'
+    description: ''
+    id: CODE_MAX_OBJECT_ARRAY_LENGTH
+    label: CODE_MAX_OBJECT_ARRAY_LENGTH
+    required: false
+    type: string
+  - default: '1000'
+    description: ''
+    id: CODE_MAX_NUMBER_ARRAY_LENGTH
+    label: CODE_MAX_NUMBER_ARRAY_LENGTH
+    required: false
+    type: string
+  - default: '1000'
+    description: ''
+    id: INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH
+    label: INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH
+    required: false
+    type: string
+  - default: worker
+    description: ''
+    id: MODE
+    label: MODE
+    required: false
+    type: string
+  - default: INFO
+    description: ''
+    id: LOG_LEVEL
+    label: LOG_LEVEL
+    required: false
+    type: string
+  - default: dify
+    description: ''
+    id: DB_DATABASE
+    label: DB_DATABASE
+    required: false
+    type: string
+  - default: '0'
+    description: ''
+    id: REDIS_DB
+    label: REDIS_DB
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: REDIS_USE_SSL
+    label: REDIS_USE_SSL
+    required: false
+    type: string
+  - default: local
+    description: ''
+    id: STORAGE_TYPE
+    label: STORAGE_TYPE
+    required: false
+    type: string
+  - default: weaviate
+    description: ''
+    id: VECTOR_STORE
+    label: VECTOR_STORE
+    required: false
+    type: string
+  - default: http://weaviate:8080
+    description: ''
+    id: WEAVIATE_ENDPOINT
+    label: WEAVIATE_ENDPOINT
+    required: false
+    type: string
+  - default: dify
+    description: ''
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  - default: /var/lib/postgresql/data/pgdata
+    description: ''
+    id: PGDATA
+    label: PGDATA
+    required: false
+    type: string
+  - default: difyai123456
+    description: ''
+    id: REDISCLI_AUTH
+    label: REDISCLI_AUTH
+    required: false
+    type: string
+  - default: '25'
+    description: ''
+    id: QUERY_DEFAULTS_LIMIT
+    label: QUERY_DEFAULTS_LIMIT
+    required: false
+    type: integer
+  - default: 'false'
+    description: ''
+    id: AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED
+    label: AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED
+    required: false
+    type: boolean
+  - default: none
+    description: ''
+    id: DEFAULT_VECTORIZER_MODULE
+    label: DEFAULT_VECTORIZER_MODULE
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: AUTHENTICATION_APIKEY_ENABLED
+    label: AUTHENTICATION_APIKEY_ENABLED
+    required: false
+    type: boolean
+  - default: WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih
+    description: ''
+    id: AUTHENTICATION_APIKEY_ALLOWED_KEYS
+    label: AUTHENTICATION_APIKEY_ALLOWED_KEYS
+    required: false
+    type: string
+  - default: hello@dify.ai
+    description: ''
+    id: AUTHENTICATION_APIKEY_USERS
+    label: AUTHENTICATION_APIKEY_USERS
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: AUTHORIZATION_ADMINLIST_ENABLED
+    label: AUTHORIZATION_ADMINLIST_ENABLED
+    required: false
+    type: boolean
+  - default: hello@dify.ai
+    description: ''
+    id: AUTHORIZATION_ADMINLIST_USERS
+    label: AUTHORIZATION_ADMINLIST_USERS
+    required: false
+    type: string
+  - default: release
+    description: ''
+    id: GIN_MODE
+    label: GIN_MODE
+    required: false
+    type: string
+  - default: '15'
+    description: ''
+    id: WORKER_TIMEOUT
+    label: WORKER_TIMEOUT
+    required: false
+    type: integer
+  - default: 'true'
+    description: ''
+    id: ENABLE_NETWORK
+    label: ENABLE_NETWORK
+    required: false
+    type: string
+  - default: http://ssrf_proxy:3128
+    description: ''
+    id: HTTP_PROXY
+    label: HTTP_PROXY
+    required: false
+    type: string
+  - default: http://ssrf_proxy:3128
+    description: ''
+    id: HTTPS_PROXY
+    label: HTTPS_PROXY
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: your-openai-api-key-here
+    description: ''
+    id: SECRET_KEY
+    label: SECRET_KEY
+    required: false
+    type: password
+  - default: ''
+    description: ''
+    id: INIT_PASSWORD
+    label: INIT_PASSWORD
+    required: false
+    type: password
+  - default: postgres
+    description: ''
+    id: DB_USERNAME
+    label: DB_USERNAME
+    required: false
+    type: string
+  - default: difyai123456
+    description: ''
+    id: DB_PASSWORD
+    label: DB_PASSWORD
+    required: false
+    type: password
+  - default: difyai123456
+    description: ''
+    id: REDIS_PASSWORD
+    label: REDIS_PASSWORD
+    required: false
+    type: password
+  - default: WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih
+    description: ''
+    id: WEAVIATE_API_KEY
+    label: WEAVIATE_API_KEY
+    required: false
+    type: password
+  - default: dify-sandbox
+    description: ''
+    id: CODE_EXECUTION_API_KEY
+    label: CODE_EXECUTION_API_KEY
+    required: false
+    type: password
+  - default: your-openai-api-key-here
+    description: ''
+    id: SECRET_KEY
+    label: SECRET_KEY
+    required: false
+    type: password
+  - default: postgres
+    description: ''
+    id: DB_USERNAME
+    label: DB_USERNAME
+    required: false
+    type: string
+  - default: difyai123456
+    description: ''
+    id: DB_PASSWORD
+    label: DB_PASSWORD
+    required: false
+    type: password
+  - default: difyai123456
+    description: ''
+    id: REDIS_PASSWORD
+    label: REDIS_PASSWORD
+    required: false
+    type: password
+  - default: WVF5YThaHlkYwhGUSmCRgsX3tD5ngdN8pkih
+    description: ''
+    id: WEAVIATE_API_KEY
+    label: WEAVIATE_API_KEY
+    required: false
+    type: password
+  - default: postgres
+    description: ''
+    id: PGUSER
+    label: PGUSER
+    required: false
+    type: string
+  - default: difyai123456
+    description: ''
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  - default: dify-sandbox
+    description: ''
+    id: API_KEY
+    label: API_KEY
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: ''
+    description: ''
+    id: CONSOLE_WEB_URL
+    label: CONSOLE_WEB_URL
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: CONSOLE_API_URL
+    label: CONSOLE_API_URL
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: SERVICE_API_URL
+    label: SERVICE_API_URL
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: APP_WEB_URL
+    label: APP_WEB_URL
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: FILES_URL
+    label: FILES_URL
+    required: false
+    type: string
+  - default: db
+    description: ''
+    id: DB_HOST
+    label: DB_HOST
+    required: false
+    type: string
+  - default: '5432'
+    description: ''
+    id: DB_PORT
+    label: DB_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: redis
+    description: ''
+    id: REDIS_HOST
+    label: REDIS_HOST
+    required: false
+    type: string
+  - default: '6379'
+    description: ''
+    id: REDIS_PORT
+    label: REDIS_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: redis://:difyai123456@redis:6379/1
+    description: ''
+    id: CELERY_BROKER_URL
+    label: CELERY_BROKER_URL
+    required: false
+    type: string
+  - default: http://ssrf_proxy:3128
+    description: ''
+    id: SSRF_PROXY_HTTP_URL
+    label: SSRF_PROXY_HTTP_URL
+    required: false
+    type: string
+  - default: http://ssrf_proxy:3128
+    description: ''
+    id: SSRF_PROXY_HTTPS_URL
+    label: SSRF_PROXY_HTTPS_URL
+    required: false
+    type: string
+  - default: db
+    description: ''
+    id: DB_HOST
+    label: DB_HOST
+    required: false
+    type: string
+  - default: '5432'
+    description: ''
+    id: DB_PORT
+    label: DB_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: redis
+    description: ''
+    id: REDIS_HOST
+    label: REDIS_HOST
+    required: false
+    type: string
+  - default: '6379'
+    description: ''
+    id: REDIS_PORT
+    label: REDIS_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: redis://:difyai123456@redis:6379/1
+    description: ''
+    id: CELERY_BROKER_URL
+    label: CELERY_BROKER_URL
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: CONSOLE_API_URL
+    label: CONSOLE_API_URL
+    required: false
+    type: string
+  - default: ''
+    description: ''
+    id: APP_API_URL
+    label: APP_API_URL
+    required: false
+    type: string
+  - default: node1
+    description: ''
+    id: CLUSTER_HOSTNAME
+    label: CLUSTER_HOSTNAME
+    required: false
+    type: string
+  - default: '8194'
+    description: ''
+    id: SANDBOX_PORT
+    label: SANDBOX_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: '3128'
+    description: ''
+    id: HTTP_PORT
+    label: HTTP_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: '8194'
+    description: ''
+    id: REVERSE_PROXY_PORT
+    label: REVERSE_PROXY_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: sandbox
+    description: ''
+    id: SANDBOX_HOST
+    label: SANDBOX_HOST
+    required: false
+    type: string
+  - default: '8194'
+    description: ''
+    id: SANDBOX_PORT
+    label: SANDBOX_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: storage
+    description: ''
+    id: STORAGE_LOCAL_PATH
+    label: STORAGE_LOCAL_PATH
+    required: false
+    type: path
+  - default: storage
+    description: ''
+    id: STORAGE_LOCAL_PATH
+    label: STORAGE_LOCAL_PATH
+    required: false
+    type: path
+  - default: /var/lib/weaviate
+    description: ''
+    id: PERSISTENCE_DATA_PATH
+    label: PERSISTENCE_DATA_PATH
+    required: false
+    type: path
+  - default: /var/spool/squid
+    description: ''
+    id: COREDUMP_DIR
+    label: COREDUMP_DIR
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+version: '1.0'

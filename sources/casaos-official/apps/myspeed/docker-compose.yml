@@ -1,0 +1,12 @@
+name: myspeed
+services:
+  myspeed:
+    image: germannewsmaker/myspeed:1.0.9
+    ports:
+    - protocol: tcp
+      published: 5216
+      target: 5216
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /myspeed/data
+      type: bind

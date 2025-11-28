@@ -1,0 +1,70 @@
+groups:
+- description: null
+  fields:
+  - default: immich
+    description: ''
+    id: DB_DATABASE_NAME
+    label: DB_DATABASE_NAME
+    required: false
+    type: string
+  - default: immich
+    description: ''
+    id: DB_DATABASE_NAME
+    label: DB_DATABASE_NAME
+    required: false
+    type: string
+  - default: immich
+    description: ''
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  - default: --data-checksums
+    description: ''
+    id: POSTGRES_INITDB_ARGS
+    label: POSTGRES_INITDB_ARGS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: postgres
+    description: ''
+    id: DB_PASSWORD
+    label: DB_PASSWORD
+    required: false
+    type: password
+  - default: postgres
+    description: ''
+    id: DB_USERNAME
+    label: DB_USERNAME
+    required: false
+    type: string
+  - default: postgres
+    description: ''
+    id: DB_PASSWORD
+    label: DB_PASSWORD
+    required: false
+    type: password
+  - default: postgres
+    description: ''
+    id: DB_USERNAME
+    label: DB_USERNAME
+    required: false
+    type: string
+  - default: postgres
+    description: ''
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  - default: postgres
+    description: ''
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  id: authentication
+  label: Authentication
+version: '1.0'

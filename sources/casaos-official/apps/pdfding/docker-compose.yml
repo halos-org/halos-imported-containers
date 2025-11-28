@@ -1,0 +1,21 @@
+name: pdfding
+services:
+  pdfding:
+    environment:
+      CSRF_COOKIE_SECURE: ${CSRF_COOKIE_SECURE}
+      DEBUG: ${DEBUG}
+      HOST_NAME: ${HOST_NAME}
+      SECRET_KEY: ${SECRET_KEY}
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE}
+    image: mrmn/pdfding:v1.3.1
+    ports:
+    - protocol: tcp
+      published: 8000
+      target: 8000
+    volumes:
+    - source: /AppData/$AppID/db
+      target: /home/nonroot/pdfding/db
+      type: bind
+    - source: /AppData/$AppID/media
+      target: /home/nonroot/pdfding/media
+      type: bind

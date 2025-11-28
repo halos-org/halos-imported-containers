@@ -1,0 +1,15 @@
+name: gopeed
+services:
+  gopeed:
+    image: liwei2633/gopeed:v1.7.1
+    ports:
+    - protocol: tcp
+      published: 9999
+      target: 9999
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /app/storage
+      type: bind
+    - source: /Downloads
+      target: /app/Downloads
+      type: bind

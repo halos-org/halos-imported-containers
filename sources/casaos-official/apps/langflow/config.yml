@@ -1,0 +1,48 @@
+groups:
+- description: null
+  fields:
+  - default: postgresql://langflow:langflow@langflow-postgres:5432/langflow
+    description: PostgreSQL Database Connection URL
+    id: LANGFLOW_DATABASE_URL
+    label: LANGFLOW_DATABASE_URL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: /app/langflow
+    description: Directory for Langflow Configuration Files
+    id: LANGFLOW_CONFIG_DIR
+    label: LANGFLOW_CONFIG_DIR
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+- description: null
+  fields:
+  - default: langflow
+    description: PostgreSQL Username
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: langflow
+    description: PostgreSQL Password
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: langflow
+    description: PostgreSQL Database Name
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

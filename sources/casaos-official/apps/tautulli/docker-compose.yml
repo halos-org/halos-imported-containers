@@ -1,0 +1,16 @@
+name: tautulli
+services:
+  tautulli:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/tautulli:2.13.2
+    ports:
+    - protocol: tcp
+      published: 8181
+      target: 8181
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind

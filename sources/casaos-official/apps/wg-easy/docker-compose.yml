@@ -1,0 +1,20 @@
+name: wg-easy
+services:
+  wg-easy:
+    environment:
+      PASSWORD: ${PASSWORD}
+      WG_DEFAULT_DNS: ${WG_DEFAULT_DNS}
+      WG_HOST: ${WG_HOST}
+      WG_PORT: ${WG_PORT}
+    image: ghcr.io/wg-easy/wg-easy:13
+    ports:
+    - protocol: udp
+      published: 51820
+      target: 51820
+    - protocol: tcp
+      published: 51821
+      target: 51821
+    volumes:
+    - source: /AppData/$AppID/wireguard
+      target: /etc/wireguard
+      type: bind

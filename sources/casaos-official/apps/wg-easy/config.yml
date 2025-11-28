@@ -1,0 +1,40 @@
+groups:
+- description: null
+  fields:
+  - default: casaos
+    description: ''
+    id: PASSWORD
+    label: PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: casaos.local
+    description: ''
+    id: WG_HOST
+    label: WG_HOST
+    required: false
+    type: string
+  - default: '51820'
+    description: ''
+    id: WG_PORT
+    label: WG_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: 1.1.1.1
+    description: ''
+    id: WG_DEFAULT_DNS
+    label: WG_DEFAULT_DNS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

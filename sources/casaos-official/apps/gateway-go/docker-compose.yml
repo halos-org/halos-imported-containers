@@ -1,0 +1,12 @@
+name: gateway-go
+services:
+  gateway-go:
+    image: openiothub/gateway-go:v2.0.10
+    ports:
+    - protocol: tcp
+      published: 34323
+      target: 34323
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /root
+      type: bind

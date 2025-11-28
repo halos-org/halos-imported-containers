@@ -1,0 +1,25 @@
+architecture: all
+debian_section: net
+description: An Alist storage synchronization tool based on the Web interface.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/icon.png
+license: Unknown
+long_description: 'Alist-Sync is a storage synchronization tool based on the Web interface.
+  It can achieve data synchronization and mutual backup among multiple network disks,
+  and also has practical functions such as multi-task management, scheduled synchronization
+  and difference handling.
+
+  '
+maintainer: xjxjin <auto-converted@casaos.io>
+name: alist-sync
+package_name: casaos-alist-sync-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist-Sync/screenshot-5.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

@@ -1,0 +1,15 @@
+name: n8n
+services:
+  n8n:
+    environment:
+      N8N_SECURE_COOKIE: ${N8N_SECURE_COOKIE}
+      TZ: ${TZ}
+    image: n8nio/n8n:1.115.3
+    ports:
+    - protocol: tcp
+      published: 5678
+      target: 5678
+    volumes:
+    - source: /AppData/$AppID
+      target: /home/node/.n8n
+      type: bind

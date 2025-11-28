@@ -1,0 +1,31 @@
+name: fileflows
+services:
+  fileflows:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: revenz/fileflows:stable
+    ports:
+    - protocol: tcp
+      published: 19200
+      target: 5000
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /app/Data
+      type: bind
+    - source: /AppData/$AppID/logs
+      target: /app/Logs
+      type: bind
+    - source: /AppData/$AppID/common
+      target: /app/common
+      type: bind
+    - source: /AppData/$AppID/temp
+      target: /temp
+      type: bind
+    - source: /Media
+      target: /Media
+      type: bind
+    - source: /var/run/docker.sock
+      target: /var/run/docker.sock
+      type: bind

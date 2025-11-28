@@ -1,0 +1,20 @@
+architecture: all
+debian_section: net
+description: Store securely encrypted backups in the cloud!
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/icon.png
+license: Unknown
+long_description: Duplicati is a free, open source, backup client that securely stores
+  encrypted, incremental, compressed backups on cloud storage services and remote
+  file servers.
+maintainer: duplicati <auto-converted@casaos.io>
+name: duplicati
+package_name: casaos-duplicati-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Duplicati/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

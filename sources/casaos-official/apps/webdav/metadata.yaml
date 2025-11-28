@@ -1,0 +1,18 @@
+architecture: all
+debian_section: utils
+description: A web-based file sharing and management protocol
+homepage: null
+icon: https://icon.casaos.io/main/all/webdav.png
+license: Unknown
+long_description: WebDAV is a web-based protocol that allows you to share and manage
+  files over the internet, providing a collaborative environment for file editing
+  and versioning.
+maintainer: CasaOS Team <auto-converted@casaos.io>
+name: webdav
+package_name: casaos-webdav-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/WebDAV/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

@@ -1,0 +1,61 @@
+architecture: all
+debian_section: misc
+description: RagFlow ist eine Open-Source-RAG-Engine, die auf tiefem...
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RagFlow/icon.png
+license: Unknown
+long_description: 'RagFlow ist eine Open-Source-RAG-Engine, die auf tiefem Dokumentenverständnis
+  basiert.
+
+
+  RagFlow ist eine Open-Source-RAG-Engine (Retrieval-Augmented Generation), die auf
+  tiefem Dokumentenverständnis basiert. Sie ermöglicht es Benutzern, ihr eigenes privates
+  ChatGPT zu erstellen, indem sie die Leistungsfähigkeit großer Sprachmodelle und
+  tiefgreifender Dokumentenanalysefähigkeiten nutzt. RagFlow unterstützt verschiedene
+  Dokumentformate, einschließlich PDF, Word, Markdown und mehr, und ermöglicht es
+  Benutzern, intelligente Frage-Antwort-Systeme auf der Grundlage ihrer eigenen Dokumente
+  zu erstellen.
+
+
+  **Hauptfunktionen:**
+
+  - Tiefes Dokumentenverständnis mit erweiterten Analysefähigkeiten
+
+  - Unterstützung für mehrere Dokumentformate (PDF, Word, Markdown, etc.)
+
+  - Private Wissensdatenbank mit Datensicherheitsgarantie
+
+  - Anpassbare RAG-Workflows für verschiedene Anwendungsfälle
+
+  - Integration mit beliebten großen Sprachmodellen
+
+  - Webbasierte Oberfläche für einfache Verwaltung und Interaktion
+
+
+  **Hardware-Anforderungen:**
+
+  - CPU >= 4 Kerne
+
+  - RAM >= 16 GB
+
+  - Festplatte >= 50 GB
+
+
+  **Mehr Erfahren:**
+
+  - [RagFlow Offizielle Website](https://ragflow.io)
+
+  - [RagFlow GitHub Repository](https://github.com/infiniflow/ragflow)
+
+  '
+maintainer: RagFlow <auto-converted@casaos.io>
+name: ragflow
+package_name: casaos-ragflow-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RagFlow/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RagFlow/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RagFlow/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

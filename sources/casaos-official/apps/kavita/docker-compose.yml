@@ -1,0 +1,17 @@
+name: kavita
+services:
+  kavita:
+    environment:
+      TZ: ${TZ}
+    image: jvmilazz0/kavita:0.8.6
+    ports:
+    - protocol: tcp
+      published: 5150
+      target: 5000
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /kavita/config
+      type: bind
+    - source: /Media/Manga
+      target: /manga
+      type: bind

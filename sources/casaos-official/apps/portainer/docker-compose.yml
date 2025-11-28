@@ -1,0 +1,21 @@
+name: portainer
+services:
+  portainer:
+    image: portainer/portainer-ce:2.31.3
+    ports:
+    - protocol: tcp
+      published: 8000
+      target: 8000
+    - protocol: tcp
+      published: 9000
+      target: 9000
+    - protocol: tcp
+      published: 9443
+      target: 9443
+    volumes:
+    - source: /AppData/$AppID
+      target: /data
+      type: bind
+    - source: /var/run/docker.sock
+      target: /var/run/docker.sock
+      type: bind

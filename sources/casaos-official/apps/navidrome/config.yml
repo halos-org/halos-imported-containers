@@ -1,0 +1,45 @@
+groups:
+- description: null
+  fields:
+  - default: 1h
+    description: Configure periodic scans using cron syntax.
+    id: ND_SCANSCHEDULE
+    label: ND_SCANSCHEDULE
+    required: false
+    type: string
+  - default: info
+    description: Log level.
+    id: ND_LOGLEVEL
+    label: ND_LOGLEVEL
+    required: false
+    type: string
+  - default: 24h
+    description: How long Navidrome will wait before closing web ui idle sessions
+    id: ND_SESSIONTIMEOUT
+    label: ND_SESSIONTIMEOUT
+    required: false
+    type: integer
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: ''
+    description: 'Base URL (only the path part) to configure Navidrome behind a proxy
+      (ex: /music)'
+    id: ND_BASEURL
+    label: ND_BASEURL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: $TZ
+    description: TimeZone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+version: '1.0'

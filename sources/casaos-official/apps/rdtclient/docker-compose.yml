@@ -1,0 +1,20 @@
+name: rdtclient
+services:
+  rdtclient:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+      UMASK: ${UMASK}
+    image: rogerfar/rdtclient:2
+    ports:
+    - protocol: tcp
+      published: 6500
+      target: 6500
+    volumes:
+    - source: /Downloads
+      target: /data/downloads
+      type: bind
+    - source: /AppData/$AppID/db
+      target: /data/db
+      type: bind

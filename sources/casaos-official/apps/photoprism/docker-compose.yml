@@ -1,0 +1,19 @@
+name: photoprism
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_ADMIN_PASSWORD: ${PHOTOPRISM_ADMIN_PASSWORD}
+      PHOTOPRISM_UPLOAD_NSFW: ${PHOTOPRISM_UPLOAD_NSFW}
+      TZ: ${TZ}
+    image: photoprism/photoprism:250228
+    ports:
+    - protocol: tcp
+      published: 2342
+      target: 2342
+    volumes:
+    - source: /AppData/$AppID/photoprism/storage
+      target: /photoprism/storage
+      type: bind
+    - source: /Gallery
+      target: /photoprism/originals
+      type: bind

@@ -1,0 +1,38 @@
+groups:
+- description: null
+  fields:
+  - default: ''
+    description: ''
+    id: TWINGATE_NETWORK
+    label: TWINGATE_NETWORK
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: ''
+    description: ''
+    id: TWINGATE_ACCESS_TOKEN
+    label: TWINGATE_ACCESS_TOKEN
+    required: false
+    type: password
+  - default: ''
+    description: ''
+    id: TWINGATE_REFRESH_TOKEN
+    label: TWINGATE_REFRESH_TOKEN
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: ${HOSTNAME}
+    description: ''
+    id: TWINGATE_LABEL_HOSTNAME
+    label: TWINGATE_LABEL_HOSTNAME
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+version: '1.0'

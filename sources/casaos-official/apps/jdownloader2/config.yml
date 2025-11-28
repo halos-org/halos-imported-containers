@@ -1,0 +1,63 @@
+groups:
+- description: null
+  fields:
+  - default: $PUID
+    description: ID of the user the application runs as. See User/Group IDs to better
+      understand when this should be set.
+    id: USER_ID
+    label: USER_ID
+    required: false
+    type: string
+  - default: $PGID
+    description: ID of the group the application runs as. See User/Group IDs to better
+      understand when this should be set.
+    id: GROUP_ID
+    label: GROUP_ID
+    required: false
+    type: string
+  - default: $MYJDOWNLOADER_EMAIL
+    description: Email address of the MyJDownloader account to use. Note that this
+      can also be configured via the JDownloader GUI.
+    id: MYJDOWNLOADER_EMAIL
+    label: MYJDOWNLOADER_EMAIL
+    required: false
+    type: string
+  - default: $MYJDOWNLOADER_DEVICE_NAME
+    description: The name of this JDownloader instance. Note that this can also be
+      configured via the JDownloader GUI.
+    id: MYJDOWNLOADER_DEVICE_NAME
+    label: MYJDOWNLOADER_DEVICE_NAME
+    required: false
+    type: string
+  - default: $JDOWNLOADER_HEADLESS
+    description: When set to 1, JDownloader is running in headless mode, meaning that
+      no GUI is available. In this mode, MyJDownloader should be used to remote control
+      JDownloader.
+    id: JDOWNLOADER_HEADLESS
+    label: JDOWNLOADER_HEADLESS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: $TZ
+    description: TimeZone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: $MYJDOWNLOADER_PASSWORD
+    description: Password of the MyJDownloader account to use. Note that this can
+      also be configured via the JDownloader GUI.
+    id: MYJDOWNLOADER_PASSWORD
+    label: MYJDOWNLOADER_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+version: '1.0'

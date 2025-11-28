@@ -1,0 +1,40 @@
+groups:
+- description: null
+  fields:
+  - default: '*'
+    description: ''
+    id: HOST_NAME
+    label: HOST_NAME
+    required: false
+    type: string
+  - default: 'FALSE'
+    description: ''
+    id: CSRF_COOKIE_SECURE
+    label: CSRF_COOKIE_SECURE
+    required: false
+    type: string
+  - default: 'FALSE'
+    description: ''
+    id: SESSION_COOKIE_SECURE
+    label: SESSION_COOKIE_SECURE
+    required: false
+    type: string
+  - default: 'FALSE'
+    description: ''
+    id: DEBUG
+    label: DEBUG
+    required: false
+    type: boolean
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: your_secret_key_here
+    description: ''
+    id: SECRET_KEY
+    label: SECRET_KEY
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+version: '1.0'

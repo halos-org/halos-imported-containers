@@ -1,0 +1,32 @@
+name: crafty
+services:
+  crafty:
+    environment:
+      TZ: ${TZ}
+    image: registry.gitlab.com/crafty-controller/crafty-4:4.4.11
+    ports:
+    - protocol: tcp
+      published: 8111
+      target: 8443
+    - protocol: tcp
+      published: 8112
+      target: 8123
+    - protocol: udp
+      published: 19132
+      target: 19132
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/backups
+      target: /crafty/backups
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/logs
+      target: /crafty/logs
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/servers
+      target: /crafty/servers
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /crafty/app/config
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/import
+      target: /crafty/import
+      type: bind

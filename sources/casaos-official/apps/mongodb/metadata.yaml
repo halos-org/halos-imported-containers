@@ -1,0 +1,23 @@
+architecture: all
+debian_section: devel
+description: A free and open-source cross-platform document-oriented database program.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Mongo/icon.png
+license: Unknown
+long_description: 'A free and open-source cross-platform document-oriented database
+  program. Classified as a NoSQL database program, MongoDB uses JSON-like documents
+  with schemata.
+
+
+  MongoDB is a free and open-source cross-platform document-oriented database program.
+  Classified as a NoSQL database program, MongoDB uses JSON-like documents with schemata.
+  MongoDB is developed by MongoDB Inc., and is published under a combination of the
+  Server Side Public License and the Apache License.'
+maintainer: MongoDB Inc. <auto-converted@casaos.io>
+name: mongodb
+package_name: casaos-mongodb-container
+screenshots: null
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

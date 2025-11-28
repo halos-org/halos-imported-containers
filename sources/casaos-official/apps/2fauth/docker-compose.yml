@@ -1,0 +1,12 @@
+name: 2fauth
+services:
+  2fauth:
+    image: 2fauth/2fauth:5.4.3
+    ports:
+    - protocol: tcp
+      published: 8000
+      target: 8000
+    volumes:
+    - source: /AppData/$AppID
+      target: /2fauth
+      type: bind

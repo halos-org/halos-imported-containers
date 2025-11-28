@@ -1,0 +1,22 @@
+architecture: all
+debian_section: video
+description: bili-sync is a Bilibili synchronization tool written specifically for
+  NAS...
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bili-Sync/logo.png
+license: Unknown
+long_description: 'bili-sync is a Bilibili synchronization tool written specifically
+  for NAS users, powered by Rust & Tokio.
+
+
+  bili-sync is a Bilibili synchronization tool written specifically for NAS users,
+  powered by Rust & Tokio.'
+maintainer: amtoaer <auto-converted@casaos.io>
+name: bili-sync
+package_name: casaos-bili-sync-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bili-Sync/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

@@ -1,0 +1,59 @@
+architecture: all
+debian_section: misc
+description: Personal finance management application
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sure/icon.png
+license: Unknown
+long_description: 'Sure is a personal finance management application designed to help
+  you track your expenses, income, and investments in one place. With an intuitive
+  interface and powerful features, Sure makes it easy to understand your financial
+  situation and make informed decisions about your money.
+
+
+  **Key Features:**
+
+  - **Expense Tracking**: Easily log and categorize your expenses
+
+  - **Income Management**: Track multiple income sources
+
+  - **Investment Monitoring**: Keep an eye on your investments and their performance
+
+  - **Budget Planning**: Create and maintain budgets to control your spending
+
+  - **Financial Reports**: Generate detailed reports to understand your financial
+  habits
+
+  - **AI-Powered Insights**: Get personalized financial advice using AI technology
+
+
+  **Use Cases:**
+
+  - Personal budget management
+
+  - Expense tracking and categorization
+
+  - Investment portfolio monitoring
+
+  - Financial goal setting and tracking
+
+  - Cash flow analysis
+
+
+  **Learn More:**
+
+  - [Sure GitHub Repository](https://github.com/we-promise/sure)
+
+  '
+maintainer: we-promise <auto-converted@casaos.io>
+name: sure
+package_name: casaos-sure-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sure/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sure/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sure/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sure/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sure/screenshot-5.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

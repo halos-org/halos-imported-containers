@@ -1,0 +1,14 @@
+name: vocechat
+services:
+  vocechat:
+    environment:
+      TZ: ${TZ}
+    image: privoce/vocechat-server:v0.3.33
+    ports:
+    - protocol: tcp
+      published: 3009
+      target: 3000
+    volumes:
+    - source: /AppData/$AppID/home/vocechat-server/data
+      target: /home/vocechat-server/data
+      type: bind

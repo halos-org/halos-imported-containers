@@ -1,0 +1,18 @@
+groups:
+- description: null
+  fields:
+  - default: '1000'
+    description: The GID (Unix group ID) of the user that runs Gitea
+    id: USER_GID
+    label: USER_GID
+    required: false
+    type: string
+  - default: '1000'
+    description: The UID (Unix user ID) of the user that runs Gitea
+    id: USER_UID
+    label: USER_UID
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

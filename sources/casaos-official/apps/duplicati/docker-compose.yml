@@ -1,0 +1,22 @@
+name: duplicati
+services:
+  duplicati:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/duplicati:2.1.0
+    ports:
+    - protocol: tcp
+      published: 8200
+      target: 8200
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Duplicati/backups
+      target: /backups
+      type: bind
+    - source: /Duplicati/source
+      target: /source
+      type: bind

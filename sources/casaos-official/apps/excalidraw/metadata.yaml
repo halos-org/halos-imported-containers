@@ -1,0 +1,68 @@
+architecture: all
+debian_section: utils
+description: Virtual whiteboard for sketching hand-drawn like diagrams
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Excalidraw/icon.png
+license: Unknown
+long_description: 'Excalidraw is a virtual hand-drawn style whiteboard platform supporting
+  infinite canvas and end-to-end encrypted collaboration. An intuitive interface offers
+  a hand-drawn experience, ideal for brainstorming, design sketches, or educational
+  scenarios, meeting diverse creative needs.
+
+
+  Core features include an infinite canvas whiteboard and end-to-end encrypted collaboration.
+  Hand-drawn style with shape library support allows creating rich graphics, enhanced
+  by image insertion capabilities. Dark mode improves user experience, catering to
+  diverse users.
+
+
+  It provides export options including PNG, SVG, and clipboard for easy content sharing.
+  Drawing capabilities cover rectangle, circle, diamond, arrow, line, free-draw, and
+  eraser, with arrow-binding and labeled arrow support. Undo, redo, zoom, and panning
+  functionalities optimize operations. With creativity and security at the core, the
+  platform delivers a modern whiteboard design solution.
+
+
+  **Key Features:**
+
+  - Infinite canvas whiteboard supporting hand-drawn style
+
+  - Shape library support for creating rich graphics
+
+  - Image insertion capability
+
+  - Dark mode
+
+  - Export to PNG, SVG, and clipboard
+
+  - Open format - export drawings as an `.excalidraw` json file
+
+  - Wide range of tools - rectangle, circle, diamond, arrow, line, free-draw, eraser...
+
+  - Arrow-binding & labeled arrows
+
+  - Undo and redo
+
+  - Zoom and panning support
+
+
+  **Learn More:**
+
+  - [Excalidraw Official Website](https://excalidraw.com/)
+
+  - [Excalidraw GitHub](https://github.com/excalidraw/excalidraw)
+
+  '
+maintainer: excalidraw <auto-converted@casaos.io>
+name: excalidraw
+package_name: casaos-excalidraw-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Excalidraw/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Excalidraw/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Excalidraw/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Excalidraw/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Excalidraw/screenshot-5.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

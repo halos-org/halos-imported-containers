@@ -1,0 +1,89 @@
+name: taskingai
+services:
+  backend-api:
+    environment:
+      AES_ENCRYPTION_KEY: ${AES_ENCRYPTION_KEY}
+      HOST_URL: ${HOST_URL}
+      OBJECT_STORAGE_TYPE: ${OBJECT_STORAGE_TYPE}
+      PATH_TO_VOLUME: ${PATH_TO_VOLUME}
+      POSTGRES_URL: ${POSTGRES_URL}
+      PROJECT_ID: ${PROJECT_ID}
+      REDIS_URL: ${REDIS_URL}
+      TASKINGAI_INFERENCE_URL: ${TASKINGAI_INFERENCE_URL}
+      TASKINGAI_PLUGIN_URL: ${TASKINGAI_PLUGIN_URL}
+    image: taskingai/taskingai-server:v0.3.0
+    volumes:
+    - source: /AppData/$AppID/data/object_storage
+      target: /var/lib/data
+      type: bind
+  backend-inference:
+    environment:
+      AES_ENCRYPTION_KEY: ${AES_ENCRYPTION_KEY}
+      ICON_URL_PREFIX: ${ICON_URL_PREFIX}
+      PROJECT_ID: ${PROJECT_ID}
+    image: taskingai/taskingai-inference:v0.2.14
+  backend-plugin:
+    environment:
+      AES_ENCRYPTION_KEY: ${AES_ENCRYPTION_KEY}
+      HOST_URL: ${HOST_URL}
+      ICON_URL_PREFIX: ${ICON_URL_PREFIX}
+      OBJECT_STORAGE_TYPE: ${OBJECT_STORAGE_TYPE}
+      PATH_TO_VOLUME: ${PATH_TO_VOLUME}
+      PROJECT_ID: ${PROJECT_ID}
+    image: taskingai/taskingai-plugin:v0.2.10
+    volumes:
+    - source: /AppData/$AppID/data/object_storage
+      target: /var/lib/data
+      type: bind
+  backend-web:
+    environment:
+      AES_ENCRYPTION_KEY: ${AES_ENCRYPTION_KEY}
+      DEFAULT_ADMIN_PASSWORD: ${DEFAULT_ADMIN_PASSWORD}
+      DEFAULT_ADMIN_USERNAME: ${DEFAULT_ADMIN_USERNAME}
+      HOST_URL: ${HOST_URL}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY}
+      OBJECT_STORAGE_TYPE: ${OBJECT_STORAGE_TYPE}
+      PATH_TO_VOLUME: ${PATH_TO_VOLUME}
+      POSTGRES_URL: ${POSTGRES_URL}
+      PROJECT_ID: ${PROJECT_ID}
+      PURPOSE: ${PURPOSE}
+      REDIS_URL: ${REDIS_URL}
+      TASKINGAI_INFERENCE_URL: ${TASKINGAI_INFERENCE_URL}
+      TASKINGAI_PLUGIN_URL: ${TASKINGAI_PLUGIN_URL}
+    image: taskingai/taskingai-server:v0.3.0
+    volumes:
+    - source: /AppData/$AppID/data/object_storage
+      target: /var/lib/data
+      type: bind
+  cache:
+    command:
+    - redis-server
+    - --requirepass
+    - TaskingAI321
+    image: redis:7-alpine
+    volumes:
+    - source: /AppData/$AppID/data/redis
+      target: /data
+      type: bind
+  db:
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_USER: ${POSTGRES_USER}
+    image: ankane/pgvector:v0.5.1
+    volumes:
+    - source: /AppData/$AppID/data/postgres
+      target: /var/lib/postgresql/data
+      type: bind
+  frontend:
+    image: taskingai/taskingai-console:v0.3.0
+  nginx:
+    image: nginx:1.24
+    ports:
+    - protocol: tcp
+      published: 3080
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/data/nginx_cache
+      target: /var/cache/nginx
+      type: bind

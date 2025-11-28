@@ -1,0 +1,27 @@
+name: adguard-home
+services:
+  adguard-home:
+    image: adguard/adguardhome:v0.107.61
+    ports:
+    - protocol: tcp
+      published: 531
+      target: 53
+    - protocol: udp
+      published: 531
+      target: 53
+    - protocol: tcp
+      published: 3001
+      target: 3000
+    - protocol: tcp
+      published: 853
+      target: 853
+    - protocol: udp
+      published: 784
+      target: 784
+    volumes:
+    - source: /AppData/$AppID/opt/adguardhome/work
+      target: /opt/adguardhome/work
+      type: bind
+    - source: /AppData/$AppID/opt/adguardhome/conf
+      target: /opt/adguardhome/conf
+      type: bind

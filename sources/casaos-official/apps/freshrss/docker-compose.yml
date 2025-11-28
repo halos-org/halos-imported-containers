@@ -1,0 +1,18 @@
+name: freshrss
+services:
+  freshrss:
+    environment:
+      CRON_MIN: ${CRON_MIN}
+      TZ: ${TZ}
+    image: freshrss/freshrss:1.26.0
+    ports:
+    - protocol: tcp
+      published: 8749
+      target: 80
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/data
+      target: /var/www/FreshRSS/data
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/extensions
+      target: /var/www/FreshRSS/extensions
+      type: bind

@@ -1,0 +1,218 @@
+groups:
+- description: null
+  fields:
+  - default: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+    description: ''
+    id: AES_ENCRYPTION_KEY
+    label: AES_ENCRYPTION_KEY
+    required: false
+    type: password
+  - default: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+    description: ''
+    id: AES_ENCRYPTION_KEY
+    label: AES_ENCRYPTION_KEY
+    required: false
+    type: password
+  - default: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+    description: ''
+    id: AES_ENCRYPTION_KEY
+    label: AES_ENCRYPTION_KEY
+    required: false
+    type: password
+  - default: b90e4648ad699c3bdf62c0860e09eb9efc098ee75f215bf750847ae19d41e4b0
+    description: ''
+    id: AES_ENCRYPTION_KEY
+    label: AES_ENCRYPTION_KEY
+    required: false
+    type: password
+  - default: dbefe42f34473990a3fa903a6a3283acdc3a910beb1ae271a6463ffa5a926bfb
+    description: ''
+    id: JWT_SECRET_KEY
+    label: JWT_SECRET_KEY
+    required: false
+    type: password
+  - default: admin
+    description: ''
+    id: DEFAULT_ADMIN_USERNAME
+    label: DEFAULT_ADMIN_USERNAME
+    required: false
+    type: string
+  - default: TaskingAI321
+    description: ''
+    id: DEFAULT_ADMIN_PASSWORD
+    label: DEFAULT_ADMIN_PASSWORD
+    required: false
+    type: password
+  - default: postgres
+    description: ''
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: TaskingAI321
+    description: ''
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: http://nginx:3080
+    description: ''
+    id: ICON_URL_PREFIX
+    label: ICON_URL_PREFIX
+    required: false
+    type: string
+  - default: taskingai
+    description: ''
+    id: PROJECT_ID
+    label: PROJECT_ID
+    required: false
+    type: string
+  - default: http://nginx:3080
+    description: ''
+    id: ICON_URL_PREFIX
+    label: ICON_URL_PREFIX
+    required: false
+    type: string
+  - default: local
+    description: ''
+    id: OBJECT_STORAGE_TYPE
+    label: OBJECT_STORAGE_TYPE
+    required: false
+    type: string
+  - default: /var/lib/data
+    description: ''
+    id: PATH_TO_VOLUME
+    label: PATH_TO_VOLUME
+    required: false
+    type: string
+  - default: taskingai
+    description: ''
+    id: PROJECT_ID
+    label: PROJECT_ID
+    required: false
+    type: string
+  - default: local
+    description: ''
+    id: OBJECT_STORAGE_TYPE
+    label: OBJECT_STORAGE_TYPE
+    required: false
+    type: string
+  - default: /var/lib/data
+    description: ''
+    id: PATH_TO_VOLUME
+    label: PATH_TO_VOLUME
+    required: false
+    type: string
+  - default: taskingai
+    description: ''
+    id: PROJECT_ID
+    label: PROJECT_ID
+    required: false
+    type: string
+  - default: WEB
+    description: ''
+    id: PURPOSE
+    label: PURPOSE
+    required: false
+    type: string
+  - default: local
+    description: ''
+    id: OBJECT_STORAGE_TYPE
+    label: OBJECT_STORAGE_TYPE
+    required: false
+    type: string
+  - default: /var/lib/data
+    description: ''
+    id: PATH_TO_VOLUME
+    label: PATH_TO_VOLUME
+    required: false
+    type: string
+  - default: taskingai
+    description: ''
+    id: PROJECT_ID
+    label: PROJECT_ID
+    required: false
+    type: string
+  - default: taskingai
+    description: ''
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: http://nginx:3080
+    description: ''
+    id: HOST_URL
+    label: HOST_URL
+    required: false
+    type: string
+  - default: postgres://postgres:TaskingAI321@db:5432/taskingai
+    description: ''
+    id: POSTGRES_URL
+    label: POSTGRES_URL
+    required: false
+    type: string
+  - default: redis://:TaskingAI321@cache:6379/0
+    description: ''
+    id: REDIS_URL
+    label: REDIS_URL
+    required: false
+    type: string
+  - default: http://backend-inference:8000
+    description: ''
+    id: TASKINGAI_INFERENCE_URL
+    label: TASKINGAI_INFERENCE_URL
+    required: false
+    type: string
+  - default: http://backend-plugin:8000
+    description: ''
+    id: TASKINGAI_PLUGIN_URL
+    label: TASKINGAI_PLUGIN_URL
+    required: false
+    type: string
+  - default: http://nginx:3080
+    description: ''
+    id: HOST_URL
+    label: HOST_URL
+    required: false
+    type: string
+  - default: postgres://postgres:TaskingAI321@db:5432/taskingai
+    description: ''
+    id: POSTGRES_URL
+    label: POSTGRES_URL
+    required: false
+    type: string
+  - default: redis://:TaskingAI321@cache:6379/0
+    description: ''
+    id: REDIS_URL
+    label: REDIS_URL
+    required: false
+    type: string
+  - default: http://backend-inference:8000
+    description: ''
+    id: TASKINGAI_INFERENCE_URL
+    label: TASKINGAI_INFERENCE_URL
+    required: false
+    type: string
+  - default: http://backend-plugin:8000
+    description: ''
+    id: TASKINGAI_PLUGIN_URL
+    label: TASKINGAI_PLUGIN_URL
+    required: false
+    type: string
+  - default: http://nginx:3080
+    description: ''
+    id: HOST_URL
+    label: HOST_URL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+version: '1.0'

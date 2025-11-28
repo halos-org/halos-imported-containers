@@ -1,0 +1,20 @@
+architecture: all
+debian_section: misc
+description: HomeKit support for the impatient.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Homebridge/icon.png
+license: Unknown
+long_description: Homebridge is a lightweight NodeJS server you can run on your home
+  network that emulates the iOS HomeKit API. It supports Plugins, which are community-contributed
+  modules that provide a basic bridge from HomeKit to various 3rd-party APIs provided
+  by manufacturers of "smart home" devices.
+maintainer: Homebridge <auto-converted@casaos.io>
+name: homebridge
+package_name: casaos-homebridge-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Homebridge/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Homebridge/screenshot-2.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

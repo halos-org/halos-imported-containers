@@ -1,0 +1,16 @@
+name: downtify
+services:
+  downtify:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: ghcr.io/henriquesebastiao/downtify:1.1.1
+    ports:
+    - protocol: tcp
+      published: 8582
+      target: 8000
+    volumes:
+    - source: /Downloads/downtify
+      target: /downloads
+      type: bind

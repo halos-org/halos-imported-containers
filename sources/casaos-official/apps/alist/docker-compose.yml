@@ -1,0 +1,12 @@
+name: alist
+services:
+  alist:
+    image: xhofe/alist:v3.40.0
+    ports:
+    - protocol: tcp
+      published: 5244
+      target: 5244
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /opt/alist/data
+      type: bind

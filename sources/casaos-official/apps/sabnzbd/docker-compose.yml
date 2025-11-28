@@ -1,0 +1,22 @@
+name: sabnzbd
+services:
+  sabnzbd:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/sabnzbd:4.1.0
+    ports:
+    - protocol: tcp
+      published: 8282
+      target: 8080
+    volumes:
+    - source: /Downloads
+      target: /incomplete-downloads
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

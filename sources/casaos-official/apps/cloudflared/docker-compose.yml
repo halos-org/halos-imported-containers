@@ -1,0 +1,12 @@
+name: cloudflared
+services:
+  cloudflared:
+    image: wisdomsky/cloudflared-web:2025.2.1
+    ports:
+    - protocol: tcp
+      published: 14333
+      target: 14333
+    volumes:
+    - source: /AppData/casaos-cloudflared/config
+      target: /config
+      type: bind

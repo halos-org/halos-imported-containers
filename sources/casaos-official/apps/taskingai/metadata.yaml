@@ -1,0 +1,24 @@
+architecture: all
+debian_section: comm
+description: The developer-friendly cloud platform for building and running LLM agents...
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/icon.png
+license: Unknown
+long_description: 'The developer-friendly cloud platform for building and running
+  LLM agents for AI-native applications.
+
+
+  The developer-friendly cloud platform for building and running LLM agents for AI-native
+  applications.'
+maintainer: TaskingAI Team <auto-converted@casaos.io>
+name: taskingai
+package_name: casaos-taskingai-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/TaskingAI/screenshot-4.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

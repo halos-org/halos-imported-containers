@@ -1,0 +1,10 @@
+name: lucky
+services:
+  lucky:
+    environment:
+      TZ: ${TZ}
+    image: gdy666/lucky:2.15.7
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}
+      target: /goodluck
+      type: bind

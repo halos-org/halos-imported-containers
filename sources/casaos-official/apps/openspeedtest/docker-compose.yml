@@ -1,0 +1,8 @@
+name: openspeedtest
+services:
+  openspeedtest:
+    image: openspeedtest/latest:v2.0.6
+    ports:
+    - protocol: tcp
+      published: 3004
+      target: 3000

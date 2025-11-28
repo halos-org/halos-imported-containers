@@ -1,0 +1,16 @@
+architecture: all
+debian_section: net
+description: CasaOS Container App for flaresolverr
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FlareSolverr/icon.png
+license: Unknown
+long_description: CasaOS Container App for flaresolverr
+maintainer: Unknown <auto-converted@casaos.io>
+name: flaresolverr
+package_name: casaos-flaresolverr-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FlareSolverr/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

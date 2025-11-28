@@ -1,0 +1,25 @@
+name: emby
+services:
+  emby:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/emby:4.8.10
+    ports:
+    - protocol: tcp
+      published: 8096
+      target: 8096
+    - protocol: tcp
+      published: 8920
+      target: 8920
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media/TV Shows
+      target: /data/tvshows
+      type: bind
+    - source: /Media/Movies
+      target: /data/movies
+      type: bind

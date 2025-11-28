@@ -1,0 +1,16 @@
+architecture: all
+debian_section: utils
+description: M3U proxy server
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Threadfin/icon.png
+license: Unknown
+long_description: Threadfin is a M3U proxy server for Plex, Emby, Jellyfin and any
+  client and provider which supports the .TS and .M3U8 (HLS) streaming formats.
+maintainer: jdownloader <auto-converted@casaos.io>
+name: threadfin
+package_name: casaos-threadfin-container
+screenshots: null
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

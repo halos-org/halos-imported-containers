@@ -1,0 +1,31 @@
+name: transmission
+services:
+  transmission:
+    environment:
+      PASS: ${PASS}
+      PEERPORT: ${PEERPORT}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+      USER: ${USER}
+    image: linuxserver/transmission:4.0.4
+    ports:
+    - protocol: tcp
+      published: 9091
+      target: 9091
+    - protocol: tcp
+      published: 51413
+      target: 51413
+    - protocol: tcp
+      published: 51413
+      target: 51413
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind
+    - source: /Downloads/watch
+      target: /watch
+      type: bind

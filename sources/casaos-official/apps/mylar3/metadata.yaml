@@ -1,0 +1,24 @@
+architecture: all
+debian_section: misc
+description: Automatic comic book (cbr/cbz) downloader
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Mylar3/icon.png
+license: Unknown
+long_description: Mylar is an automated Comic Book (cbr/cbz) downloader program for
+  use with NZB and torrents. Mylar allows you to create a watchlist of series that
+  it monitors for various things (new issues, updated information, etc). It will grab,
+  sort, and rename downloaded issues. It will also allow you to monitor weekly pull-lists
+  for items belonging to said watchlisted series to download, as well as being able
+  to monitor and maintain story-arcs.
+maintainer: Mylar3 Team <auto-converted@casaos.io>
+name: mylar3
+package_name: casaos-mylar3-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Mylar3/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Mylar3/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Mylar3/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Mylar3/screenshot-4.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

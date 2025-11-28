@@ -1,0 +1,19 @@
+name: filebrowser
+services:
+  filebrowser:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: filebrowser/filebrowser:v2.23.0
+    ports:
+    - protocol: tcp
+      published: 10180
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/db
+      target: /db
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/DATA
+      target: /srv
+      type: bind

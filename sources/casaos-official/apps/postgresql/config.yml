@@ -1,0 +1,54 @@
+groups:
+- description: null
+  fields:
+  - default: $PUID
+    description: for UserID
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PGID
+    description: for GroupID
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: specify a timezone to use, see this list.
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: casaos
+    description: Postgres server username
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: casaos
+    description: Postgres server password
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: casaos
+    description: Specify the name of a database to be created on image startup.
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

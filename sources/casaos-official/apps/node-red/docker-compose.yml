@@ -1,0 +1,12 @@
+name: node-red
+services:
+  node-red:
+    image: nodered/node-red:4.0.9-22
+    ports:
+    - protocol: tcp
+      published: 1880
+      target: 1880
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /data
+      type: bind

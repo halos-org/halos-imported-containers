@@ -1,0 +1,12 @@
+name: ttydbridge
+services:
+  ttydbridge:
+    environment:
+      EXEC_DIR: ${EXEC_DIR}
+      PORT: ${PORT}
+      START_COMMAND: ${START_COMMAND}
+    image: cp0204/ttydbridge:v0.0.3
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/opt
+      target: /opt
+      type: bind

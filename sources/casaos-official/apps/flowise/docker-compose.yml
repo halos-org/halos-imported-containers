@@ -1,0 +1,23 @@
+name: flowise
+services:
+  flowise:
+    entrypoint:
+    - /bin/sh -c "sleep 3; flowise start"
+    environment:
+      APIKEY_PATH: ${APIKEY_PATH}
+      BLOB_STORAGE_PATH: ${BLOB_STORAGE_PATH}
+      DATABASE_PATH: ${DATABASE_PATH}
+      FLOWISE_PASSWORD: ${FLOWISE_PASSWORD}
+      FLOWISE_USERNAME: ${FLOWISE_USERNAME}
+      LOG_PATH: ${LOG_PATH}
+      PORT: ${PORT}
+      SECRETKEY_PATH: ${SECRETKEY_PATH}
+    image: flowiseai/flowise:3.0.4
+    ports:
+    - protocol: tcp
+      published: 3025
+      target: 3025
+    volumes:
+    - source: /AppData/$AppID
+      target: /root/.flowise
+      type: bind

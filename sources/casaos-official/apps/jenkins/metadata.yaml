@@ -1,0 +1,16 @@
+architecture: all
+debian_section: net
+description: Jenkins Continuous Integration and Delivery server.
+homepage: null
+icon: https://icon.casaos.io/main/all/jenkins.png
+license: Unknown
+long_description: A server for creating pipelines for Jenkins continuous integration
+  and delivery.
+maintainer: bepp-boop <auto-converted@casaos.io>
+name: jenkins
+package_name: casaos-jenkins-container
+screenshots: null
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

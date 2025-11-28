@@ -1,0 +1,20 @@
+name: glances
+services:
+  glances:
+    environment:
+      GLANCES_OPT: ${GLANCES_OPT}
+    image: nicolargo/glances:4.3.0.8-full
+    ports:
+    - protocol: tcp
+      published: 61208
+      target: 61208
+    - protocol: tcp
+      published: 61209
+      target: 61209
+    volumes:
+    - source: /var/run/docker.sock
+      target: /var/run/docker.sock
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/mnt
+      target: /mnt
+      type: bind

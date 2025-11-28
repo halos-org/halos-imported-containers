@@ -1,0 +1,53 @@
+architecture: all
+debian_section: misc
+description: Open-source UI for building and debugging multi-agent and RAG applications
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LangFlow/icon.png
+license: Unknown
+long_description: 'Langflow is a powerful, open-source UI designed specifically for
+  building and debugging multi-agent and Retrieval-Augmented Generation (RAG) applications.
+  It provides a visual, drag-and-drop interface that simplifies the process of creating
+  complex AI workflows.
+
+
+  The system consists of two main components:
+
+  - **Langflow**: The main application providing a visual interface for building AI
+  workflows
+
+  - **PostgreSQL**: A robust database system for storing application data and configurations
+
+
+  **Key Features:**
+
+  - Visual, drag-and-drop interface for building AI workflows
+
+  - Support for multi-agent systems and RAG applications
+
+  - Integrated debugging tools for testing and optimization
+
+  - Persistent storage for workflows and configurations
+
+  - Easy deployment with Docker containers
+
+
+  **Learn More:**
+
+  - [Langflow Official Website](https://www.langflow.org)
+
+  - [Langflow GitHub Repository](https://github.com/langflow-ai/langflow)
+
+  - [Documentation](https://docs.langflow.org)
+
+  '
+maintainer: langflowai <auto-converted@casaos.io>
+name: langflow
+package_name: casaos-langflow-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LangFlow/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LangFlow/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LangFlow/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

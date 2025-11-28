@@ -1,0 +1,16 @@
+name: label-studio
+services:
+  label-studio:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: heartexlabs/label-studio:1.8.1
+    ports:
+    - protocol: tcp
+      published: 3080
+      target: 8080
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /label-studio/data
+      type: bind

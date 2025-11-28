@@ -1,0 +1,12 @@
+name: vaultwarden
+services:
+  vaultwarden:
+    image: vaultwarden/server:1.32.7
+    ports:
+    - protocol: tcp
+      published: 10380
+      target: 80
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /data
+      type: bind

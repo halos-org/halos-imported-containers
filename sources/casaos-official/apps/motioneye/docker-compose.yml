@@ -1,0 +1,15 @@
+name: motioneye
+services:
+  motioneye:
+    image: ccrisan/motioneye:master-amd64
+    ports:
+    - protocol: tcp
+      published: 8765
+      target: 8765
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /etc/motioneye
+      type: bind
+    - source: /Media/motioneye
+      target: /var/lib/motioneye
+      type: bind

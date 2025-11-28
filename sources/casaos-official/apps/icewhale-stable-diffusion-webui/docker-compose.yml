@@ -1,0 +1,21 @@
+name: icewhale-stable-diffusion-webui
+services:
+  icewhale-stable-diffusion-webui:
+    environment:
+      CPU_FALLBACK: ${CPU_FALLBACK}
+      NVIDIA_VISIBLE_DEVICES: ${NVIDIA_VISIBLE_DEVICES}
+    image: johnguan/stable-diffusion-webui:latest
+    ports:
+    - protocol: tcp
+      published: 7860
+      target: 7860
+    volumes:
+    - source: /AppData/Stable-Diffusion-WebUI/models
+      target: /data/models
+      type: bind
+    - source: /AppData/Stable-Diffusion-WebUI/outputs
+      target: /data/outputs
+      type: bind
+    - source: /AppData/Stable-Diffusion-WebUI/config
+      target: /data/config
+      type: bind

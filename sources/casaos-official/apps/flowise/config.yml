@@ -1,0 +1,64 @@
+groups:
+- description: null
+  fields:
+  - default: '3025'
+    description: ''
+    id: PORT
+    label: PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: /root/.flowise
+    description: ''
+    id: DATABASE_PATH
+    label: DATABASE_PATH
+    required: false
+    type: path
+  - default: /root/.flowise
+    description: ''
+    id: APIKEY_PATH
+    label: APIKEY_PATH
+    required: false
+    type: path
+  - default: /root/.flowise
+    description: ''
+    id: SECRETKEY_PATH
+    label: SECRETKEY_PATH
+    required: false
+    type: path
+  - default: /root/.flowise/logs
+    description: ''
+    id: LOG_PATH
+    label: LOG_PATH
+    required: false
+    type: path
+  - default: /root/.flowise/storage
+    description: ''
+    id: BLOB_STORAGE_PATH
+    label: BLOB_STORAGE_PATH
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+- description: null
+  fields:
+  - default: casaos
+    description: ''
+    id: FLOWISE_USERNAME
+    label: FLOWISE_USERNAME
+    required: false
+    type: string
+  - default: casaos
+    description: ''
+    id: FLOWISE_PASSWORD
+    label: FLOWISE_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+version: '1.0'

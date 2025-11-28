@@ -1,0 +1,12 @@
+name: actualbudget
+services:
+  actualbudget:
+    image: actualbudget/actual-server:25.7.1
+    ports:
+    - protocol: tcp
+      published: 15006
+      target: 5006
+    volumes:
+    - source: /AppData/$AppID
+      target: /data
+      type: bind

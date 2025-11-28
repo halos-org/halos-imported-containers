@@ -1,0 +1,18 @@
+architecture: all
+debian_section: comm
+description: Messenger for the Decentralized Web
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Databag/icon.png
+license: Unknown
+long_description: Databag is a federated chat app for self-hosting that focuses on
+  user privacy and security; the service includes clients for iOS, Android, and browser.
+maintainer: balzack <auto-converted@casaos.io>
+name: databag
+package_name: casaos-databag-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Databag/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Databag/screenshot-2.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

@@ -1,0 +1,23 @@
+name: lazylibrarian
+services:
+  lazylibrarian:
+    environment:
+      DOCKER_MODS: ${DOCKER_MODS}
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/lazylibrarian:version-7ef0109b
+    ports:
+    - protocol: tcp
+      published: 5299
+      target: 5299
+    volumes:
+    - source: /Downloads
+      target: /downloads
+      type: bind
+    - source: /Media/Books
+      target: /books
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind

@@ -1,0 +1,17 @@
+name: beaverhabittracker
+services:
+  beaverhabittracker:
+    environment:
+      ENABLE_IOS_STANDALONE: ${ENABLE_IOS_STANDALONE}
+      HABITS_STORAGE: ${HABITS_STORAGE}
+      INDEX_HABIT_DATE_COLUMNS: ${INDEX_HABIT_DATE_COLUMNS}
+      TRUSTED_LOCAL_EMAIL: ${TRUSTED_LOCAL_EMAIL}
+    image: daya0576/beaverhabits:0.7.3
+    ports:
+    - protocol: tcp
+      published: 15580
+      target: 8080
+    volumes:
+    - source: /AppData/$AppID/
+      target: /app/.user
+      type: bind

@@ -1,0 +1,12 @@
+name: uptimekuma
+services:
+  uptimekuma:
+    image: louislam/uptime-kuma:1.23.16-alpine
+    ports:
+    - protocol: tcp
+      published: 3001
+      target: 3001
+    volumes:
+    - source: /AppData/$AppID/app/data
+      target: /app/data
+      type: bind

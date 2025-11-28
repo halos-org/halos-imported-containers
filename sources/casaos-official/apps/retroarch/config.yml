@@ -1,0 +1,12 @@
+groups:
+- description: null
+  fields:
+  - default: '"/var/www/html"'
+    description: ROOT_WWW_PATH
+    id: ROOT_WWW_PATH
+    label: ROOT_WWW_PATH
+    required: false
+    type: path
+  id: storage
+  label: Storage Configuration
+version: '1.0'

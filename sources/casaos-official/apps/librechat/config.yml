@@ -1,0 +1,428 @@
+groups:
+- description: null
+  fields:
+  - default: user_provided
+    description: ''
+    id: ASSISTANTS_API_KEY
+    label: ASSISTANTS_API_KEY
+    required: false
+    type: password
+  - default: user_provided
+    description: ''
+    id: OPENAI_API_KEY
+    label: OPENAI_API_KEY
+    required: false
+    type: password
+  - default: user_provided
+    description: ''
+    id: GOOGLE_KEY
+    label: GOOGLE_KEY
+    required: false
+    type: password
+  - default: user_provided
+    description: ''
+    id: ANTHROPIC_API_KEY
+    label: ANTHROPIC_API_KEY
+    required: false
+    type: password
+  - default: 'false'
+    description: ''
+    id: LIMIT_MESSAGE_USER
+    label: LIMIT_MESSAGE_USER
+    required: false
+    type: string
+  - default: 16f8c0ef4a5d391b26034086c628469d3f9f497f08163ab9b40137092f2909ef
+    description: JWT Secret Key for Authentication
+    id: JWT_SECRET
+    label: JWT_SECRET
+    required: false
+    type: password
+  - default: eaa5191f2914e30b9387fd84e254e4ba6fc51b4654968a9b0803b456a54b8418
+    description: JWT Refresh Secret Key
+    id: JWT_REFRESH_SECRET
+    label: JWT_REFRESH_SECRET
+    required: false
+    type: password
+  - default: f34be427ebb29de8d88c107a71546019685ed8b241d8f2ed00c3df97ad2566f0
+    description: ''
+    id: CREDS_KEY
+    label: CREDS_KEY
+    required: false
+    type: password
+  - default: DrhYf7zENyR6AlUCKmnz0eYASOQdl6zxH7s7MKFSfFCt
+    description: MeiliSearch Master Key
+    id: MEILI_MASTER_KEY
+    label: MEILI_MASTER_KEY
+    required: false
+    type: password
+  - default: myuser
+    description: PostgreSQL Username
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: mypassword
+    description: PostgreSQL Password
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: 0.0.0.0
+    description: Host Address
+    id: HOST
+    label: HOST
+    required: false
+    type: string
+  - default: '3080'
+    description: ''
+    id: PORT
+    label: PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: http://librechat-meilisearch:7700
+    description: MeiliSearch Host
+    id: MEILI_HOST
+    label: MEILI_HOST
+    required: false
+    type: string
+  - default: '8000'
+    description: RAG API Port
+    id: RAG_PORT
+    label: RAG_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: http://librechat-rag-api:8000
+    description: RAG API URL
+    id: RAG_API_URL
+    label: RAG_API_URL
+    required: false
+    type: string
+  - default: http://librechat-meilisearch:7700
+    description: MeiliSearch Host Address
+    id: MEILI_HOST
+    label: MEILI_HOST
+    required: false
+    type: string
+  - default: librechat-vectordb
+    description: Database Host for RAG
+    id: DB_HOST
+    label: DB_HOST
+    required: false
+    type: string
+  - default: '8000'
+    description: RAG Service Port
+    id: RAG_PORT
+    label: RAG_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  id: network
+  label: Network Settings
+- description: null
+  fields:
+  - default: http://0.0.0.0:3080
+    description: ''
+    id: DOMAIN_CLIENT
+    label: DOMAIN_CLIENT
+    required: false
+    type: string
+  - default: http://0.0.0.0:3080
+    description: ''
+    id: DOMAIN_SERVER
+    label: DOMAIN_SERVER
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: NO_INDEX
+    label: NO_INDEX
+    required: false
+    type: string
+  - default: '1'
+    description: ''
+    id: TRUST_PROXY
+    label: TRUST_PROXY
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: CONSOLE_JSON
+    label: CONSOLE_JSON
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: DEBUG_LOGGING
+    label: DEBUG_LOGGING
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: DEBUG_CONSOLE
+    label: DEBUG_CONSOLE
+    required: false
+    type: string
+  - default: mongodb://librechat-mongodb:27017/LibreChat
+    description: MongoDB Connection URI
+    id: MONGO_URI
+    label: MONGO_URI
+    required: false
+    type: string
+  - default: 'true'
+    description: Enable Search Functionality
+    id: SEARCH
+    label: SEARCH
+    required: false
+    type: string
+  - default: 'true'
+    description: Disable MeiliSearch Analytics in API
+    id: MEILI_NO_ANALYTICS
+    label: MEILI_NO_ANALYTICS
+    required: false
+    type: string
+  - default: 'false'
+    description: Enable OpenAI Content Moderation
+    id: OPENAI_MODERATION
+    label: OPENAI_MODERATION
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: BAN_VIOLATIONS
+    label: BAN_VIOLATIONS
+    required: false
+    type: string
+  - default: 1000 * 60 * 60 * 2
+    description: ''
+    id: BAN_DURATION
+    label: BAN_DURATION
+    required: false
+    type: string
+  - default: '20'
+    description: ''
+    id: BAN_INTERVAL
+    label: BAN_INTERVAL
+    required: false
+    type: string
+  - default: '1'
+    description: ''
+    id: LOGIN_VIOLATION_SCORE
+    label: LOGIN_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '1'
+    description: ''
+    id: REGISTRATION_VIOLATION_SCORE
+    label: REGISTRATION_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '1'
+    description: ''
+    id: CONCURRENT_VIOLATION_SCORE
+    label: CONCURRENT_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '1'
+    description: ''
+    id: MESSAGE_VIOLATION_SCORE
+    label: MESSAGE_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '20'
+    description: ''
+    id: NON_BROWSER_VIOLATION_SCORE
+    label: NON_BROWSER_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '0'
+    description: ''
+    id: TTS_VIOLATION_SCORE
+    label: TTS_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '0'
+    description: ''
+    id: STT_VIOLATION_SCORE
+    label: STT_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '0'
+    description: ''
+    id: FORK_VIOLATION_SCORE
+    label: FORK_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '0'
+    description: ''
+    id: IMPORT_VIOLATION_SCORE
+    label: IMPORT_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '0'
+    description: ''
+    id: FILE_UPLOAD_VIOLATION_SCORE
+    label: FILE_UPLOAD_VIOLATION_SCORE
+    required: false
+    type: string
+  - default: '7'
+    description: ''
+    id: LOGIN_MAX
+    label: LOGIN_MAX
+    required: false
+    type: string
+  - default: '5'
+    description: ''
+    id: LOGIN_WINDOW
+    label: LOGIN_WINDOW
+    required: false
+    type: string
+  - default: '5'
+    description: ''
+    id: REGISTER_MAX
+    label: REGISTER_MAX
+    required: false
+    type: string
+  - default: '60'
+    description: ''
+    id: REGISTER_WINDOW
+    label: REGISTER_WINDOW
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: LIMIT_CONCURRENT_MESSAGES
+    label: LIMIT_CONCURRENT_MESSAGES
+    required: false
+    type: string
+  - default: '2'
+    description: ''
+    id: CONCURRENT_MESSAGE_MAX
+    label: CONCURRENT_MESSAGE_MAX
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: LIMIT_MESSAGE_IP
+    label: LIMIT_MESSAGE_IP
+    required: false
+    type: string
+  - default: '40'
+    description: ''
+    id: MESSAGE_IP_MAX
+    label: MESSAGE_IP_MAX
+    required: false
+    type: string
+  - default: '1'
+    description: ''
+    id: MESSAGE_IP_WINDOW
+    label: MESSAGE_IP_WINDOW
+    required: false
+    type: string
+  - default: '40'
+    description: ''
+    id: MESSAGE_USER_MAX
+    label: MESSAGE_USER_MAX
+    required: false
+    type: string
+  - default: '1'
+    description: ''
+    id: MESSAGE_USER_WINDOW
+    label: MESSAGE_USER_WINDOW
+    required: false
+    type: string
+  - default: '5'
+    description: ''
+    id: ILLEGAL_MODEL_REQ_SCORE
+    label: ILLEGAL_MODEL_REQ_SCORE
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: ALLOW_EMAIL_LOGIN
+    label: ALLOW_EMAIL_LOGIN
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: ALLOW_REGISTRATION
+    label: ALLOW_REGISTRATION
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: ALLOW_SOCIAL_LOGIN
+    label: ALLOW_SOCIAL_LOGIN
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: ALLOW_SOCIAL_REGISTRATION
+    label: ALLOW_SOCIAL_REGISTRATION
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: ALLOW_PASSWORD_RESET
+    label: ALLOW_PASSWORD_RESET
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: ALLOW_UNVERIFIED_EMAIL_LOGIN
+    label: ALLOW_UNVERIFIED_EMAIL_LOGIN
+    required: false
+    type: string
+  - default: 1000 * 60 * 15
+    description: ''
+    id: SESSION_EXPIRY
+    label: SESSION_EXPIRY
+    required: false
+    type: string
+  - default: (1000 * 60 * 60 * 24) * 7
+    description: ''
+    id: REFRESH_TOKEN_EXPIRY
+    label: REFRESH_TOKEN_EXPIRY
+    required: false
+    type: string
+  - default: e2341419ec3dd3d19b13a1a87fafcbfb
+    description: ''
+    id: CREDS_IV
+    label: CREDS_IV
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: DEBUG_PLUGINS
+    label: DEBUG_PLUGINS
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: DEBUG_OPENAI
+    label: DEBUG_OPENAI
+    required: false
+    type: string
+  - default: 'true'
+    description: Disable MeiliSearch Analytics
+    id: MEILI_NO_ANALYTICS
+    label: MEILI_NO_ANALYTICS
+    required: false
+    type: string
+  - default: mydatabase
+    description: PostgreSQL Database Name
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

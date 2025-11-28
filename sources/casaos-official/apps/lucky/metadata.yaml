@@ -1,0 +1,20 @@
+architecture: all
+debian_section: net
+description: Powerful networking tool
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/icon.png
+license: Unknown
+long_description: A powerful tool for port forwarding, reverse proxy, dynamic DNS,
+  wake-on-LAN, IPv4 NAT traversal, webdav services, task scheduling, and automatic
+  certificate management.
+maintainer: gdy666 <auto-converted@casaos.io>
+name: lucky
+package_name: casaos-lucky-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lucky/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

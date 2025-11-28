@@ -1,0 +1,22 @@
+name: readarr
+services:
+  readarr:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/readarr:0.3.10-develop
+    ports:
+    - protocol: tcp
+      published: 8787
+      target: 8787
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media/Books
+      target: /books
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

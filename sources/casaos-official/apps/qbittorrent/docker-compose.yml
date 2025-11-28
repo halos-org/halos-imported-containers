@@ -1,0 +1,20 @@
+name: qbittorrent
+services:
+  qbittorrent:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+      UMASK: ${UMASK}
+    image: ghcr.io/hotio/qbittorrent:release-5.0.4
+    ports:
+    - protocol: tcp
+      published: 8181
+      target: 8080
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/DATA
+      target: /DATA
+      type: bind

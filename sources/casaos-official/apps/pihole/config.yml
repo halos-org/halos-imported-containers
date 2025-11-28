@@ -1,0 +1,28 @@
+groups:
+- description: null
+  fields:
+  - default: $TZ
+    description: TimeZone
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: casaos
+    description: Pi-hole admin password
+    id: FTLCONF_WEBSERVER_API_PASSWORD
+    label: FTLCONF_webserver_api_password
+    required: false
+    type: string
+  - default: all
+    description: DNS listening mode
+    id: FTLCONF_DNS_LISTENINGMODE
+    label: FTLCONF_dns_listeningMode
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

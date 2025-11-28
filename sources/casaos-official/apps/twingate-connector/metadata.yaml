@@ -1,0 +1,15 @@
+architecture: all
+debian_section: net
+description: Twingate Connector for CasaOS
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Twingate/icon.png
+license: Unknown
+long_description: It's a connector for Twingate".
+maintainer: Twingate <auto-converted@casaos.io>
+name: twingate-connector
+package_name: casaos-twingate-connector-container
+screenshots: null
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

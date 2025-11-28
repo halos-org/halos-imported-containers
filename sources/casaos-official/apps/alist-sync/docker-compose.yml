@@ -1,0 +1,14 @@
+name: alist-sync
+services:
+  alist-sync:
+    environment:
+      TZ: ${TZ}
+    image: xjxjin/alist-sync:1.1.5
+    ports:
+    - protocol: tcp
+      published: 52441
+      target: 52441
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /app/data
+      type: bind

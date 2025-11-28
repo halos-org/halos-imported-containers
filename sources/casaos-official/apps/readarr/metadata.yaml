@@ -1,0 +1,21 @@
+architecture: all
+debian_section: video
+description: Ebook and audiobook collection manager for Usenet and BitTorrent users.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/icon.png
+license: Unknown
+long_description: Readarr is a ebook collection manager for Usenet and BitTorrent
+  users. It can monitor multiple RSS feeds for new books from your favorite authors
+  and will interface with clients and indexers to grab, sort, and rename them.
+maintainer: Readarr Team <auto-converted@casaos.io>
+name: readarr
+package_name: casaos-readarr-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/screenshot-4.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

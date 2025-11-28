@@ -1,0 +1,19 @@
+groups:
+- description: null
+  fields:
+  - default: 'false'
+    description: Set DARK_MODE to true to enable dark mode.
+    id: DARK_MODE
+    label: DARK_MODE
+    required: false
+    type: string
+  - default: '[''qemu:///system'']'
+    description: Set HOSTS to "['qemu:///session']" to connect to a user session.
+      Only change this option if you know what you're doing!
+    id: HOSTS
+    label: HOSTS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

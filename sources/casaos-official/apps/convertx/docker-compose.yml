@@ -1,0 +1,15 @@
+name: convertx
+services:
+  convertx:
+    environment:
+      HTTP_ALLOWED: ${HTTP_ALLOWED}
+      JWT_SECRET: ${JWT_SECRET}
+    image: c4illin/convertx:v0.14.1
+    ports:
+    - protocol: tcp
+      published: 3333
+      target: 3000
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /app/data
+      type: bind

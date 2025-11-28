@@ -1,0 +1,20 @@
+architecture: all
+debian_section: devel
+description: Cloud Database Manager.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/icon.png
+license: Unknown
+long_description: CloudBeaver is a web-based database GUI tool which provides rich
+  web interface. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL Server,
+  Oracle, DB2, Firebird, H2, Trino.
+maintainer: dbeaver <auto-converted@casaos.io>
+name: cloudbeaver
+package_name: casaos-cloudbeaver-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

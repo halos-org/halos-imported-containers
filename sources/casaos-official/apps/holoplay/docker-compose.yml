@@ -1,0 +1,8 @@
+name: holoplay
+services:
+  holoplay:
+    image: spout8301/holoplay:1.12.3
+    ports:
+    - protocol: tcp
+      published: 3000
+      target: 3000

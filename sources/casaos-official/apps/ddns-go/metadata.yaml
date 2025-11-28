@@ -1,0 +1,25 @@
+architecture: all
+debian_section: net
+description: Simple and easy to use DDNS
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ddns-go/icon.png
+license: Unknown
+long_description: 'A simple and easy-to-use DDNS tool. Automatically updates domain
+  name resolution to your public IP (supports Alibaba Cloud, Tencent Cloud, Dnspod,
+  Cloudflare, Callback, Huawei Cloud, Baidu Cloud, Porkbun, GoDaddy, and Google Domain).
+
+
+  Deploy DDNS-go on Zima, and you can bind the public IP of your Zima device to your
+  domain name. This way, you can access your Zima device via the domain name while
+  you are away.
+
+  '
+maintainer: jeessy2 <auto-converted@casaos.io>
+name: ddns-go
+package_name: casaos-ddns-go-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ddns-go/screenshot-1.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

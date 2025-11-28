@@ -1,0 +1,21 @@
+name: audiobookshelf
+services:
+  audiobookshelf:
+    image: ghcr.io/advplyr/audiobookshelf:2.30.0
+    ports:
+    - protocol: tcp
+      published: 13378
+      target: 80
+    volumes:
+    - source: /Media/Audiobooks
+      target: /audiobooks
+      type: bind
+    - source: /Media/Podcasts
+      target: /podcasts
+      type: bind
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /AppData/$AppID/metadata
+      target: /metadata
+      type: bind

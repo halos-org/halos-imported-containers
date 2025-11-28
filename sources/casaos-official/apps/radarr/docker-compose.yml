@@ -1,0 +1,22 @@
+name: radarr
+services:
+  radarr:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/radarr:5.26.2
+    ports:
+    - protocol: tcp
+      published: 7878
+      target: 7878
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /Media/Movies
+      target: /movies
+      type: bind
+    - source: /Downloads
+      target: /downloads
+      type: bind

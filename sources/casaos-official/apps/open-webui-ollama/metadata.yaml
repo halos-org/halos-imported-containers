@@ -1,0 +1,69 @@
+architecture: all
+debian_section: comm
+description: User-friendly WebUI for LLMs (Formerly Ollama WebUI)
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenWebUI/icon.png
+license: Unknown
+long_description: 'Open WebUI is a feature-rich, user-friendly self-hosted AI platform
+  designed for fully offline operation, supporting multiple large language model runners
+  and API integration. Its intuitive Web interface provides powerful AI deployment
+  capabilities, ideal for developers, researchers, and AI enthusiasts building localized
+  intelligent applications.
+
+
+  The tool''s core features include local model execution and Retrieval Augmented
+  Generation (RAG). It supports Ollama and OpenAI-compatible APIs (e.g., LMStudio,
+  GroqCloud), enabling seamless model switching and multi-model conversations. RAG
+  enhances chat experiences through local document loading or web search integration
+  (e.g., SearXNG, Google PSE). Granular permissions and role-based access control
+  (RBAC) ensure security with customized user role management.
+
+
+  It supports Markdown and LaTeX for enriched interactions and offers hands-free voice
+  and video call features for dynamic communication. Image generation integration
+  (e.g., DALL-E, ComfyUI) enriches visual content, and a model builder enables creating
+  and importing custom models via the interface. The Pipelines plugin framework supports
+  Python plugins, extending functionality like function calling and real-time translation.
+  The tool’s offline privacy and flexibility deliver a modern AI interaction solution.
+
+
+  **Key Features:**
+
+  - Local execution of Ollama and OpenAI-compatible APIs with multi-model conversations
+
+  - RAG support with local document and web search integration (e.g., SearXNG, Google
+  PSE)
+
+  - Granular permissions and role-based access control (RBAC)
+
+  - Simultaneous interaction with multiple models, leveraging their strengths
+
+  - Image generation integration with DALL-E, ComfyUI, and more
+
+  - Full Markdown and LaTeX support
+
+  - Hands-free voice and video call functionality
+
+  - Pipelines plugin framework for custom Python functionality
+
+
+  **Learn More:**
+
+  - [Open WebUI Official Website](https://openwebui.com)
+
+  - [Open WebUI Documentation](https://docs.openwebui.com)
+
+  - [Open WebUI GitHub Repository](https://github.com/open-webui/open-webui)
+
+  '
+maintainer: Tim J. Baek <auto-converted@casaos.io>
+name: open-webui-ollama
+package_name: casaos-open-webui-ollama-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenWebUI/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenWebUI/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenWebUI/screenshot-3.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

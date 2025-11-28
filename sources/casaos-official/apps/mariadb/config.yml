@@ -1,0 +1,70 @@
+groups:
+- description: null
+  fields:
+  - default: $PUID
+    description: for UserID
+    id: PUID
+    label: PUID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $PGID
+    description: for GroupID
+    id: PGID
+    label: PGID
+    max: 65535
+    min: 0
+    required: false
+    type: integer
+  - default: $TZ
+    description: specify a timezone to use, see this list.
+    id: TZ
+    label: TZ
+    required: false
+    type: string
+  id: system
+  label: System Settings
+- description: null
+  fields:
+  - default: casaos
+    description: Set this to root password for installation (minimum 4 characters
+      & non-alphanumeric passwords must be properly escaped).
+    id: MYSQL_ROOT_PASSWORD
+    label: MYSQL_ROOT_PASSWORD
+    required: false
+    type: password
+  - default: casaos
+    description: This user will have superuser access to the database specified by
+      MYSQL_DATABASE (do not use root here).
+    id: MYSQL_USER
+    label: MYSQL_USER
+    required: false
+    type: string
+  - default: casaos
+    description: Set this to the password you want to use for you MYSQL_USER (minimum
+      4 characters & non-alphanumeric passwords must be properly escaped).
+    id: MYSQL_PASSWORD
+    label: MYSQL_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: casaos
+    description: Specify the name of a database to be created on image startup.
+    id: MYSQL_DATABASE
+    label: MYSQL_DATABASE
+    required: false
+    type: string
+  - default: ''
+    description: Set this to ingest sql files from an http/https endpoint (comma seperated
+      array).
+    id: REMOTE_SQL
+    label: REMOTE_SQL
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

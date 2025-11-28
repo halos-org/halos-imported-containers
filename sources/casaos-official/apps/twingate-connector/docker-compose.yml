@@ -1,0 +1,11 @@
+name: twingate-connector
+services:
+  twingate-connector:
+    command:
+    - /connectord
+    environment:
+      TWINGATE_ACCESS_TOKEN: ${TWINGATE_ACCESS_TOKEN}
+      TWINGATE_LABEL_HOSTNAME: ${TWINGATE_LABEL_HOSTNAME}
+      TWINGATE_NETWORK: ${TWINGATE_NETWORK}
+      TWINGATE_REFRESH_TOKEN: ${TWINGATE_REFRESH_TOKEN}
+    image: twingate/connector:1

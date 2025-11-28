@@ -1,0 +1,22 @@
+groups:
+- description: null
+  fields:
+  - default: '1'
+    description: CORS config.
+    id: NO_CORS
+    label: NO_CORS
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: '1'
+    description: Enables automatic server URL detection for remote clients.
+    id: AUTO_SERVER_URL
+    label: AUTO_SERVER_URL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+version: '1.0'

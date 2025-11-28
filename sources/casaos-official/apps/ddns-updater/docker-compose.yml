@@ -1,0 +1,32 @@
+name: ddns-updater
+services:
+  ddns-updater:
+    command:
+    - touch /data/config.json
+    environment:
+      BACKUP_DIRECTORY: ${BACKUP_DIRECTORY}
+      BACKUP_PERIOD: ${BACKUP_PERIOD}
+      CONFIG: ${CONFIG}
+      HTTP_TIMEOUT: ${HTTP_TIMEOUT}
+      LISTENING_ADDRESS: ${LISTENING_ADDRESS}
+      LOG_CALLER: ${LOG_CALLER}
+      LOG_LEVEL: ${LOG_LEVEL}
+      PERIOD: ${PERIOD}
+      PUBLICIPV4_HTTP_PROVIDERS: ${PUBLICIPV4_HTTP_PROVIDERS}
+      PUBLICIPV6_HTTP_PROVIDERS: ${PUBLICIPV6_HTTP_PROVIDERS}
+      PUBLICIP_DNS_PROVIDERS: ${PUBLICIP_DNS_PROVIDERS}
+      PUBLICIP_DNS_TIMEOUT: ${PUBLICIP_DNS_TIMEOUT}
+      PUBLICIP_FETCHERS: ${PUBLICIP_FETCHERS}
+      PUBLICIP_HTTP_PROVIDERS: ${PUBLICIP_HTTP_PROVIDERS}
+      ROOT_URL: ${ROOT_URL}
+      SHOUTRRR_ADDRESSES: ${SHOUTRRR_ADDRESSES}
+      UPDATE_COOLDOWN_PERIOD: ${UPDATE_COOLDOWN_PERIOD}
+    image: qmcgaw/ddns-updater:v2.9.0
+    ports:
+    - protocol: tcp
+      published: 8000
+      target: 8000
+    volumes:
+    - source: /AppData/$AppID/data
+      target: /updater/data
+      type: bind

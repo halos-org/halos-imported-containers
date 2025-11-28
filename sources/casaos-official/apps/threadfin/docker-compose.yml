@@ -1,0 +1,18 @@
+name: threadfin
+services:
+  threadfin:
+    environment:
+      THREADFIN_BRANCH: ${THREADFIN_BRANCH}
+      THREADFIN_DEBUG: ${THREADFIN_DEBUG}
+    image: fyb3roptik/threadfin:latest
+    ports:
+    - protocol: tcp
+      published: 34400
+      target: 34400
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /home/threadfin/conf/data
+      type: bind
+    - source: ${CONTAINER_DATA_ROOT}/backup
+      target: /home/threadfin/conf/backup
+      type: bind

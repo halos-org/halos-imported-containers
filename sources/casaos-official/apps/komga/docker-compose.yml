@@ -1,0 +1,21 @@
+name: komga
+services:
+  komga:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+    image: gotson/komga:1.22.0
+    ports:
+    - protocol: tcp
+      published: 25600
+      target: 25600
+    volumes:
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind
+    - source: /AppData/$AppID/data
+      target: /data
+      type: bind
+    - source: /etc/timezone
+      target: /etc/timezone
+      type: bind

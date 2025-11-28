@@ -1,0 +1,168 @@
+groups:
+- description: null
+  fields:
+  - default: maybe_user
+    description: ''
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: maybe_password
+    description: ''
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  - default: ${OPENAI_ACCESS_TOKEN}
+    description: ''
+    id: OPENAI_ACCESS_TOKEN
+    label: OPENAI_ACCESS_TOKEN
+    required: false
+    type: password
+  - default: maybe_user
+    description: ''
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: maybe_password
+    description: ''
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  - default: ${OPENAI_ACCESS_TOKEN}
+    description: ''
+    id: OPENAI_ACCESS_TOKEN
+    label: OPENAI_ACCESS_TOKEN
+    required: false
+    type: password
+  - default: maybe_user
+    description: ''
+    id: POSTGRES_USER
+    label: POSTGRES_USER
+    required: false
+    type: string
+  - default: maybe_password
+    description: ''
+    id: POSTGRES_PASSWORD
+    label: POSTGRES_PASSWORD
+    required: false
+    type: password
+  id: authentication
+  label: Authentication
+- description: null
+  fields:
+  - default: maybe_production
+    description: ''
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  - default: a7523c3d0ae56415046ad8abae168d71074a79534a7062258f8d1d51ac2f76d3c3bc86d86b6b0b307df30d9a6a90a2066a3fa9e67c5e6f374dbd7dd4e0778e13
+    description: ''
+    id: SECRET_KEY_BASE
+    label: SECRET_KEY_BASE
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: SELF_HOSTED
+    label: SELF_HOSTED
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: RAILS_FORCE_SSL
+    label: RAILS_FORCE_SSL
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: RAILS_ASSUME_SSL
+    label: RAILS_ASSUME_SSL
+    required: false
+    type: string
+  - default: maybe_production
+    description: ''
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  - default: a7523c3d0ae56415046ad8abae168d71074a79534a7062258f8d1d51ac2f76d3c3bc86d86b6b0b307df30d9a6a90a2066a3fa9e67c5e6f374dbd7dd4e0778e13
+    description: ''
+    id: SECRET_KEY_BASE
+    label: SECRET_KEY_BASE
+    required: false
+    type: string
+  - default: 'true'
+    description: ''
+    id: SELF_HOSTED
+    label: SELF_HOSTED
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: RAILS_FORCE_SSL
+    label: RAILS_FORCE_SSL
+    required: false
+    type: string
+  - default: 'false'
+    description: ''
+    id: RAILS_ASSUME_SSL
+    label: RAILS_ASSUME_SSL
+    required: false
+    type: string
+  - default: maybe_production
+    description: ''
+    id: POSTGRES_DB
+    label: POSTGRES_DB
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+- description: null
+  fields:
+  - default: maybe-db
+    description: ''
+    id: DB_HOST
+    label: DB_HOST
+    required: false
+    type: string
+  - default: '5432'
+    description: ''
+    id: DB_PORT
+    label: DB_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: redis://maybe-redis:6379/1
+    description: ''
+    id: REDIS_URL
+    label: REDIS_URL
+    required: false
+    type: string
+  - default: maybe-db
+    description: ''
+    id: DB_HOST
+    label: DB_HOST
+    required: false
+    type: string
+  - default: '5432'
+    description: ''
+    id: DB_PORT
+    label: DB_PORT
+    max: 65535
+    min: 1024
+    required: false
+    type: integer
+  - default: redis://maybe-redis:6379/1
+    description: ''
+    id: REDIS_URL
+    label: REDIS_URL
+    required: false
+    type: string
+  id: network
+  label: Network Settings
+version: '1.0'

@@ -1,0 +1,21 @@
+name: handbrake
+services:
+  handbrake:
+    image: jlesage/handbrake:v25.02.3
+    ports:
+    - protocol: tcp
+      published: 5800
+      target: 5800
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/DATA
+      target: /storage
+      type: bind
+    - source: /AppData/$AppID/watch
+      target: /watch
+      type: bind
+    - source: /Media
+      target: /output
+      type: bind
+    - source: /AppData/$AppID/config
+      target: /config
+      type: bind

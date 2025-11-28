@@ -1,0 +1,24 @@
+architecture: all
+debian_section: games
+description: Take control of your Minecraft servers.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/icon.png
+license: Unknown
+long_description: Crafty is an open source Minecraft control panel built using Tornado
+  and AdminLTE, featuring server scheduling, a interactive console and the ability
+  to run almost any type of Minecraft server
+maintainer: Crafty Team <auto-converted@casaos.io>
+name: crafty
+package_name: casaos-crafty-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/screenshot-2.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/screenshot-3.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/screenshot-4.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/screenshot-5.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/screenshot-6.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Crafty/screenshot-7.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

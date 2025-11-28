@@ -1,0 +1,18 @@
+groups:
+- description: null
+  fields:
+  - default: main
+    description: 'Set Threadfin git branch [ main, beta, dev ] Default: beta'
+    id: THREADFIN_BRANCH
+    label: THREADFIN_BRANCH
+    required: false
+    type: string
+  - default: '0'
+    description: 'Set Threadfin debug level [ 0-3 ] Default: 0=OFF'
+    id: THREADFIN_DEBUG
+    label: THREADFIN_DEBUG
+    required: false
+    type: boolean
+  id: configuration
+  label: General Configuration
+version: '1.0'

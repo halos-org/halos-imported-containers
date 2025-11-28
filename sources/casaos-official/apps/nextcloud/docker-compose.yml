@@ -1,0 +1,15 @@
+name: nextcloud
+services:
+  nextcloud:
+    image: nextcloud:31.0
+    ports:
+    - protocol: tcp
+      published: 10081
+      target: 80
+    - protocol: tcp
+      published: 10443
+      target: 443
+    volumes:
+    - source: /AppData/$AppID/var/www/html
+      target: /var/www/html
+      type: bind

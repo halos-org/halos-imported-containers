@@ -1,0 +1,18 @@
+architecture: all
+debian_section: utils
+description: A GTK Broadway web UI for libvirt and virt-manager.
+homepage: null
+icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/VirtualMachineManager/icon.png
+license: Unknown
+long_description: A GTK Broadway web UI for libvirt and virt-manager, to run virtual
+  machines using QEMU/KVM.
+maintainer: Red Hat <auto-converted@casaos.io>
+name: virt-manager
+package_name: casaos-virt-manager-container
+screenshots:
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/VirtualMachineManager/screenshot-1.png
+- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/VirtualMachineManager/screenshot-2.png
+source_metadata: null
+tags:
+- role::container-app
+version: 1.0.0

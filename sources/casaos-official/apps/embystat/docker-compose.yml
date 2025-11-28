@@ -1,0 +1,16 @@
+name: embystat
+services:
+  embystat:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/embystat:0.2.0
+    ports:
+    - protocol: tcp
+      published: 6555
+      target: 6555
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind

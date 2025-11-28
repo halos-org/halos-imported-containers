@@ -1,0 +1,16 @@
+name: filedrop
+services:
+  filedrop:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: noecl/filedrop:1.0.1
+    ports:
+    - protocol: tcp
+      published: 8000
+      target: 8000
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/data
+      target: /var/file_drop_files
+      type: bind

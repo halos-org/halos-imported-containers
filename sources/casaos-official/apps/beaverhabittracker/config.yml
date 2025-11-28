@@ -1,0 +1,30 @@
+groups:
+- description: null
+  fields:
+  - default: USER_DISK
+    description: Sets the storage type for habits
+    id: HABITS_STORAGE
+    label: HABITS_STORAGE
+    required: false
+    type: string
+  - default: your@email.com
+    description: Sets the trusted local email
+    id: TRUSTED_LOCAL_EMAIL
+    label: TRUSTED_LOCAL_EMAIL
+    required: false
+    type: string
+  - default: '5'
+    description: Customize the displayed dates for the index page
+    id: INDEX_HABIT_DATE_COLUMNS
+    label: INDEX_HABIT_DATE_COLUMNS
+    required: false
+    type: string
+  - default: 'True'
+    description: Enables iOS standalone mode
+    id: ENABLE_IOS_STANDALONE
+    label: ENABLE_IOS_STANDALONE
+    required: false
+    type: string
+  id: configuration
+  label: General Configuration
+version: '1.0'

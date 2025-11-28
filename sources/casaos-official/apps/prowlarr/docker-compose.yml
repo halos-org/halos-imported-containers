@@ -1,0 +1,16 @@
+name: prowlarr
+services:
+  prowlarr:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: linuxserver/prowlarr:1.37.0
+    ports:
+    - protocol: tcp
+      published: 9696
+      target: 9696
+    volumes:
+    - source: ${CONTAINER_DATA_ROOT}/config
+      target: /config
+      type: bind

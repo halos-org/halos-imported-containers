@@ -1,0 +1,8 @@
+name: excalidraw
+services:
+  excalidraw:
+    image: excalidraw/excalidraw:latest
+    ports:
+    - protocol: tcp
+      published: 17638
+      target: 80

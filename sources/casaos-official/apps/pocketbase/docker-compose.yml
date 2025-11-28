@@ -1,0 +1,12 @@
+name: pocketbase
+services:
+  pocketbase:
+    image: argonptg/pocketbase:0.25.9
+    ports:
+    - protocol: tcp
+      published: 8090
+      target: 8090
+    volumes:
+    - source: /AppData/$AppID/pb_data
+      target: /pb_data
+      type: bind

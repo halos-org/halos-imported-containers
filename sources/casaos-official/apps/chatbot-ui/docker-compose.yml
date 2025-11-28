@@ -1,0 +1,12 @@
+name: chatbot-ui
+services:
+  chatbot-ui:
+    environment:
+      PGID: ${PGID}
+      PUID: ${PUID}
+      TZ: ${TZ}
+    image: ghcr.io/mckaywrigley/chatbot-ui:main
+    ports:
+    - protocol: tcp
+      published: 3080
+      target: 3000

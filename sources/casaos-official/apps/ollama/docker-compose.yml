@@ -1,0 +1,12 @@
+name: ollama
+services:
+  ollama:
+    image: ollama/ollama:0.9.5
+    ports:
+    - protocol: tcp
+      published: 11434
+      target: 11434
+    volumes:
+    - source: /AppData/$AppID/
+      target: /root/.ollama
+      type: bind
