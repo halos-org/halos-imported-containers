@@ -199,7 +199,7 @@ build_app_packages() {
                 fi
 
                 # Clean up the temporary package directory
-                rm -rf "$BUILD_DIR/$package_name"
+                rm -rf "${BUILD_DIR:?}/${package_name:?}"
             else
                 warn "dpkg-buildpackage not available - skipping .deb build for $app_name"
                 ((built_count++))
