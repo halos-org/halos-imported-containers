@@ -50,7 +50,19 @@ jobs:
           name: packages-casaos-official-unstable
           path: build
 
+      - name: Check if packages exist
+        id: check
+        run: |
+          if compgen -G "build/*.deb" > /dev/null; then
+            echo "has-packages=true" >> $GITHUB_OUTPUT
+            echo "::notice::Found packages to publish"
+          else
+            echo "has-packages=false" >> $GITHUB_OUTPUT
+            echo "::notice::No packages to publish (source not yet implemented)"
+          fi
+
       - name: Publish to apt.hatlabs.fi (placeholder)
+        if: steps.check.outputs.has-packages == 'true'
         run: |
           echo "::notice::Publishing to unstable channel (placeholder)"
           echo "::notice::This will be implemented when shared-workflows are available"

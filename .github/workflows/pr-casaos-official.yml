@@ -44,12 +44,17 @@ jobs:
         if: always()
         with:
           script: |
-            const buildSuccess = '${{ steps.build.outcome }}' === 'success';
-            const packageCount = '${{ steps.build.outputs.package-count }}';
+            const buildOutcome = '${{ steps.build.outcome }}';
+            const packageCount = '${{ steps.build.outputs.package-count }}' || '0';
 
-            const body = buildSuccess
-              ? `✅ **Build successful** for casaos-official\n\n📦 Built ${packageCount} packages\n\nPackages are available as workflow artifacts for inspection.`
-              : `❌ **Build failed** for casaos-official\n\nPlease check the workflow logs for details.`;
+            let body;
+            if (buildOutcome === 'skipped') {
+              body = `ℹ️ **Build skipped** for casaos-official\n\nSource will be created in Cluster 4 implementation.\n\nWorkflow and actions are ready for testing.`;
+            } else if (buildOutcome === 'success') {
+              body = `✅ **Build successful** for casaos-official\n\n📦 Built ${packageCount} packages\n\nPackages are available as workflow artifacts for inspection.`;
+            } else {
+              body = `❌ **Build failed** for casaos-official\n\nPlease check the workflow logs for details.`;
+            }
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
@@ -58,10 +63,5 @@ jobs:
               body: body
             });
 
-      - name: Upload build artifacts for inspection
-        uses: actions/upload-artifact@v4
-        if: success()
-        with:
-          name: pr-packages-casaos-official
-          path: build/*.deb
-          retention-days: 7
+      # Artifact upload handled by build-deb action
+      # No need to duplicate here

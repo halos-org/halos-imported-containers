@@ -11,8 +11,12 @@ jobs:
   build:
     name: Build CasaOS Official Packages for Release
     runs-on: ubuntu-latest
-    # Only run if release is not a draft and affects casaos-official
-    if: github.event.release.draft == false
+    # Only run if release is not a draft and tagged for casaos-official
+    # Expected tag format: casaos-official/v1.2.3 or v1.2.3-casaos-official
+    if: |
+      github.event.release.draft == false &&
+      (startsWith(github.event.release.tag_name, 'casaos-official/') ||
+       contains(github.event.release.tag_name, 'casaos-official'))
     steps:
       - name: Checkout code at release tag
         uses: actions/checkout@v4
@@ -45,7 +49,10 @@ jobs:
     name: Publish to Stable Channel
     runs-on: ubuntu-latest
     needs: build
-    if: github.event.release.draft == false
+    if: |
+      github.event.release.draft == false &&
+      (startsWith(github.event.release.tag_name, 'casaos-official/') ||
+       contains(github.event.release.tag_name, 'casaos-official'))
     # TODO: Implement when shared-workflows publish-stable.yml is available
     steps:
       - name: Download build artifacts
@@ -54,7 +61,19 @@ jobs:
           name: packages-casaos-official-stable-${{ github.event.release.tag_name }}
           path: build
 
+      - name: Check if packages exist
+        id: check
+        run: |
+          if compgen -G "build/*.deb" > /dev/null; then
+            echo "has-packages=true" >> $GITHUB_OUTPUT
+            echo "::notice::Found packages to publish"
+          else
+            echo "has-packages=false" >> $GITHUB_OUTPUT
+            echo "::notice::No packages to publish (source not yet implemented)"
+          fi
+
       - name: Publish to apt.hatlabs.fi (placeholder)
+        if: steps.check.outputs.has-packages == 'true'
         run: |
           echo "::notice::Publishing to stable channel (placeholder)"
           echo "::notice::Release tag: ${{ github.event.release.tag_name }}"
