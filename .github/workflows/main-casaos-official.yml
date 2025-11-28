@@ -1,0 +1,66 @@
+name: Main - CasaOS Official
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'sources/casaos-official/**'
+      - 'tools/**'
+      - '.github/actions/**'
+      - '.github/workflows/main-casaos-official.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build CasaOS Official Packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build packages
+        id: build
+        uses: ./.github/actions/build-deb
+        with:
+          source: casaos-official
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages-casaos-official-unstable
+          path: |
+            build/*.deb
+            build/*.buildinfo
+            build/*.changes
+          retention-days: 30
+
+  publish-unstable:
+    name: Publish to Unstable Channel
+    runs-on: ubuntu-latest
+    needs: build
+    # TODO: Implement when shared-workflows publish-unstable.yml is available
+    # For now, this job is a placeholder
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: packages-casaos-official-unstable
+          path: build
+
+      - name: Publish to apt.hatlabs.fi (placeholder)
+        run: |
+          echo "::notice::Publishing to unstable channel (placeholder)"
+          echo "::notice::This will be implemented when shared-workflows are available"
+          echo "::notice::Packages to publish:"
+          ls -lh build/*.deb
+
+          # TODO: Call shared workflow or publish directly
+          # Expected approach:
+          # - Use hatlabs/shared-workflows/.github/workflows/publish-unstable.yml
+          # - Pass APT_REPO_PAT secret
+          # - Upload to trixie/main with _pre suffix
+
+          echo "::warning::Publishing not yet implemented - requires APT_REPO_PAT secret and shared workflow"

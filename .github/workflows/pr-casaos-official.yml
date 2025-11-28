@@ -1,0 +1,67 @@
+name: PR - CasaOS Official
+
+on:
+  pull_request:
+    paths:
+      - 'sources/casaos-official/**'
+      - 'tools/**'
+      - '.github/actions/**'
+      - '.github/workflows/pr-casaos-official.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate:
+    name: Validate CasaOS Official
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate source structure
+        uses: ./.github/actions/validate-source
+        with:
+          source: casaos-official
+
+  build:
+    name: Build CasaOS Official Packages
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build packages
+        id: build
+        uses: ./.github/actions/build-deb
+        with:
+          source: casaos-official
+
+      - name: Comment on PR with build results
+        uses: actions/github-script@v7
+        if: always()
+        with:
+          script: |
+            const buildSuccess = '${{ steps.build.outcome }}' === 'success';
+            const packageCount = '${{ steps.build.outputs.package-count }}';
+
+            const body = buildSuccess
+              ? `✅ **Build successful** for casaos-official\n\n📦 Built ${packageCount} packages\n\nPackages are available as workflow artifacts for inspection.`
+              : `❌ **Build failed** for casaos-official\n\nPlease check the workflow logs for details.`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Upload build artifacts for inspection
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: pr-packages-casaos-official
+          path: build/*.deb
+          retention-days: 7

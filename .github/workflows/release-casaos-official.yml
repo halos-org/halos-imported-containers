@@ -1,0 +1,72 @@
+name: Release - CasaOS Official
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build CasaOS Official Packages for Release
+    runs-on: ubuntu-latest
+    # Only run if release is not a draft and affects casaos-official
+    if: github.event.release.draft == false
+    steps:
+      - name: Checkout code at release tag
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Build packages
+        id: build
+        uses: ./.github/actions/build-deb
+        with:
+          source: casaos-official
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages-casaos-official-stable-${{ github.event.release.tag_name }}
+          path: |
+            build/*.deb
+            build/*.buildinfo
+            build/*.changes
+          retention-days: 90
+
+      - name: Attach packages to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: build/*.deb
+          tag_name: ${{ github.event.release.tag_name }}
+
+  publish-stable:
+    name: Publish to Stable Channel
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event.release.draft == false
+    # TODO: Implement when shared-workflows publish-stable.yml is available
+    steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: packages-casaos-official-stable-${{ github.event.release.tag_name }}
+          path: build
+
+      - name: Publish to apt.hatlabs.fi (placeholder)
+        run: |
+          echo "::notice::Publishing to stable channel (placeholder)"
+          echo "::notice::Release tag: ${{ github.event.release.tag_name }}"
+          echo "::notice::This will be implemented when shared-workflows are available"
+          echo "::notice::Packages to publish:"
+          ls -lh build/*.deb
+
+          # TODO: Call shared workflow or publish directly
+          # Expected approach:
+          # - Use hatlabs/shared-workflows/.github/workflows/publish-stable.yml
+          # - Pass APT_REPO_PAT secret
+          # - Upload to trixie/main without _pre suffix
+          # - Packages should use release version from VERSION file + tag
+
+          echo "::warning::Publishing not yet implemented - requires APT_REPO_PAT secret and shared workflow"
