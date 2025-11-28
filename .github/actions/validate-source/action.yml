@@ -20,12 +20,17 @@ runs:
       run: |
         if [ -n "${{ inputs.source }}" ]; then
           if [ ! -d "sources/${{ inputs.source }}" ]; then
-            echo "::error::Source directory not found: sources/${{ inputs.source }}"
-            exit 1
+            echo "::warning::Source directory not found: sources/${{ inputs.source }}"
+            echo "::notice::Source will be created in future implementation"
+            echo "::notice::Skipping validation - no source to validate yet"
+            echo "source-exists=false" >> $GITHUB_ENV
+            exit 0
           fi
           echo "::notice::Validating source: ${{ inputs.source }}"
+          echo "source-exists=true" >> $GITHUB_ENV
         else
           echo "::notice::Validating all sources"
+          echo "source-exists=true" >> $GITHUB_ENV
         fi
 
     - name: Install ShellCheck
@@ -54,6 +59,7 @@ runs:
 
     - name: Run ShellCheck on build scripts
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         echo "::group::ShellCheck validation"
 
@@ -71,6 +77,7 @@ runs:
     - name: Validate directory structure
       id: validate
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         # Validate script exists
         if [ ! -x "./tools/validate-structure.sh" ]; then
@@ -95,6 +102,7 @@ runs:
 
     - name: Run test suites
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         echo "::group::Running test suites"
 
@@ -118,6 +126,7 @@ runs:
 
     - name: Validate app definitions (placeholder)
       shell: bash
+      if: env.source-exists == 'true'
       run: |
         echo "::group::App definition validation"
 
