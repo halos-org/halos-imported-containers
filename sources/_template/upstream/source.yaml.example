@@ -1,0 +1,110 @@
+# Upstream Source Configuration Template
+#
+# Copy this file to: sources/{SOURCE_NAME}/upstream/source.yaml
+# Replace all placeholders: {SOURCE_ID}, {REPOSITORY}, {CONVERTER_TYPE}, etc.
+#
+# This file defines how to sync with the upstream app store repository.
+
+# Source metadata
+source_id: {SOURCE_ID}  # Must match directory name (lowercase, hyphens)
+source_name: "{DISPLAY_NAME}"  # Human-readable name
+source_description: "{SHORT_DESCRIPTION}"  # One-line description
+
+# Upstream repository configuration
+upstream:
+  # Source type: github, gitlab, http, git, or custom
+  type: github
+
+  # Repository location
+  # For GitHub: "owner/repo" format
+  # For GitLab: "owner/repo" format
+  # For Git: full git URL
+  # For HTTP: base URL for app definitions
+  repository: "{UPSTREAM_OWNER}/{UPSTREAM_REPO}"
+
+  # Branch to track
+  branch: "main"
+
+  # Path within repository containing app definitions
+  # Leave empty if apps are at repository root
+  path: "{PATH_TO_APPS}"  # e.g., "Apps", "apps", "catalog", ""
+
+# Converter configuration
+converter:
+  # Converter type - must match a converter in container-packaging-tools
+  # Available: casaos, runtipi, custom
+  # Custom converters can be added to container-packaging-tools
+  type: {CONVERTER_TYPE}  # casaos, runtipi, custom
+
+  # App manifest version (if applicable)
+  # CasaOS: "2.0"
+  # Runtipi: leave blank or specify version
+  version: "{MANIFEST_VERSION}"  # e.g., "2.0", "1.0", or blank
+
+  # Converter options (converter-specific)
+  options:
+    # Package name prefix for all apps from this source
+    # Must match prefix in store YAML filter
+    # Examples: casaos, runtipi, custom
+    package_prefix: "{PREFIX}"
+
+    # Apply intelligent fallbacks for missing/invalid data
+    use_fallbacks: true
+
+    # Validation mode: warn, error, or ignore
+    # warn: log warnings but continue (recommended)
+    # error: fail conversion on validation issues
+    # ignore: skip validation (not recommended)
+    validation_mode: "warn"
+
+    # Additional converter-specific options can be added here
+    # Refer to container-packaging-tools documentation for your converter
+
+# Sync schedule (for automated sync workflow - planned feature)
+sync:
+  # How often to check for upstream changes
+  # Options: daily, weekly, manual
+  schedule: "daily"
+
+  # Time of day to run sync (UTC, 24-hour format)
+  # Stagger times to avoid all sources syncing simultaneously
+  time: "02:00"
+
+  # Enable automatic PR creation when changes detected
+  auto_pr: true
+
+  # Pull request options
+  pr_options:
+    # PR title prefix for automated sync PRs
+    title_prefix: "sync({SOURCE_ID}):"
+
+    # Auto-merge after checks pass (requires approval)
+    # Recommended: false (manual review)
+    auto_merge: false
+
+    # Labels to add to automated PRs
+    labels:
+      - "automated"
+      - "{SOURCE_ID}"
+      - "sync"
+
+# Package metadata defaults
+# These values are used for all packages from this source
+defaults:
+  origin: "Hat Labs"  # APT package origin
+  maintainer: "Hat Labs <info@hatlabs.fi>"  # Package maintainer
+  section: "admin"  # Debian section (admin is standard for container apps)
+  priority: "optional"  # Debian priority (optional is standard)
+
+# Statistics (auto-updated by sync process)
+# Do not manually edit these fields
+stats:
+  total_apps: 0  # Number of apps currently synced
+  last_sync: null  # Timestamp of last successful sync
+  last_sync_commit: null  # Upstream commit hash from last sync
+
+# Notes:
+# - source_id must match the directory name exactly
+# - package_prefix should be short and descriptive
+# - Sync workflow will be implemented in a future PR
+# - Statistics are auto-updated by the sync process

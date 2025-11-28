@@ -1,0 +1,32 @@
+# Debian Control File Template
+#
+# Copy to: sources/{SOURCE_NAME}/store/debian/control
+# Replace placeholders: {SOURCE_ID}, {DISPLAY_NAME}, {DESCRIPTION}, etc.
+# Remove this header comment block
+
+Source: {SOURCE_ID}-container-store
+Section: admin
+Priority: optional
+Maintainer: Hat Labs <info@hatlabs.fi>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.0
+Homepage: https://github.com/hatlabs/halos-imported-containers
+
+Package: {SOURCE_ID}-container-store
+Architecture: all
+Description: {DISPLAY_NAME} container application store definition for Cockpit APT
+ This package provides the store definition and branding for the {DISPLAY_NAME}
+ container application store, designed to work with cockpit-apt.
+ .
+ {DESCRIPTION_LINE_2}
+ .
+ {DESCRIPTION_LINE_3}
+ .
+ {SOURCE_ATTRIBUTION}
+
+# Notes:
+# - Source and Package names must use {SOURCE_ID}-container-store format
+# - Description must have short synopsis (first line, <80 chars)
+# - Extended description uses " ." for blank lines
+# - Each line after first must start with a space
+# - Keep description focused on what the store provides

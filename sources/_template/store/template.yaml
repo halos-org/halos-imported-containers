@@ -1,0 +1,89 @@
+# Store Definition Template
+#
+# Copy this file to: sources/{SOURCE_NAME}/store/{SOURCE_NAME}.yaml
+# Replace all placeholders: {SOURCE_ID}, {DISPLAY_NAME}, {PREFIX}, etc.
+#
+# This file defines how your source appears in the Cockpit container apps UI.
+
+# Store ID (lowercase, hyphens only, matches source directory name)
+# Example: casaos-official, runtipi, custom-apps
+id: {SOURCE_ID}
+
+# Display name shown in Cockpit UI
+# Example: "CasaOS Official", "Runtipi Apps", "Custom Applications"
+name: {DISPLAY_NAME}
+
+# Markdown-formatted description
+# Describe what apps this store contains and where they come from
+description: |
+  {DESCRIPTION}
+
+  {ADDITIONAL_CONTEXT}
+
+# Icon path (installed by Debian packaging)
+# Standard path: /usr/share/container-stores/{SOURCE_ID}/icon.svg
+icon: /usr/share/container-stores/{SOURCE_ID}/icon.svg
+
+# Package filters - define which packages appear in this store
+filters:
+  # Repository origins (from APT Release file "Origin:" field)
+  # Usually "Hat Labs" for all halos-imported-containers sources
+  include_origins:
+    - "Hat Labs"
+
+  # Package name patterns
+  # All apps from this source should match: {PREFIX}-*-container
+  # Example: casaos-*-container, runtipi-*-container
+  include_patterns:
+    - "{PREFIX}-*-container"
+
+# Category metadata - organize apps into sections
+# Customize categories based on the types of apps in your source
+# Icons use Heroicons naming (https://heroicons.com)
+category_metadata:
+  # Example categories - customize for your source's app types
+
+  - id: media
+    label: Media & Entertainment
+    icon: PlayCircleIcon
+    description: Media servers, streaming, and entertainment applications
+
+  - id: utilities
+    label: Utilities & Tools
+    icon: WrenchIcon
+    description: System utilities, productivity tools, and general-purpose applications
+
+  - id: automation
+    label: Automation & IoT
+    icon: HomeIcon
+    description: Home automation, IoT platforms, and smart device management
+
+  - id: networking
+    label: Networking & Security
+    icon: NetworkIcon
+    description: Network tools, VPNs, DNS, and security applications
+
+  - id: storage
+    label: Storage & Backup
+    icon: DatabaseIcon
+    description: File storage, backup solutions, and data management
+
+  - id: development
+    label: Development Tools
+    icon: CodeIcon
+    description: Development environments, version control, and CI/CD
+
+  - id: monitoring
+    label: Monitoring & Analytics
+    icon: ChartLineIcon
+    description: System monitoring, logging, and analytics dashboards
+
+  # Add more categories as needed for your specific source
+  # Common additional categories:
+  # - gaming, communication, finance, education, productivity, etc.
+
+# Notes:
+# - Store ID must match source directory name
+# - Package prefix must match the prefix used in package names
+# - Categories should reflect the actual app types in your source
+# - Icon path must match the installation path in debian/rules

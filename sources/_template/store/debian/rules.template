@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# Debian Rules File Template
+#
+# Copy to: sources/{SOURCE_NAME}/store/debian/rules
+# Replace {SOURCE_ID} with your source ID
+# Make executable: chmod +x debian/rules
+# Remove this header comment block
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	# Install store configuration
+	# Path format: etc/container-apps/stores/{SOURCE_ID}.yaml
+	install -D -m 644 {SOURCE_ID}.yaml debian/{SOURCE_ID}-container-store/etc/container-apps/stores/{SOURCE_ID}.yaml
+
+	# Install branding assets
+	# Icon path: /usr/share/container-stores/{SOURCE_ID}/icon.svg
+	install -D -m 644 icon.svg debian/{SOURCE_ID}-container-store/usr/share/container-stores/{SOURCE_ID}/icon.svg
+
+	# Install banner if it exists (optional)
+	# Banner path: /usr/share/container-stores/{SOURCE_ID}/banner.png
+	[ -f banner.png ] && install -D -m 644 banner.png debian/{SOURCE_ID}-container-store/usr/share/container-stores/{SOURCE_ID}/banner.png || true
+
+# Notes:
+# - Replace all {SOURCE_ID} placeholders
+# - Store YAML filename must match source ID
+# - install -D creates parent directories automatically
+# - -m 644 sets file permissions (readable by all, writable by owner)
+# - Banner installation is optional (|| true prevents failure if missing)
+# - Paths must match those referenced in your store YAML file

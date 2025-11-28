@@ -1,0 +1,33 @@
+# Debian Changelog Template
+#
+# Copy to: sources/{SOURCE_NAME}/store/debian/changelog
+# Replace placeholders: {SOURCE_ID}, {VERSION}, {DATE}, {CHANGES}
+# Remove this header comment block
+#
+# Format: debian changelog format (strict!)
+# Tool: Use 'dch' command to maintain proper format
+
+{SOURCE_ID}-container-store ({VERSION}-1) stable; urgency=medium
+
+  * Initial release
+  * Store definition for {DISPLAY_NAME} applications
+  * Filtering configuration for cockpit-apt
+  * {FEATURE_1}
+  * {FEATURE_2}
+  * Branding assets (icon and banner)
+
+ -- Hat Labs <info@hatlabs.fi>  {DATE}
+
+# Changelog format notes:
+# - First line: package-name (version) distribution; urgency=level
+# - Changes: Each line starts with "  * " (two spaces, asterisk, space)
+# - Signature: " -- Maintainer <email>  Date" (space-dash-dash-space format)
+# - Date format: "Thu, 28 Nov 2025 12:00:00 +0200" (RFC 2822)
+# - Version format: {upstream}-{debian} (e.g., "0.1.0-1")
+#
+# Use 'dch -i' to add new entries in correct format
+# Or manually follow the format exactly (very strict!)
+#
+# Example date formats:
+#   Thu, 28 Nov 2025 12:00:00 +0200
+#   Mon, 01 Jan 2025 10:00:00 +0000

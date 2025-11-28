@@ -1,0 +1,154 @@
+# {DISPLAY_NAME} Source
+
+Auto-imported container applications from [{UPSTREAM_NAME}]({UPSTREAM_URL}).
+
+## Overview
+
+This source provides automatic conversion and packaging of applications from the upstream {UPSTREAM_NAME} repository. Applications are automatically converted to HaLOS-compatible Debian packages using the {CONVERTER_TYPE} converter from container-packaging-tools.
+
+**Statistics**: {APP_COUNT}+ applications available
+
+## Structure
+
+```
+{SOURCE_ID}/
+├── apps/                # Converted application definitions ({APP_COUNT}+ apps)
+│   ├── app-name-1/     # Individual app directories
+│   ├── app-name-2/     # Each contains metadata.yaml, config.yml, docker-compose.yml
+│   └── ...
+├── store/               # Store definition and packaging
+│   ├── {SOURCE_ID}.yaml      # Store configuration for Cockpit
+│   ├── icon.svg              # Store branding (256x256)
+│   └── debian/               # Debian packaging for store package
+│       ├── control
+│       ├── rules
+│       ├── changelog
+│       └── copyright
+├── upstream/            # Upstream sync configuration
+│   └── source.yaml     # Sync settings and metadata
+└── README.md           # This file
+```
+
+## Upstream Source
+
+- **Repository**: {UPSTREAM_URL}
+- **Branch**: `{BRANCH}`
+- **Path**: `{PATH}/`
+- **Format**: {FORMAT_NAME} {FORMAT_VERSION}
+- **Maintainer**: {UPSTREAM_MAINTAINER}
+
+## Package Naming
+
+All packages from this source use the `{PREFIX}-{appname}-container` naming pattern:
+
+- **{PREFIX}-{EXAMPLE_APP_1}-container**: {EXAMPLE_APP_1_DESC} from {DISPLAY_NAME}
+- **{PREFIX}-{EXAMPLE_APP_2}-container**: {EXAMPLE_APP_2_DESC} from {DISPLAY_NAME}
+- **{PREFIX}-{EXAMPLE_APP_3}-container**: {EXAMPLE_APP_3_DESC} from {DISPLAY_NAME}
+
+The `{PREFIX}-` prefix clearly identifies packages from this source and prevents conflicts with packages from other sources (casaos, runtipi, manually curated, etc.).
+
+## Store Package
+
+The store package `{SOURCE_ID}-container-store` provides:
+
+- **Store definition**: Configuration for Cockpit UI integration
+- **Package filtering**: Includes all `{PREFIX}-*-container` packages
+- **Categories**: {CATEGORY_LIST}
+- **Branding**: Icon and optional banner for store display
+
+## Sync Process (Planned)
+
+The automated sync workflow will:
+
+1. **Daily Check**: Monitor upstream repository for changes
+2. **Change Detection**: Identify new, updated, or removed apps
+3. **Automatic Conversion**: Run {CONVERTER_TYPE} converter on modified apps
+4. **PR Creation**: Create pull request with converted apps
+5. **Validation**: CI validates all converted app definitions
+6. **Merge**: After approval, merge triggers package builds
+7. **Publication**: Packages published to apt.hatlabs.fi
+
+## Conversion Details
+
+Apps are converted using the `{CONVERTER_TYPE}` converter from container-packaging-tools:
+
+- **Input Format**: {FORMAT_NAME} ({FORMAT_DESCRIPTION})
+- **Output Format**: HaLOS container package format (metadata.yaml, config.yml, docker-compose.yml)
+- **Intelligent Fallbacks**: Handles missing descriptions, invalid variable names, null screenshots
+- **Metadata Enhancement**: Adds Debian packaging metadata, dependencies, maintainer info
+- **Success Rate**: {CONVERSION_STATS}
+
+## Installation
+
+```bash
+# Install the store package
+sudo apt install {SOURCE_ID}-container-store
+
+# Install individual apps
+sudo apt install {PREFIX}-{EXAMPLE_APP_1}-container
+sudo apt install {PREFIX}-{EXAMPLE_APP_2}-container
+sudo apt install {PREFIX}-{EXAMPLE_APP_3}-container
+```
+
+The store package is required for apps to appear in the Cockpit UI, but individual apps can be installed independently via APT.
+
+## Building
+
+Build all {DISPLAY_NAME} packages (store + apps):
+
+```bash
+# From repository root
+./tools/build-source.sh {SOURCE_ID}
+
+# Output: build/*.deb
+```
+
+## Application Categories
+
+Apps span multiple categories:
+
+{CATEGORY_DESCRIPTIONS}
+
+## Source Attribution
+
+All packages clearly indicate their source:
+
+- **Package prefix**: `{PREFIX}-` identifies {DISPLAY_NAME} origin
+- **Metadata**: Includes upstream URL and original {UPSTREAM_NAME} repository link
+- **Maintainer**: Hat Labs (as package maintainer)
+- **Upstream License**: Preserved from original app definition
+
+## Related
+
+- **Upstream**: [{UPSTREAM_NAME}]({UPSTREAM_URL})
+- **Converter**: [container-packaging-tools](https://github.com/hatlabs/container-packaging-tools)
+- **Repository**: [halos-imported-containers](https://github.com/hatlabs/halos-imported-containers)
+- **APT Repository**: [apt.hatlabs.fi](https://apt.hatlabs.fi)
+
+## License
+
+Package definitions and metadata: MIT License
+
+Individual applications retain their upstream licenses as specified in their original {UPSTREAM_NAME} app manifests.
+
+<!--
+TEMPLATE PLACEHOLDERS:
+- {DISPLAY_NAME}: Human-readable source name (e.g., "CasaOS Official")
+- {SOURCE_ID}: Source directory name (e.g., "casaos-official")
+- {PREFIX}: Package prefix (e.g., "casaos")
+- {UPSTREAM_NAME}: Upstream repository name
+- {UPSTREAM_URL}: Upstream repository URL
+- {UPSTREAM_MAINTAINER}: Who maintains the upstream
+- {BRANCH}: Git branch (e.g., "main")
+- {PATH}: Path within repo to apps (e.g., "Apps")
+- {FORMAT_NAME}: App format name (e.g., "CasaOS App Manifest")
+- {FORMAT_VERSION}: Format version (e.g., "v2.0")
+- {FORMAT_DESCRIPTION}: Brief format description
+- {CONVERTER_TYPE}: Converter type (e.g., "casaos")
+- {APP_COUNT}: Number of apps
+- {CONVERSION_STATS}: Conversion success stats (e.g., "147/147 apps")
+- {CATEGORY_LIST}: Comma-separated category list
+- {CATEGORY_DESCRIPTIONS}: Bulleted list of categories and descriptions
+- {EXAMPLE_APP_1/2/3}: Example app names
+- {EXAMPLE_APP_1/2/3_DESC}: Example app descriptions
+-->
