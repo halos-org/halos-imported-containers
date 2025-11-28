@@ -78,11 +78,10 @@ check_prerequisites() {
         missing_tools+=("debhelper (install: apt install debhelper)")
     fi
 
-    # Check for container-packaging-tools (TODO: Add when ready)
-    # For now, we'll build a placeholder since the tool isn't available yet
-    # if ! command -v container-pkg &> /dev/null; then
-    #     missing_tools+=("container-packaging-tools (install: uv tool install ...)")
-    # fi
+    # Check for container-packaging-tools
+    if ! command -v generate-container-packages &> /dev/null; then
+        missing_tools+=("generate-container-packages (install: uv tool install container-packaging-tools)")
+    fi
 
     if [ ${#missing_tools[@]} -gt 0 ]; then
         warn "Some build tools are missing:"
@@ -105,17 +104,32 @@ build_store_package() {
         error "Store Debian packaging directory not found: $store_dir/debian"
     fi
 
-    # TODO: Implement actual dpkg-buildpackage call when Debian packaging is ready
-    # For now, just validate the structure exists
-    info "Store package build logic placeholder (requires Debian packaging setup)"
-    info "Would execute: dpkg-buildpackage -us -uc -b in $store_dir"
+    # Check if dpkg-buildpackage is available
+    if ! command -v dpkg-buildpackage &> /dev/null; then
+        warn "dpkg-buildpackage not available - skipping actual build"
+        info "Store package structure validated at: $store_dir"
+        return 0
+    fi
 
-    # Create a placeholder .deb file for testing
-    # TODO: Extract version from debian/changelog when implementing real build
+    # Build the store package
+    info "Building store package with dpkg-buildpackage..."
+    (
+        cd "$store_dir"
+        dpkg-buildpackage -us -uc -b
+    )
+
+    # Move the built .deb file to BUILD_DIR
     local package_name="${source_name}-container-store"
-    local version="0.1.0"  # Hard-coded for placeholder only
-    touch "$BUILD_DIR/${package_name}_${version}_all.deb"
-    info "Created placeholder: ${package_name}_${version}_all.deb"
+    # Find the .deb file (should be in parent of store_dir)
+    local deb_file
+    deb_file=$(find "$(dirname "$store_dir")" -maxdepth 1 -name "${package_name}_*.deb" -type f | head -n 1)
+
+    if [ -n "$deb_file" ]; then
+        mv "$deb_file" "$BUILD_DIR/"
+        info "Built: $(basename "$deb_file")"
+    else
+        error "Store package build failed - .deb file not found"
+    fi
 }
 
 # Build app packages using container-packaging-tools
@@ -140,29 +154,60 @@ build_app_packages() {
 
     info "Found $app_count apps to build"
 
-    # TODO: Implement container-packaging-tools build when ready
-    # For each app in apps_dir:
-    #   - Run container-pkg build or equivalent
-    #   - Move .deb file to BUILD_DIR
-    # For now, just iterate and create placeholders
+    # Check if generate-container-packages is available
+    if ! command -v generate-container-packages &> /dev/null; then
+        warn "generate-container-packages not available - skipping app builds"
+        info "Install with: uv tool install container-packaging-tools"
+        return 0
+    fi
+
+    # Build each app package
+    local built_count=0
+    local failed_count=0
 
     for app_dir in "$apps_dir"/*; do
         if [ -d "$app_dir" ]; then
             local app_name
             app_name=$(basename "$app_dir")
             local package_name="${source_name}-${app_name}-container"
-            # TODO: Extract version from metadata.yaml when implementing real build
-            local version="1.0.0"  # Hard-coded for placeholder only
 
-            info "Would build: $package_name"
-            # TODO: Replace with actual build command
-            # container-pkg build "$app_dir" --output "$BUILD_DIR"
+            info "Building: $package_name"
 
-            # Create placeholder for testing
-            touch "$BUILD_DIR/${package_name}_${version}_all.deb"
-            info "Created placeholder: ${package_name}_${version}_all.deb"
+            # Generate Debian package structure
+            if ! generate-container-packages "$app_dir" -o "$BUILD_DIR"; then
+                warn "Failed to generate package for $app_name"
+                ((failed_count++))
+                continue
+            fi
+
+            # Build the Debian package if dpkg-buildpackage is available
+            if command -v dpkg-buildpackage &> /dev/null; then
+                (
+                    cd "$BUILD_DIR/$package_name"
+                    dpkg-buildpackage -us -uc -b
+                )
+
+                # Move the .deb file to BUILD_DIR root
+                local deb_file
+                deb_file=$(find "$BUILD_DIR" -maxdepth 1 -name "${package_name}_*.deb" -type f | head -n 1)
+
+                if [ -n "$deb_file" ]; then
+                    ((built_count++))
+                else
+                    warn "Package build failed for $app_name - .deb not found"
+                    ((failed_count++))
+                fi
+
+                # Clean up the temporary package directory
+                rm -rf "$BUILD_DIR/$package_name"
+            else
+                warn "dpkg-buildpackage not available - skipping .deb build for $app_name"
+                ((built_count++))
+            fi
         fi
     done
+
+    info "Apps built: $built_count/$app_count (failed: $failed_count)"
 }
 
 # Print build summary
