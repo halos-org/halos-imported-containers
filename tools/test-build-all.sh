@@ -31,6 +31,46 @@ fail() {
     TESTS_FAILED=$((TESTS_FAILED + 1))
 }
 
+# Helper: Create minimal valid Debian packaging for a test source
+create_test_source() {
+    local source_name="$1"
+    local source_dir="$TEST_DIR/sources/$source_name"
+
+    mkdir -p "$source_dir/"{apps,store/debian,upstream}
+    touch "$source_dir/store/${source_name}.yaml"
+
+    # Create minimal valid debian/changelog
+    cat > "$source_dir/store/debian/changelog" <<EOF
+${source_name}-container-store (0.1.0-1) unstable; urgency=medium
+
+  * Initial test release
+
+ -- Test <test@example.com>  $(date -R)
+EOF
+
+    # Create minimal valid debian/control
+    cat > "$source_dir/store/debian/control" <<EOF
+Source: ${source_name}-container-store
+Section: admin
+Priority: optional
+Maintainer: Test <test@example.com>
+Build-Depends: debhelper-compat (= 13)
+
+Package: ${source_name}-container-store
+Architecture: all
+Description: Test package
+ Test package for build system
+EOF
+
+    # Create minimal debian/rules
+    cat > "$source_dir/store/debian/rules" <<'EOF'
+#!/usr/bin/make -f
+%:
+	dh $@
+EOF
+    chmod +x "$source_dir/store/debian/rules"
+}
+
 # Test 1: Script exists and is executable
 test_script_exists() {
     if [ -x "$BUILD_ALL_SCRIPT" ]; then
@@ -55,8 +95,7 @@ test_empty_sources() {
 
 # Test 3: Run on repository with one source (should build that source)
 test_single_source() {
-    mkdir -p "$TEST_DIR/sources/source1/"{apps,store/debian,upstream}
-    touch "$TEST_DIR/sources/source1/store/source1.yaml"
+    create_test_source "source1"
 
     local exit_code=0
     local output
@@ -71,10 +110,8 @@ test_single_source() {
 
 # Test 4: Run on repository with multiple sources (should build all)
 test_multiple_sources() {
-    mkdir -p "$TEST_DIR/sources/source1/"{apps,store/debian,upstream}
-    mkdir -p "$TEST_DIR/sources/source2/"{apps,store/debian,upstream}
-    touch "$TEST_DIR/sources/source1/store/source1.yaml"
-    touch "$TEST_DIR/sources/source2/store/source2.yaml"
+    create_test_source "source1"
+    create_test_source "source2"
 
     local exit_code=0
     local output
@@ -90,8 +127,7 @@ test_multiple_sources() {
 # Test 5: Verify _template directory is skipped
 test_template_skipped() {
     mkdir -p "$TEST_DIR/sources/_template"
-    mkdir -p "$TEST_DIR/sources/realsource/"{apps,store/debian,upstream}
-    touch "$TEST_DIR/sources/realsource/store/realsource.yaml"
+    create_test_source "realsource"
 
     local output
     output=$( cd "$TEST_DIR" && "$BUILD_ALL_SCRIPT" 2>&1 )
@@ -105,10 +141,8 @@ test_template_skipped() {
 
 # Test 6: Verify packages from all sources in build/ directory
 test_packages_collected() {
-    mkdir -p "$TEST_DIR/sources/source1/"{apps,store/debian,upstream}
-    mkdir -p "$TEST_DIR/sources/source2/"{apps,store/debian,upstream}
-    touch "$TEST_DIR/sources/source1/store/source1.yaml"
-    touch "$TEST_DIR/sources/source2/store/source2.yaml"
+    create_test_source "source1"
+    create_test_source "source2"
 
     ( cd "$TEST_DIR" && "$BUILD_ALL_SCRIPT" >/dev/null 2>&1 )
 
@@ -127,8 +161,7 @@ test_packages_collected() {
 
 # Test 7: Exit code 0 on successful build
 test_exit_code_success() {
-    mkdir -p "$TEST_DIR/sources/source1/"{apps,store/debian,upstream}
-    touch "$TEST_DIR/sources/source1/store/source1.yaml"
+    create_test_source "source1"
 
     local exit_code=0
     ( cd "$TEST_DIR" && "$BUILD_ALL_SCRIPT" >/dev/null 2>&1 ) || exit_code=$?
@@ -142,8 +175,7 @@ test_exit_code_success() {
 
 # Test 8: Prints clear summary at end
 test_summary_output() {
-    mkdir -p "$TEST_DIR/sources/source1/"{apps,store/debian,upstream}
-    touch "$TEST_DIR/sources/source1/store/source1.yaml"
+    create_test_source "source1"
 
     local output
     output=$( cd "$TEST_DIR" && "$BUILD_ALL_SCRIPT" 2>&1 )

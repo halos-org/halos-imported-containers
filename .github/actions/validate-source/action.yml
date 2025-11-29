@@ -127,7 +127,8 @@ runs:
         docker compose -f docker/docker-compose.debtools.yml run --rm debtools bash -c "
           set -e
           echo 'Installing container-packaging-tools...'
-          uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
+          uv tool install git+https://github.com/hatlabs/container-packaging-tools.git >/dev/null 2>&1
+          export PATH=\"/root/.local/bin:\$PATH\"
           echo 'Running tests...'
           ./tools/test-validate-structure.sh
           ./tools/test-build-source.sh
