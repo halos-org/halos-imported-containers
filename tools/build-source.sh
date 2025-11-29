@@ -189,10 +189,10 @@ build_app_packages() {
             deb_file=$(find "$BUILD_DIR" -maxdepth 1 -name "*${app_name}*container*.deb" -type f -mmin -1 | head -n 1)
 
             if [ -n "$deb_file" ]; then
-                ((built_count++))
+                built_count=$((built_count + 1))
             else
                 warn "Package build failed for $app_name - .deb not found"
-                ((failed_count++))
+                failed_count=$((failed_count + 1))
             fi
         fi
     done
