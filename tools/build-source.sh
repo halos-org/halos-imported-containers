@@ -173,36 +173,26 @@ build_app_packages() {
 
             info "Building: $package_name"
 
-            # Generate Debian package structure
+            # Generate Debian package (creates .deb directly)
+            # Note: generate-container-packages creates the .deb file directly,
+            # no need to run dpkg-buildpackage afterwards
             if ! generate-container-packages "$app_dir" -o "$BUILD_DIR"; then
                 warn "Failed to generate package for $app_name"
                 ((failed_count++))
                 continue
             fi
 
-            # Build the Debian package if dpkg-buildpackage is available
-            if command -v dpkg-buildpackage &> /dev/null; then
-                (
-                    cd "$BUILD_DIR/$package_name"
-                    dpkg-buildpackage -us -uc -b
-                )
+            # Verify the .deb was created
+            # Note: Package name from generate-container-packages may differ from our expected name
+            # It uses the name from the app's metadata
+            local deb_file
+            deb_file=$(find "$BUILD_DIR" -maxdepth 1 -name "*${app_name}*container*.deb" -type f -mmin -1 | head -n 1)
 
-                # Move the .deb file to BUILD_DIR root
-                local deb_file
-                deb_file=$(find "$BUILD_DIR" -maxdepth 1 -name "${package_name}_*.deb" -type f | head -n 1)
-
-                if [ -n "$deb_file" ]; then
-                    ((built_count++))
-                else
-                    warn "Package build failed for $app_name - .deb not found"
-                    ((failed_count++))
-                fi
-
-                # Clean up the temporary package directory
-                rm -rf "${BUILD_DIR:?}/${package_name:?}"
-            else
-                warn "dpkg-buildpackage not available - skipping .deb build for $app_name"
+            if [ -n "$deb_file" ]; then
                 ((built_count++))
+            else
+                warn "Package build failed for $app_name - .deb not found"
+                ((failed_count++))
             fi
         fi
     done
