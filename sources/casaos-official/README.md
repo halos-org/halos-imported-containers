@@ -136,3 +136,7 @@ All packages clearly indicate their source:
 Package definitions and metadata: MIT License
 
 Individual applications retain their upstream licenses as specified in their original CasaOS app manifests.
+
+---
+
+<!-- Test change for PR workflow validation (Issue #18) -->
