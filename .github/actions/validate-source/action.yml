@@ -100,11 +100,19 @@ runs:
         echo "result=success" >> $GITHUB_OUTPUT
         echo "::notice::Validation passed"
 
-    - name: Run test suites
+    - name: Build debtools Docker image
       shell: bash
       if: env.source-exists == 'true'
       run: |
-        echo "::group::Running test suites"
+        echo "::group::Building debtools Docker image"
+        docker compose -f docker/docker-compose.debtools.yml build debtools
+        echo "::endgroup::"
+
+    - name: Run test suites in Docker
+      shell: bash
+      if: env.source-exists == 'true'
+      run: |
+        echo "::group::Running test suites in debtools container"
 
         # Validate test scripts exist
         for test_script in test-validate-structure.sh test-build-source.sh test-build-all.sh; do
@@ -114,15 +122,18 @@ runs:
           fi
         done
 
-        # Run all test suites
-        # Note: These test the build scripts themselves, not source structure
-        # Consider running only on changes to tools/ directory in future
-        ./tools/test-validate-structure.sh
-        ./tools/test-build-source.sh
-        ./tools/test-build-all.sh
+        # Run all test suites in Docker with build tools available
+        # Install container-packaging-tools first
+        docker compose -f docker/docker-compose.debtools.yml run --rm debtools bash -c "
+          set -e
+          cd ../container-packaging-tools && uv tool install --editable . && cd /workspace
+          ./tools/test-validate-structure.sh
+          ./tools/test-build-source.sh
+          ./tools/test-build-all.sh
+        "
 
         echo "::endgroup::"
-        echo "::notice::All tests passed"
+        echo "::notice::All tests passed in Docker environment"
 
     - name: Validate app definitions (placeholder)
       shell: bash
