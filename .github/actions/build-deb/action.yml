@@ -77,10 +77,19 @@ runs:
       shell: bash
       if: env.source-exists == 'true'
       run: |
-        # TODO: Install container-packaging-tools when available
-        # For now, placeholder for Cluster 4 implementation
-        echo "::notice::container-packaging-tools installation placeholder"
-        echo "::notice::Will be implemented in Cluster 4 (CasaOS Implementation)"
+        echo "::group::Installing container-packaging-tools"
+        uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
+
+        # Add to PATH (uv tools install to ~/.local/bin)
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        export PATH="$HOME/.local/bin:$PATH"
+
+        # Verify installation
+        if ! generate-container-packages --version; then
+          echo "::error::generate-container-packages installation failed"
+          exit 1
+        fi
+        echo "::endgroup::"
 
     - name: Install Debian packaging tools
       shell: bash
@@ -88,7 +97,7 @@ runs:
       run: |
         if [ "$RUNNER_OS" == "Linux" ]; then
           sudo apt-get update
-          sudo apt-get install -y dpkg-dev debhelper
+          sudo apt-get install -y build-essential dpkg-dev debhelper
         else
           echo "::warning::Debian tools not available on $RUNNER_OS"
           echo "::warning::Build will use placeholder logic"
