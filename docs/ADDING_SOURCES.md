@@ -28,6 +28,8 @@ Each source in this repository represents an upstream container app store (like 
 
 **Time Estimate**: 2-4 hours for a new source with existing converter support
 
+**Note**: This guide uses generic examples (like `newsource`, `runtipi`) as placeholders. For actual working implementations, refer to `sources/casaos-official/` as the reference.
+
 ## Prerequisites
 
 ### Required Knowledge
@@ -49,11 +51,10 @@ Each source in this repository represents an upstream container app store (like 
 Before adding a source, verify that `container-packaging-tools` supports the upstream format:
 
 **Currently Supported:**
-- **CasaOS**: CasaOS App Store v2.0 format (implemented)
-- **Runtipi**: Runtipi app store format (planned)
+- **CasaOS**: CasaOS App Store v2.0 format
 
 **Custom Converters:**
-If your upstream format isn't supported, you'll need to implement a converter in the [container-packaging-tools](https://github.com/hatlabs/container-packaging-tools) repository first.
+If your upstream format isn't supported, you'll need to implement a converter in the [container-packaging-tools](https://github.com/hatlabs/container-packaging-tools) repository first. See the CasaOS converter as a reference implementation.
 
 ## Step-by-Step Process
 
@@ -91,37 +92,39 @@ mv sources/newsource/upstream/source.yaml.example sources/newsource/upstream/sou
 vim sources/newsource/upstream/source.yaml
 ```
 
-**Key fields to configure:**
+**Key fields to configure** (example values - replace with your actual source):
 
 ```yaml
 # Source identification (must match directory name)
-source_id: runtipi  # MUST match your directory name
-source_name: "Runtipi"  # Display name
-source_description: "Community app store for Runtipi"
+source_id: newsource  # MUST match your directory name
+source_name: "New Source"  # Display name
+source_description: "Description of your source"
 
-# Upstream repository
+# Upstream repository (configure based on your upstream)
 upstream:
   type: github  # github, gitlab, http, or git
-  repository: "runtipi/runtipi-appstore"  # owner/repo for GitHub
-  branch: "master"  # or "main"
-  path: "apps"  # path to apps within repo (blank if root)
+  repository: "owner/repo"  # For GitHub: owner/repo format
+  branch: "main"  # Branch to track
+  path: "apps"  # Path to apps within repo (blank if root)
 
-# Converter settings
+# Converter settings (must use implemented converter)
 converter:
-  type: runtipi  # Must match converter in container-packaging-tools
-  version: ""  # Converter-specific version if applicable
+  type: casaos  # Currently only 'casaos' is implemented
+  version: "2.0"  # CasaOS manifest version
   options:
-    package_prefix: runtipi  # Used in package names: runtipi-app-container
+    package_prefix: newsource  # Used in package names
     use_fallbacks: true
     validation_mode: "warn"
 
-# Package defaults
+# Package defaults (standard for all sources)
 defaults:
   origin: "Hat Labs"
   maintainer: "Hat Labs <info@hatlabs.fi>"
   section: "admin"
   priority: "optional"
 ```
+
+**Important**: Currently only the `casaos` converter is implemented. You must either use CasaOS-compatible upstream data or implement a custom converter first.
 
 See the [template file](../sources/_template/upstream/source.yaml.example) for detailed field descriptions.
 
@@ -545,24 +548,18 @@ Replace placeholders like `{DISPLAY_NAME}`, `{SOURCE_ID}`, `{PREFIX}`, etc. with
 
 ### Step 8: Run the Converter
 
-Now populate the `apps/` directory by running the converter:
+Now populate the `apps/` directory by running the converter.
 
-```bash
-# Install container-packaging-tools
-./run shell
-uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
-export PATH="$HOME/.local/bin:$PATH"
+**Important**: The conversion workflow is currently manual. Automated source-based conversion is planned but not yet implemented.
 
-# Run converter (this will populate apps/ directory)
-# The converter reads your upstream/source.yaml config
-# Example command (adjust based on actual converter interface):
-convert-source sources/runtipi
+For CasaOS sources, you would:
+1. Clone the upstream repository
+2. Run `generate-container-packages` on each app directory
+3. Copy converted apps to your `sources/newsource/apps/` directory
 
-# Exit container
-exit
-```
+See the existing `sources/casaos-official/apps/` directory structure as a reference for the expected output format.
 
-**Note:** The exact converter command depends on the implementation in container-packaging-tools. Check the tool's documentation for source-based conversion commands.
+**Note:** Automated sync workflows (planned) will handle this conversion automatically in the future.
 
 ### Step 9: Validate Structure
 
@@ -804,25 +801,28 @@ git push
 
 ## Examples
 
-### Complete Example: Adding Runtipi
+### Reference Implementation: CasaOS Official
 
-See the full example in the repository:
-- Source: `sources/casaos-official/` (reference implementation)
+The only complete, working implementation currently in the repository:
+- Source: `sources/casaos-official/`
 - Workflows: `.github/workflows/*casaos-official.yml`
 - Store: `sources/casaos-official/store/`
+- Upstream config: `sources/casaos-official/upstream/source.yaml`
+
+Use this as your template when adding new sources.
 
 ### Minimal Example Structure
 
 ```
-sources/runtipi/
+sources/newsource/
 ├── apps/
-│   ├── jellyfin/
+│   ├── app1/
 │   │   ├── metadata.yaml
 │   │   ├── config.yml
 │   │   └── docker-compose.yml
 │   └── ... (more apps)
 ├── store/
-│   ├── runtipi.yaml
+│   ├── newsource.yaml
 │   ├── icon.svg
 │   └── debian/
 │       ├── control
@@ -833,6 +833,8 @@ sources/runtipi/
 │   └── source.yaml
 └── README.md
 ```
+
+**See `sources/casaos-official/` for the actual working implementation.**
 
 ## Best Practices
 
