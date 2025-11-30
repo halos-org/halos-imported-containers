@@ -11,7 +11,7 @@ on:
       - '.github/workflows/main-casaos.yml'
 
 permissions:
-  contents: read
+  contents: write  # Required for creating releases
 
 jobs:
   build:
@@ -81,6 +81,56 @@ jobs:
           echo "::notice::Packages to publish:"
           ls -lh build/*.deb
 
+      - name: Generate release tag
+        id: release-tag
+        run: |
+          # Create unique release tag: YYYY-MM-DD+N
+          DATE=$(date -u +%Y-%m-%d)
+
+          # Fetch all tags
+          git fetch --tags --quiet
+
+          # Count existing tags for today's date
+          REVISION=$(git tag -l "${DATE}+*" | wc -l | tr -d ' ')
+          REVISION=$((REVISION + 1))
+
+          RELEASE_TAG="${DATE}+${REVISION}"
+          echo "tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
+          echo "::notice::Release tag: ${RELEASE_TAG}"
+
+      - name: Create pre-release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.release-tag.outputs.tag }}
+          name: "CasaOS Unstable - ${{ steps.release-tag.outputs.tag }}"
+          body: |
+            ## CasaOS Container Packages - Unstable Channel
+
+            Auto-generated pre-release from main branch.
+
+            **Commit**: ${{ github.sha }}
+            **Timestamp**: ${{ steps.release-tag.outputs.tag }}
+
+            ### Packages
+
+            This release contains Debian packages for all CasaOS apps.
+            These packages are automatically published to apt.hatlabs.fi unstable channel.
+
+            ### Installation
+
+            ```bash
+            # Add HaLOS APT repository (if not already added)
+            curl -fsSL https://apt.hatlabs.fi/halos-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/halos-archive-keyring.gpg
+            echo "deb [signed-by=/usr/share/keyrings/halos-archive-keyring.gpg] https://apt.hatlabs.fi trixie-unstable main" | sudo tee /etc/apt/sources.list.d/halos-unstable.list
+
+            # Update and install
+            sudo apt update
+            sudo apt install casaos-container-store
+            ```
+          prerelease: true
+          files: build/*.deb
+          fail_on_unmatched_files: true
+
       - name: Dispatch to APT repository
         uses: peter-evans/repository-dispatch@v3
         with:
@@ -92,13 +142,15 @@ jobs:
               "repository": "${{ github.repository }}",
               "distro": "trixie",
               "channel": "unstable",
-              "component": "main"
+              "component": "main",
+              "release_tag": "${{ steps.release-tag.outputs.tag }}"
             }
 
       - name: Report success
         run: |
           echo "=== Unstable Channel Publish Complete ==="
           echo "Repository: ${{ github.repository }}"
+          echo "Release Tag: ${{ steps.release-tag.outputs.tag }}"
           echo "Distro: trixie"
           echo "Channel: unstable"
           echo "Component: main"
