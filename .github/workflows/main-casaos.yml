@@ -84,10 +84,17 @@ jobs:
       - name: Generate release tag
         id: release-tag
         run: |
-          # Create unique release tag: unstable-YYYYMMDD-HHMMSS-{short-sha}
-          TIMESTAMP=$(date -u +%Y%m%d-%H%M%S)
-          SHORT_SHA=$(echo "${{ github.sha }}" | cut -c1-7)
-          RELEASE_TAG="unstable-${TIMESTAMP}-${SHORT_SHA}"
+          # Create unique release tag: YYYY-MM-DD+N
+          DATE=$(date -u +%Y-%m-%d)
+
+          # Fetch all tags
+          git fetch --tags --quiet
+
+          # Count existing tags for today's date
+          REVISION=$(git tag -l "${DATE}+*" | wc -l | tr -d ' ')
+          REVISION=$((REVISION + 1))
+
+          RELEASE_TAG="${DATE}+${REVISION}"
           echo "tag=${RELEASE_TAG}" >> $GITHUB_OUTPUT
           echo "::notice::Release tag: ${RELEASE_TAG}"
 
@@ -95,7 +102,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.release-tag.outputs.tag }}
-          name: "CasaOS (Unstable) - ${{ steps.release-tag.outputs.tag }}"
+          name: "CasaOS Unstable - ${{ steps.release-tag.outputs.tag }}"
           body: |
             ## CasaOS Container Packages - Unstable Channel
 
