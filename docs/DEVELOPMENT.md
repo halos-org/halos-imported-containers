@@ -1,6 +1,6 @@
 # HaLOS Imported Containers - Development Guide
 
-**Last Updated**: 2025-11-29
+**Last Updated**: 2024-11-30
 
 This guide covers setting up your local development environment and common development workflows for the halos-imported-containers repository.
 
@@ -33,7 +33,7 @@ This guide covers setting up your local development environment and common devel
 
 ### Optional Tools
 
-- **yq**: YAML validation (recommended for local validation)
+- **yq**: YAML validation (required for validation workflows)
 - **jq**: JSON processing for GitHub API
 
 ### Installation

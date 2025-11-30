@@ -6,13 +6,13 @@ Auto-imported container applications from the [CasaOS App Store](https://github.
 
 This source provides automatic conversion and packaging of applications from the upstream CasaOS App Store repository. Applications are automatically converted to HaLOS-compatible Debian packages using the CasaOS converter from container-packaging-tools.
 
-**Statistics**: 147+ applications available
+**Statistics**: 144 applications available
 
 ## Structure
 
 ```
 casaos/
-├── apps/                # Converted application definitions (147+ apps)
+├── apps/                # Converted application definitions (144 apps)
 │   ├── app-name-1/     # Individual app directories
 │   ├── app-name-2/     # Each contains metadata.yaml, config.yml, docker-compose.yml
 │   └── ...
@@ -76,7 +76,7 @@ Apps are converted using the `casaos` converter from container-packaging-tools:
 - **Output Format**: HaLOS container package format (metadata.yaml, config.yml, docker-compose.yml)
 - **Intelligent Fallbacks**: Handles missing descriptions, invalid variable names, null screenshots
 - **Metadata Enhancement**: Adds Debian packaging metadata, dependencies, maintainer info
-- **100% Success Rate**: Currently 147/147 apps convert successfully
+- **High Success Rate**: Currently 144/144 valid apps convert successfully
 
 ## Installation
 

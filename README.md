@@ -6,7 +6,7 @@ Auto-imported container applications from multiple app stores for HaLOS.
 
 This repository contains automatically converted container applications from multiple upstream app stores for use with HaLOS (Hat Labs Operating System). Currently supported sources:
 
-- **[CasaOS](https://github.com/IceWhaleTech/CasaOS-AppStore)**: 147+ applications
+- **[CasaOS](https://github.com/IceWhaleTech/CasaOS-AppStore)**: 144 applications
 - **CasaOS Community**: Third-party CasaOS stores (planned)
 - **Runtipi**: Runtipi app store (planned)
 
@@ -23,7 +23,7 @@ Source-specific prefixes:
 halos-imported-containers/
 ├── sources/
 │   ├── casaos/     # CasaOS official apps (current)
-│   │   ├── apps/            # Converted applications (147+ apps)
+│   │   ├── apps/            # Converted applications (144 apps)
 │   │   ├── store/           # Store definition and packaging
 │   │   └── upstream/        # Sync metadata
 │   ├── casaos-community/    # CasaOS community apps (planned)
@@ -38,7 +38,7 @@ halos-imported-containers/
 Apps are automatically converted using the [`container-packaging-tools`](https://github.com/hatlabs/container-packaging-tools) converter:
 
 1. **Upstream Sync**: Monitor multiple upstream app stores for changes
-2. **Automatic Conversion**: Run source-specific converters on all apps (currently 147/147 for CasaOS)
+2. **Automatic Conversion**: Run source-specific converters on all apps (currently 144/144 for CasaOS)
 3. **Package Generation**: Build Debian packages with proper metadata and source prefixes
 4. **Repository Publishing**: Publish to apt.hatlabs.fi
 

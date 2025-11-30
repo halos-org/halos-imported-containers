@@ -46,4 +46,4 @@ A successful implementation:
 - ✅ Documentation is updated
 - ✅ Commit messages are meaningful
 
-For detailed workflow information, see [DEVELOPMENT_WORKFLOW.md](../../docs/DEVELOPMENT_WORKFLOW.md) in the halos-distro workspace.
+For detailed workflow information, see the halos-distro workspace documentation at https://github.com/hatlabs/halos-distro/tree/main/docs

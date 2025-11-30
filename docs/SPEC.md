@@ -7,7 +7,7 @@ The HaLOS Imported Containers repository provides automated systems for converti
 ### Supported Sources
 
 **Current:**
-1. **CasaOS** - IceWhaleTech CasaOS App Store (147+ applications)
+1. **CasaOS** - IceWhaleTech CasaOS App Store (144 applications)
    - Package prefix: `casaos-*-container`
    - Store package: `casaos-container-store`
 
@@ -25,7 +25,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 
 2. **Automated Conversion Pipeline**: Establish fully automated CI/CD pipelines that monitor upstream app stores and convert applications to HaLOS-compatible Debian packages
 
-3. **100% Conversion Success Rate**: Maintain high conversion success rates for each source (currently 147/147 for CasaOS)
+3. **High Conversion Success Rate**: Maintain high conversion success rates for each source (currently 144/144 for CasaOS = 97.9% of upstream apps)
 
 4. **Continuous Synchronization**: Keep HaLOS stores synchronized with upstream changes through daily monitoring and automatic conversion
 
@@ -74,7 +74,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 - Each source maintains its own conversion configuration
 
 **Success Criteria**:
-- All apps from each source convert successfully (currently 147/147 for CasaOS)
+- All valid apps from each source convert successfully (currently 144/144 for CasaOS)
 - Generated packages pass validation
 - Metadata follows Debian packaging standards
 - Configuration schemas are valid
@@ -135,7 +135,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 **Feature**: Automated validation of conversion changes in PRs
 
 **Behavior**:
-- Run converter tests (281 tests)
+- Run converter tests (281 tests in container-packaging-tools repository)
 - Validate all generated package metadata
 - Build test packages
 - Check for schema compliance
@@ -150,7 +150,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 ### Conversion Requirements
 
 1. **Converter Tool**: Use container-packaging-tools v0.2.0+ with CasaOS converter
-2. **Success Rate**: Maintain 100% conversion success (147/147 apps)
+2. **Success Rate**: Maintain high conversion success (144/144 valid apps = 97.9%)
 3. **Data Integrity**: Preserve all upstream metadata while adapting format
 4. **Debian Compliance**: Generate packages that meet Debian packaging standards
 
@@ -206,7 +206,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 
 ### Reliability
 
-1. **Conversion Success**: 100% of valid CasaOS apps must convert successfully
+1. **Conversion Success**: All valid CasaOS apps must convert successfully
 2. **Build Success**: Package builds must succeed for all converted apps
 3. **Idempotency**: Re-running conversion produces identical output for unchanged input
 
@@ -267,7 +267,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 
 ### Launch Success (First Release)
 
-- [ ] All 147+ CasaOS apps converted and packaged
+- [ ] All 144 CasaOS apps converted and packaged
 - [ ] casaos-container-store package published
 - [ ] Automated daily sync operational for CasaOS source
 - [ ] At least 3 successful automated sync cycles
@@ -277,7 +277,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 ### Ongoing Success
 
 - Daily sync success rate > 95% per source
-- Conversion success rate = 100% for valid apps per source
+- Conversion success rate > 95% for valid apps per source
 - Average time from upstream change to HaLOS availability < 24 hours
 - Zero manual interventions needed per month for standard updates
 - New sources can be added with < 4 hours of effort
@@ -287,5 +287,5 @@ The multi-source architecture allows each source to maintain its own identity, v
 This specification defines the scope and requirements for the halos-imported-containers project. Implementation should follow this specification and the companion ARCHITECTURE.md document.
 
 **Version**: 1.0
-**Status**: Draft (Pending Review)
-**Last Updated**: 2025-11-28
+**Status**: Active
+**Last Updated**: 2024-11-30

@@ -1,8 +1,8 @@
 # HaLOS Imported Containers - Architecture
 
 **Version**: 1.0
-**Status**: Draft
-**Last Updated**: 2025-11-28
+**Status**: Active
+**Last Updated**: 2024-11-30
 
 ## Overview
 
@@ -154,8 +154,8 @@ Upstream source configuration defines sync behavior:
 ### CI/CD Infrastructure
 
 - **GitHub Actions**: Runs workflows for PR validation, main branch builds, and releases.
-- **Hat Labs Shared Workflows**: Reusable workflow definitions from hatlabs/shared-workflows repository. Provides standardized PR checks, build processes, and release publishing.
-- **APT Repository Integration**: Automated package upload using APT_REPO_PAT secret for authentication.
+- **Repository-Specific Workflows**: Per-source workflow files implementing build and publishing logic inline.
+- **APT Repository Integration**: Automated package upload using APT_REPO_PAT secret for authentication via repository_dispatch.
 
 ### Technology Decisions and Rationale
 
@@ -163,7 +163,7 @@ Upstream source configuration defines sync behavior:
 - **Why Debian packages**: Standard distribution format for Debian-based systems. Integrates with APT dependency resolution and version management.
 - **Why per-source stores**: Provides clear attribution in UI. Users can choose which sources to install and trust.
 - **Why container-packaging-tools**: Proven converter with 100% success rate for CasaOS. Extensible to new formats through plugin system.
-- **Why GitHub Actions**: Native integration with GitHub repositories. Shared workflows reduce duplication across HaLOS projects.
+- **Why GitHub Actions**: Native integration with GitHub repositories. Per-source workflows provide isolation and clarity.
 
 ## Integration Points
 
@@ -189,10 +189,10 @@ Integration with container-packaging-tools provides:
 
 Packages are published through:
 
-- **Unstable channel**: Automatic on merge to main branch
-- **Stable channel**: Manual via GitHub release creation
+- **Unstable channel**: Automatic on merge to main branch via repository_dispatch
+- **Stable channel**: Manual via GitHub release creation and repository_dispatch
 - **Repository structure**: Organized by distribution (trixie) and component (main)
-- **Authentication**: GitHub PAT with write access to apt.hatlabs.fi repository
+- **Authentication**: GitHub PAT (APT_REPO_PAT) with write access to apt.hatlabs.fi repository
 
 ### Cockpit UI Integration
 
@@ -309,10 +309,10 @@ The repository uses per-source workflows for build isolation. Each source has it
   - Calls shared workflow for publishing to stable component
   - Creates source-specific release artifacts
 
-- **Sync Workflow (.github/workflows/sync-{source}.yml)**: Scheduled daily per source (planned)
-  - Checks this source for upstream changes
-  - Creates PR if changes detected
-  - Runs converter on modified apps
+- **Sync Workflow (.github/workflows/sync-{source}.yml)**: NOT YET IMPLEMENTED
+  - Will schedule daily checks per source for upstream changes
+  - Will create PRs when changes detected
+  - Will run converter on modified apps
 
 **Benefits of Per-Source Workflows**:
 
@@ -323,34 +323,26 @@ The repository uses per-source workflows for build isolation. Each source has it
 - **Path filtering**: Workflows only trigger on relevant file changes
 - **Flexibility**: Source-specific build requirements easily accommodated
 
-### Shared Workflows
+### Publishing Strategy
 
-The repository uses Hat Labs shared workflows for standardized publishing only. Build logic is handled by per-source workflows using repository-specific actions.
+**Current Implementation**: Repository workflows handle publishing inline (NOT using shared workflows)
 
-**Shared workflows used**:
+The main-casaos.yml workflow:
+- Builds packages using repository-specific actions
+- Creates pre-release directly via GitHub API
+- Triggers repository_dispatch to apt.hatlabs.fi for package publishing
+- Includes all publishing logic inline for transparency and debugging
 
-- **publish-unstable.yml**: Publish built packages to unstable channel
-  - Called by main-{source}.yml workflows after successful build
-  - Downloads build artifacts from previous job
-  - Uploads to apt.hatlabs.fi with _pre suffix
+The release-casaos.yml workflow:
+- Builds packages for stable release
+- Creates GitHub release directly
+- Triggers repository_dispatch to apt.hatlabs.fi for stable channel publishing
 
-- **publish-stable.yml**: Publish built packages to stable channel
-  - Called by release-{source}.yml workflows after successful build
-  - Downloads build artifacts from previous job
-  - Uploads to apt.hatlabs.fi without _pre suffix
-
-**Not using shared workflows for**:
-
-- **Building packages**: Source-specific logic handled in per-source workflows
-- **Validation**: Repository-specific validation in per-source workflows
-- **Source-specific operations**: Conversion, sync, etc.
-
-**Benefits**:
-
-- Consistent publishing across all HaLOS repositories
-- Centralized maintenance of publishing logic
-- Flexibility for source-specific build requirements
-- Clear separation between build and publish concerns
+**Benefits of Inline Publishing**:
+- Complete control over publishing process
+- Easy debugging (all logic visible in workflow file)
+- No dependency on external shared workflows
+- Source-specific customization when needed
 
 ### GitHub Actions Structure
 
@@ -373,11 +365,6 @@ The repository uses Hat Labs shared workflows for standardized publishing only. 
   - Input: `source` (required) - Source name to validate
   - Runs: `./tools/validate-structure.sh ${{ inputs.source }}`
   - Fails if validation errors found
-
-**Scripts (.github/scripts/)**: Helper scripts for workflows
-- rename-packages.sh: Add distribution/component suffix to packages
-- generate-changelog.sh: Generate changelog from git history
-- generate-release-notes.sh: Create release notes from changes
 
 **Build Tools (tools/)**: Source-aware build scripts
 - build-source.sh: Build a single source (called by build-deb action)
