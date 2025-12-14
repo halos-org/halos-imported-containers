@@ -4,17 +4,13 @@ description: A well-designed cross-platform ChatGPT UI.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/icon.png
 license: Unknown
-long_description: An intelligent chat application based on ChatGPT, supports fast
-  deployment, Markdown, beautiful UI, fluid response, privacy and security, and allows
-  customization of preset roles for quick creation, sharing, and debugging of personalized
-  conversations.
+long_description: An intelligent chat application based on ChatGPT, supports fast deployment, Markdown, beautiful UI, fluid response, privacy and security, and allows customization of preset roles for quick creation, sharing, and debugging of personalized conversations.
 maintainer: Yidadaa <auto-converted@casaos.io>
 name: chatgpt-next-web
-package_name: casaos-chatgpt-next-web-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ChatGPT-Next-Web/screenshot-2.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

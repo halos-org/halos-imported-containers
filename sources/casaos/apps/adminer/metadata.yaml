@@ -4,18 +4,14 @@ description: Database management in a single PHP file
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/icon.png
 license: Unknown
-long_description: Adminer (formerly phpMinAdmin) is a full-featured database management
-  tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready
-  to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite,
-  MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.
+long_description: Adminer (formerly phpMinAdmin) is a full-featured database management tool written in PHP. Conversely to phpMyAdmin, it consist of a single file ready to deploy to the target server. Adminer is available for MySQL, PostgreSQL, SQLite, MS SQL, Oracle, Firebird, SimpleDB, Elasticsearch and MongoDB.
 maintainer: Jakub Vrána <auto-converted@casaos.io>
 name: adminer
-package_name: casaos-adminer-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Adminer/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

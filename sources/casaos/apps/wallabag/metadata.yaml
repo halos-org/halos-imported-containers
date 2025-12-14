@@ -4,27 +4,13 @@ description: Save and classify articles. Read them later. Freely.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Wallabag/icon.png
 license: Unknown
-long_description: 'Wallabag is a web page saving app that allows users to save articles
-  for offline reading, extracting content for a distraction-free experience. Its intuitive
-  Web interface enables saving articles with a click, ensuring users can read them
-  at their convenience.
+long_description: 'Wallabag is a web page saving app that allows users to save articles for offline reading, extracting content for a distraction-free experience. Its intuitive Web interface enables saving articles with a click, ensuring users can read them at their convenience.
 
 
-  The app''s core features include convenient web page saving, optimized reading,
-  and flexible content organization. It extracts only the article''s content, removing
-  pop-ups and ads, and displays it in a clean, comfortable view. Users can organize
-  saved articles with tags and automatic tagging rules, creating a personalized content
-  library accessible on demand. Browser extensions enable quick saving, compatible
-  with Chrome, Firefox, Opera, and more. Cross-platform clients cover Android, iOS,
-  and other devices, ensuring a seamless reading experience. It also supports multi-user
-  collaboration for sharing saved articles.
+  The app''s core features include convenient web page saving, optimized reading, and flexible content organization. It extracts only the article''s content, removing pop-ups and ads, and displays it in a clean, comfortable view. Users can organize saved articles with tags and automatic tagging rules, creating a personalized content library accessible on demand. Browser extensions enable quick saving, compatible with Chrome, Firefox, Opera, and more. Cross-platform clients cover Android, iOS, and other devices, ensuring a seamless reading experience. It also supports multi-user collaboration for sharing saved articles.
 
 
-  It enables importing data from services like Pocket, Readability, Instapaper, or
-  Pinboard, simplifying content library migration. RSS generation allows users to
-  access saved articles in RSS readers. Community documentation enhances usability,
-  and the app''s high flexibility and intuitive operation deliver a modern web content
-  management solution.
+  It enables importing data from services like Pocket, Readability, Instapaper, or Pinboard, simplifying content library migration. RSS generation allows users to access saved articles in RSS readers. Community documentation enhances usability, and the app''s high flexibility and intuitive operation deliver a modern web content management solution.
 
 
   **Key Features:**
@@ -33,8 +19,7 @@ long_description: 'Wallabag is a web page saving app that allows users to save a
 
   - Extract pure content for a distraction-free reading view
 
-  - Article classification with automatic tagging rules for a personalized content
-  library
+  - Article classification with automatic tagging rules for a personalized content library
 
   - Browser extensions for quick web page saving
 
@@ -57,15 +42,14 @@ long_description: 'Wallabag is a web page saving app that allows users to save a
 
   - [Wallabag Docker Image](https://hub.docker.com/r/wallabag/wallabag)
 
-  '
+'
 maintainer: wallabag <auto-converted@casaos.io>
 name: wallabag
-package_name: casaos-wallabag-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Wallabag/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Wallabag/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Wallabag/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Wallabag/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Wallabag/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Wallabag/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

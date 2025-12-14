@@ -4,10 +4,7 @@ description: Einheitliche LLM-Feinabstimmung mit 100+ Modellen
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LLaMA-Factory_Nvidia/icon.png
 license: Unknown
-long_description: 'LLaMA Factory ist ein umfassendes Framework für das Fine-Tuning
-  von Large Language Models (LLMs) mit über 100 unterstützten Modellen. Es bietet
-  eine benutzerfreundliche Web-Oberfläche und leistungsstarke Trainingsmethoden wie
-  LoRA, QLoRA und Full-Parameter-Training.
+long_description: 'LLaMA Factory ist ein umfassendes Framework für das Fine-Tuning von Large Language Models (LLMs) mit über 100 unterstützten Modellen. Es bietet eine benutzerfreundliche Web-Oberfläche und leistungsstarke Trainingsmethoden wie LoRA, QLoRA und Full-Parameter-Training.
 
 
   **Hauptfunktionen:**
@@ -36,15 +33,14 @@ long_description: 'LLaMA Factory ist ein umfassendes Framework für das Fine-Tun
 
   - [Dokumentation](https://llamafactory.readthedocs.io/)
 
-  '
+'
 maintainer: hiyouga <auto-converted@casaos.io>
 name: llama-factory-nvidia
-package_name: casaos-llama-factory-nvidia-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LLaMA-Factory_Nvidia/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LLaMA-Factory_Nvidia/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LLaMA-Factory_Nvidia/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LLaMA-Factory_Nvidia/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LLaMA-Factory_Nvidia/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LLaMA-Factory_Nvidia/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

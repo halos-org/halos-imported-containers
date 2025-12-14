@@ -4,26 +4,13 @@ description: Self-hosted ZeroTier network controller with web UI for centralized
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/icon.png
 license: Unknown
-long_description: 'ZTNET is a powerful ZeroTier network management tool that simplifies
-  network configuration and management through an intuitive Web interface, ideal for
-  teams and individual users. Its modern design and rich features provide an efficient
-  solution for building secure, scalable virtual networks.
+long_description: 'ZTNET is a powerful ZeroTier network management tool that simplifies network configuration and management through an intuitive Web interface, ideal for teams and individual users. Its modern design and rich features provide an efficient solution for building secure, scalable virtual networks.
 
 
-  The tool centers on an intuitive Web interface and organization with multi-user
-  support. Developed in TypeScript, it acts as an intermediary between users and the
-  ZeroTier Controller API, enabling collaborative network management within organizations
-  to streamline team tasks. Integration with ZeroTier Central API allows direct management
-  of networks, nodes, and members through a user-friendly interface, enhancing configuration
-  efficiency.
+  The tool centers on an intuitive Web interface and organization with multi-user support. Developed in TypeScript, it acts as an intermediary between users and the ZeroTier Controller API, enabling collaborative network management within organizations to streamline team tasks. Integration with ZeroTier Central API allows direct management of networks, nodes, and members through a user-friendly interface, enhancing configuration efficiency.
 
 
-  It supports custom private root servers to create isolated network environments,
-  improving privacy and control. Personalized user spaces enable users to independently
-  create and manage networks. Support for 6plane and rfc4193 IPv6 addressing enriches
-  enterprise or personal networking capabilities. Compatibility with ARM64 and AMD64
-  architectures ensures broad device support. The tool focuses on user-friendly and
-  flexible design to deliver a modern network management experience.
+  It supports custom private root servers to create isolated network environments, improving privacy and control. Personalized user spaces enable users to independently create and manage networks. Support for 6plane and rfc4193 IPv6 addressing enriches enterprise or personal networking capabilities. Compatibility with ARM64 and AMD64 architectures ensures broad device support. The tool focuses on user-friendly and flexible design to deliver a modern network management experience.
 
 
   **Key Features:**
@@ -49,18 +36,17 @@ long_description: 'ZTNET is a powerful ZeroTier network management tool that sim
 
   - [ZTnet GitHub](https://github.com/sinamics/ztnet)
 
-  '
+'
 maintainer: sinamics <auto-converted@casaos.io>
 name: ztnet
-package_name: casaos-ztnet-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-1.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-2.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-3.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-4.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-5.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-6.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-2.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-3.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-4.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-5.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Ztnet/screenshot-6.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

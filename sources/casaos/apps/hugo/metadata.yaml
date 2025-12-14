@@ -4,32 +4,20 @@ description: The world's fastest framework for building websites
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hugo/icon.png
 license: Unknown
-long_description: 'Hugo is a high-speed static site generation platform written in
-  Go, optimized for speed and designed for flexibility. Advanced templating system
-  and fast asset pipelines render a complete website in seconds, ideal for creating
-  documentation sites, landing pages, and various project websites.
+long_description: 'Hugo is a high-speed static site generation platform written in Go, optimized for speed and designed for flexibility. Advanced templating system and fast asset pipelines render a complete website in seconds, ideal for creating documentation sites, landing pages, and various project websites.
 
 
-  Core features include optimized speed and a flexible framework. Concurrency in Go
-  enables rapid rendering, supporting image processing (convert, resize, crop, rotate,
-  adjust colors, apply filters, overlay text/images, extract EXIF data), JavaScript
-  bundling (tree shaking, code splitting), Sass processing, and TailwindCSS support.
-  Multilingual support and taxonomy system make it suitable for diverse sites like
-  documentation, news, or events.
+  Core features include optimized speed and a flexible framework. Concurrency in Go enables rapid rendering, supporting image processing (convert, resize, crop, rotate, adjust colors, apply filters, overlay text/images, extract EXIF data), JavaScript bundling (tree shaking, code splitting), Sass processing, and TailwindCSS support. Multilingual support and taxonomy system make it suitable for diverse sites like documentation, news, or events.
 
 
-  It includes an embedded web server for real-time previews of content, structure,
-  and style changes during development. Frequent releases ensure ongoing feature enhancements,
-  keeping it cutting-edge. With efficiency and flexibility at the core, the platform
-  delivers a modern static site generation solution.
+  It includes an embedded web server for real-time previews of content, structure, and style changes during development. Frequent releases ensure ongoing feature enhancements, keeping it cutting-edge. With efficiency and flexibility at the core, the platform delivers a modern static site generation solution.
 
 
   **Key Features:**
 
   - High-speed rendering, generating sites in seconds
 
-  - Fast asset pipelines: image processing, JavaScript bundling, Sass, and TailwindCSS
-  support
+  - Fast asset pipelines: image processing, JavaScript bundling, Sass, and TailwindCSS support
 
   - Flexible framework with multilingual and taxonomy systems
 
@@ -76,15 +64,14 @@ long_description: 'Hugo is a high-speed static site generation platform written 
 
   - [Hugo GitHub](https://github.com/gohugoio/hugo)
 
-  '
+'
 maintainer: gohugoio <auto-converted@casaos.io>
 name: hugo
-package_name: casaos-hugo-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hugo/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hugo/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hugo/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hugo/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hugo/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Hugo/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -1,29 +1,16 @@
 architecture: all
 debian_section: utils
-description: A Personal Relationship Management tool to help you document your social
-  life.
+description: A Personal Relationship Management tool to help you document your social life.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Monica/icon.png
 license: Unknown
-long_description: 'Monica is a self-hosted personal relationship management tool that
-  helps users document and organize interactions with family and friends via an intuitive
-  Web interface, creating a personalized contact database. It is ideal for users balancing
-  work and life, ensuring key personal connections are never missed.
+long_description: 'Monica is a self-hosted personal relationship management tool that helps users document and organize interactions with family and friends via an intuitive Web interface, creating a personalized contact database. It is ideal for users balancing work and life, ensuring key personal connections are never missed.
 
 
-  The tool''s core features include comprehensive contact management and smart reminders.
-  It supports creating detailed contact profiles, logging personal details, relationships
-  (e.g., family, friends), and how contacts were met. Users can set automatic reminders
-  for birthdays, anniversaries, and other key dates, while tracking conversations,
-  activities, and gift ideas. A diary feature records daily moods and significant
-  moments, maintaining a clear life record.
+  The tool''s core features include comprehensive contact management and smart reminders. It supports creating detailed contact profiles, logging personal details, relationships (e.g., family, friends), and how contacts were met. Users can set automatic reminders for birthdays, anniversaries, and other key dates, while tracking conversations, activities, and gift ideas. A diary feature records daily moods and significant moments, maintaining a clear life record.
 
 
-  It offers task and debt management to track to-dos or financial interactions. Users
-  can upload photos and documents, favorite contacts, and organize relationships with
-  labels for streamlined data management. Full control over local data ensures privacy.
-  The tool’s intuitive operation and high flexibility deliver a modern relationship
-  management solution.
+  It offers task and debt management to track to-dos or financial interactions. Users can upload photos and documents, favorite contacts, and organize relationships with labels for streamlined data management. Full control over local data ensures privacy. The tool’s intuitive operation and high flexibility deliver a modern relationship management solution.
 
 
   **Key Features:**
@@ -51,15 +38,14 @@ long_description: 'Monica is a self-hosted personal relationship management tool
 
   - [Monica GitHub Repository](https://github.com/monicahq/monica)
 
-  '
+'
 maintainer: monica <auto-converted@casaos.io>
 name: monica
-package_name: casaos-monica-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Monica/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Monica/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Monica/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Monica/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Monica/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Monica/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -4,27 +4,13 @@ description: Privacy-first finance app with envelope budgeting and multi-device 
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/icon.png
 license: Unknown
-long_description: 'Actual Budget is a fast, privacy-focused finance management app
-  using local-first envelope budgeting, ensuring full control over data. Its intuitive
-  interface supports offline use, with multi-device sync and optional end-to-end encryption,
-  delivering a secure, efficient financial management experience, ideal for users
-  seeking clear financial oversight.
+long_description: 'Actual Budget is a fast, privacy-focused finance management app using local-first envelope budgeting, ensuring full control over data. Its intuitive interface supports offline use, with multi-device sync and optional end-to-end encryption, delivering a secure, efficient financial management experience, ideal for users seeking clear financial oversight.
 
 
-  The app''s core features include envelope budgeting based on real income, rapid
-  transaction handling, and intuitive financial reporting. It helps users track spending
-  and monitor monthly savings clearly, with a streamlined transaction editor for quick
-  categorization, split transactions, and transfers. Built-in net worth and cash flow
-  reports provide financial insights, and a custom report engine allows tailored reports
-  for specific needs. Undo and redo functionality ensures users can easily correct
-  mistakes, maintaining operational flexibility.
+  The app''s core features include envelope budgeting based on real income, rapid transaction handling, and intuitive financial reporting. It helps users track spending and monitor monthly savings clearly, with a streamlined transaction editor for quick categorization, split transactions, and transfers. Built-in net worth and cash flow reports provide financial insights, and a custom report engine allows tailored reports for specific needs. Undo and redo functionality ensures users can easily correct mistakes, maintaining operational flexibility.
 
 
-  It integrates bank accounts via goCardless (EU/UK) or SimpleFIN (US/Canada), supports
-  multi-device syncing for data privacy, and enables importing transaction data from
-  YNAB4, nYNAB, and QIF, OFX, QFX, CAMT.053, CSV files, simplifying migration of existing
-  financial records. Community documentation enhances usability, and the app''s simple
-  operation and high flexibility deliver a modern finance management solution.
+  It integrates bank accounts via goCardless (EU/UK) or SimpleFIN (US/Canada), supports multi-device syncing for data privacy, and enables importing transaction data from YNAB4, nYNAB, and QIF, OFX, QFX, CAMT.053, CSV files, simplifying migration of existing financial records. Community documentation enhances usability, and the app''s simple operation and high flexibility deliver a modern finance management solution.
 
 
   **Key Features:**
@@ -58,17 +44,16 @@ long_description: 'Actual Budget is a fast, privacy-focused finance management a
 
   - [Actual Budget Docker Image](https://hub.docker.com/r/actualbudget/actual-server)
 
-  '
+'
 maintainer: ActualBudget <auto-converted@casaos.io>
 name: actualbudget
-package_name: casaos-actualbudget-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-3.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-4.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-5.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-4.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ActualBudget/screenshot-5.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

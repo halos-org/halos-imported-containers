@@ -4,29 +4,22 @@ description: PostgreSQL is an advanced, enterprise-class, and open-source relati
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PostgreSQL/icon.png
 license: Unknown
-long_description: 'PostgreSQL is an advanced, enterprise-class, and open-source relational
-  database system. PostgreSQL supports both SQL (relational) and JSON (non-relational)
-  querying.
+long_description: 'PostgreSQL is an advanced, enterprise-class, and open-source relational database system. PostgreSQL supports both SQL (relational) and JSON (non-relational) querying.
 
 
-  PostgreSQL is a powerful, open source object-relational database system with over
-  35 years of active development that has earned it a strong reputation for reliability,
-  feature robustness, and performance.
+  PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
 
 
-  PostgreSQL is a highly stable database backed by more than 20 years of development
-  by the open-source community.
+  PostgreSQL is a highly stable database backed by more than 20 years of development by the open-source community.
 
 
-  PostgreSQL is used as a primary database for many web applications as well as mobile
-  and analytics applications.
+  PostgreSQL is used as a primary database for many web applications as well as mobile and analytics applications.
 
-  '
+'
 maintainer: PostgreSQL Global Dev't Group <auto-converted@casaos.io>
 name: postgresql
-package_name: casaos-postgresql-container
 screenshots: null
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -4,14 +4,12 @@ description: Unleash the power of seamless file synchronization.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Resilio-sync/icon.png
 license: Unknown
-long_description: resilio-sync is a Docker-based application that enables fast and
-  secure file synchronization and sharing.
+long_description: resilio-sync is a Docker-based application that enables fast and secure file synchronization and sharing.
 maintainer: Unknown <auto-converted@casaos.io>
 name: resilio-sync
-package_name: casaos-resilio-sync-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Resilio-sync/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Resilio-sync/screenshot-1.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

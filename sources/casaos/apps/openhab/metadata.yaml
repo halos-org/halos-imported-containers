@@ -4,24 +4,15 @@ description: Empowering the smart home
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/icon.png
 license: Unknown
-long_description: The open Home Automation Bus (openHAB, pronounced ˈəʊpənˈhæb) is
-  an open source, technology agnostic home automation platform which runs as the center
-  of your smart home! Its ability to integrate a multitude of other devices and systems.
-  openHAB includes other home automation systems, (smart) devices and other technologies
-  into a single solution. To provide a uniform user interface and a common approach
-  to automation rules across the entire system, regardless of the number of manufacturers
-  and sub-systems involved. Giving you the most flexible tool available to make almost
-  any home automation wish come true; if you can think it, odds are that you can implement
-  it with openHAB.
+long_description: The open Home Automation Bus (openHAB, pronounced ˈəʊpənˈhæb) is an open source, technology agnostic home automation platform which runs as the center of your smart home! Its ability to integrate a multitude of other devices and systems. openHAB includes other home automation systems, (smart) devices and other technologies into a single solution. To provide a uniform user interface and a common approach to automation rules across the entire system, regardless of the number of manufacturers and sub-systems involved. Giving you the most flexible tool available to make almost any home automation wish come true; if you can think it, odds are that you can implement it with openHAB.
 maintainer: openHAB <auto-converted@casaos.io>
 name: openhab
-package_name: casaos-openhab-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-1.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-2.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-3.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-4.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-2.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-3.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/OpenHAB/screenshot-4.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -4,22 +4,15 @@ description: Label Studio is an open source data labeling tool.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LabelStudio/icon.png
 license: Unknown
-long_description: 'Label Studio is an open source data labeling tool. It lets you
-  label data types like audio, text, images, videos, and time series with a simple
-  and straightforward UI and export to various model formats. It can be used to prepare
-  raw data or improve existing training data to get more accurate ML models.
+long_description: 'Label Studio is an open source data labeling tool. It lets you label data types like audio, text, images, videos, and time series with a simple and straightforward UI and export to various model formats. It can be used to prepare raw data or improve existing training data to get more accurate ML models.
 
 
-  Label Studio is an open source data labeling tool. It lets you label data types
-  like audio, text, images, videos, and time series with a simple and straightforward
-  UI and export to various model formats. It can be used to prepare raw data or improve
-  existing training data to get more accurate ML models.'
+  Label Studio is an open source data labeling tool. It lets you label data types like audio, text, images, videos, and time series with a simple and straightforward UI and export to various model formats. It can be used to prepare raw data or improve existing training data to get more accurate ML models.'
 maintainer: Yidadaa <auto-converted@casaos.io>
 name: label-studio
-package_name: casaos-label-studio-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LabelStudio/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/LabelStudio/screenshot-1.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

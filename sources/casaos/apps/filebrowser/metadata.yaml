@@ -4,16 +4,14 @@ description: Upload, delete, preview, rename, edit and share your files.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/icon.png
 license: Unknown
-long_description: File Browser - Webbased File Browser including sharing functions
-  etc.
+long_description: File Browser - Webbased File Browser including sharing functions etc.
 maintainer: File Browser <auto-converted@casaos.io>
 name: filebrowser
-package_name: casaos-filebrowser-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/screenshot-1.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/screenshot-2.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/screenshot-3.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/screenshot-2.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FileBrowser/screenshot-3.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

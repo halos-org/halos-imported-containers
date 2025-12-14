@@ -4,13 +4,11 @@ description: Simple and easy to use DDNS
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/DDNS-Updater/icon.png
 license: Unknown
-long_description: Program to keep DNS A and/or AAAA records updated for multiple DNS
-  providers
+long_description: Program to keep DNS A and/or AAAA records updated for multiple DNS providers
 maintainer: qmcgaw <auto-converted@casaos.io>
 name: ddns-updater
-package_name: casaos-ddns-updater-container
 screenshots: null
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

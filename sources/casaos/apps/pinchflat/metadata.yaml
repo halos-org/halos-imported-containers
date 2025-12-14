@@ -4,10 +4,7 @@ description: Your next YouTube media manager
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pinchflat/icon.png
 license: Unknown
-long_description: 'Pinchflat is a self-hosted app for downloading YouTube content
-  built using yt-dlp. It''s designed to be lightweight, self-contained, and easy to
-  use. You set up rules for how to download content from YouTube channels or playlists
-  and it''ll do the rest, periodically checking for new content.
+long_description: 'Pinchflat is a self-hosted app for downloading YouTube content built using yt-dlp. It''s designed to be lightweight, self-contained, and easy to use. You set up rules for how to download content from YouTube channels or playlists and it''ll do the rest, periodically checking for new content.
 
 
   Key features include:
@@ -43,17 +40,15 @@ long_description: 'Pinchflat is a self-hosted app for downloading YouTube conten
   - Supports running custom scripts when after downloading/deleting media
 
 
-  Perfect for people who want to download content for use with a media center app
-  or for those who want to archive media!
+  Perfect for people who want to download content for use with a media center app or for those who want to archive media!
 
-  '
+'
 maintainer: kieraneglin <auto-converted@casaos.io>
 name: pinchflat
-package_name: casaos-pinchflat-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pinchflat/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pinchflat/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pinchflat/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Pinchflat/screenshot-2.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

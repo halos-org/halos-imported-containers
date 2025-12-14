@@ -4,14 +4,12 @@ description: The all-in-one AI application.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/AnythingLLM/icon.png
 license: Unknown
-long_description: AnythingLLM is the easiest to use, all-in-one AI application that
-  can do RAG, AI Agents, and much more with no code or infrastructure headaches.
+long_description: AnythingLLM is the easiest to use, all-in-one AI application that can do RAG, AI Agents, and much more with no code or infrastructure headaches.
 maintainer: Mintplex Labs <auto-converted@casaos.io>
 name: anythingllm
-package_name: casaos-anythingllm-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/AnythingLLM/screenshot-1.gif
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/AnythingLLM/screenshot-1.gif
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

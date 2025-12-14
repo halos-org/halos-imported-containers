@@ -4,15 +4,12 @@ description: Cross-platform monitoring tool.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Glances/icon.png
 license: Unknown
-long_description: Glances is an open-source system cross-platform monitoring tool.
-  It allows real-time monitoring of various aspects of your system such as CPU, memory,
-  disk, network usage etc.
+long_description: Glances is an open-source system cross-platform monitoring tool. It allows real-time monitoring of various aspects of your system such as CPU, memory, disk, network usage etc.
 maintainer: Nicolas Hennion <auto-converted@casaos.io>
 name: glances
-package_name: casaos-glances-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Glances/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Glances/screenshot-1.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

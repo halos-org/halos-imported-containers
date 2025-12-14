@@ -4,30 +4,13 @@ description: Open source home automation that puts local control and privacy fir
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/icon.png
 license: Unknown
-long_description: 'Home Assistant is a smart home management app prioritizing local
-  control and data privacy, managing devices through an intuitive interface with data
-  stored locally, eliminating cloud dependency. Its robust features and community
-  support make it ideal for DIY enthusiasts and home users creating personalized home
-  experiences.
+long_description: 'Home Assistant is a smart home management app prioritizing local control and data privacy, managing devices through an intuitive interface with data stored locally, eliminating cloud dependency. Its robust features and community support make it ideal for DIY enthusiasts and home users creating personalized home experiences.
 
 
-  The app''s core features include customizable dashboards, powerful automations,
-  and a voice assistant. Dashboards support drag-and-drop customization, with various
-  card types to display data and control devices like lights or sensors. It offers
-  an advanced automation engine, such as turning on lights at sunset or alerting users
-  to an open garage door. The Assist voice assistant enables natural language control,
-  compatible with phones, tablets, smartwatches, and even traditional telephones,
-  allowing users to customize interactions and experiment with AI conversations to
-  meet diverse needs.
+  The app''s core features include customizable dashboards, powerful automations, and a voice assistant. Dashboards support drag-and-drop customization, with various card types to display data and control devices like lights or sensors. It offers an advanced automation engine, such as turning on lights at sunset or alerting users to an open garage door. The Assist voice assistant enables natural language control, compatible with phones, tablets, smartwatches, and even traditional telephones, allowing users to customize interactions and experiment with AI conversations to meet diverse needs.
 
 
-  It extends functionality through add-ons, supporting tools like AdGuard for ad blocking,
-  NodeRed for third-party automations, or turning devices into Spotify Connect targets.
-  Home energy management optimizes solar production and usage planning to save costs.
-  Home Assistant Cast transforms TVs into dashboard displays, and NFC tags trigger
-  music playback or routine automations. Community documentation aids configuration,
-  with local data processing ensuring privacy, suitable for home or small team smart
-  home management.
+  It extends functionality through add-ons, supporting tools like AdGuard for ad blocking, NodeRed for third-party automations, or turning devices into Spotify Connect targets. Home energy management optimizes solar production and usage planning to save costs. Home Assistant Cast transforms TVs into dashboard displays, and NFC tags trigger music playback or routine automations. Community documentation aids configuration, with local data processing ensuring privacy, suitable for home or small team smart home management.
 
 
   **Key Features:**
@@ -61,16 +44,15 @@ long_description: 'Home Assistant is a smart home management app prioritizing lo
 
   - [Home Assistant Add-ons](https://www.home-assistant.io/addons)
 
-  '
+'
 maintainer: Home Assistant <auto-converted@casaos.io>
 name: homeassistant
-package_name: casaos-homeassistant-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-1.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-2.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-3.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-4.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-2.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-3.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/HomeAssistant/screenshot-4.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -4,21 +4,17 @@ description: Web app for browsing, reading and downloading eBooks stored in a Ca
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/icon.png
 license: Unknown
-long_description: 'Web app for browsing, reading and downloading eBooks stored in
-  a Calibre database
+long_description: 'Web app for browsing, reading and downloading eBooks stored in a Calibre database
 
 
-  Calibre-web is a web app providing a clean interface for browsing, reading and downloading
-  eBooks using an existing Calibre database. It is also possible to integrate google
-  drive and edit metadata and your calibre library through the app itself.'
+  Calibre-web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. It is also possible to integrate google drive and edit metadata and your calibre library through the app itself.'
 maintainer: linuxserver <auto-converted@casaos.io>
 name: calibre-web
-package_name: casaos-calibre-web-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Calibre-web/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

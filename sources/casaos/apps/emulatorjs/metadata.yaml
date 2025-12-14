@@ -4,15 +4,12 @@ description: CasaOS Container App for emulatorjs
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/EmulatorJS/icon.png
 license: Unknown
-long_description: EmulatorJS is a Docker-based emulator application that can simulate
-  various operating systems and device environments within containers for development,
-  testing, and learning purposes.
+long_description: EmulatorJS is a Docker-based emulator application that can simulate various operating systems and device environments within containers for development, testing, and learning purposes.
 maintainer: Unknown <auto-converted@casaos.io>
 name: emulatorjs
-package_name: casaos-emulatorjs-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/EmulatorJS/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/EmulatorJS/screenshot-1.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -4,10 +4,7 @@ description: Personal finance management application
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Maybe/icon.png
 license: Unknown
-long_description: 'Maybe is a personal finance management application designed to
-  help you track your expenses, income, and investments in one place. With an intuitive
-  interface and powerful features, Maybe makes it easy to understand your financial
-  situation and make informed decisions about your money.
+long_description: 'Maybe is a personal finance management application designed to help you track your expenses, income, and investments in one place. With an intuitive interface and powerful features, Maybe makes it easy to understand your financial situation and make informed decisions about your money.
 
 
   **Key Features:**
@@ -20,8 +17,7 @@ long_description: 'Maybe is a personal finance management application designed t
 
   - **Budget Planning**: Create and maintain budgets to control your spending
 
-  - **Financial Reports**: Generate detailed reports to understand your financial
-  habits
+  - **Financial Reports**: Generate detailed reports to understand your financial habits
 
   - **AI-Powered Insights**: Get personalized financial advice using AI technology
 
@@ -43,15 +39,14 @@ long_description: 'Maybe is a personal finance management application designed t
 
   - [Maybe GitHub Repository](https://github.com/maybe-finance/maybe)
 
-  '
+'
 maintainer: maybe-finance <auto-converted@casaos.io>
 name: maybe
-package_name: casaos-maybe-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Maybe/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Maybe/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Maybe/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Maybe/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Maybe/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Maybe/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

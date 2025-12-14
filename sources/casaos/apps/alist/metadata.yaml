@@ -4,35 +4,24 @@ description: Mount your cloud drive on your home NAS
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/icon.png
 license: Unknown
-long_description: 'Alist transforms how you manage and access your files at home,
-  whether on your TV, phone, or any other device. Unlike traditional cloud storage,
-  Alist offers a unified experience across multiple platforms, making it a breeze
-  to keep your media and documents at your fingertips.
+long_description: 'Alist transforms how you manage and access your files at home, whether on your TV, phone, or any other device. Unlike traditional cloud storage, Alist offers a unified experience across multiple platforms, making it a breeze to keep your media and documents at your fingertips.
 
 
-  With features like easy installation, support for multiple storage providers (local,
-  Aliyundrive, Onedrive, Google Drive), WebDAV support, dark mode, protected routes
-  with password authentication, file previews for videos, audio, office files, PDFs,
-  code, images, package and batch downloads, single sign-on, offline torrent downloads,
-  file encryption, and additional tools like a text editor and Cloudflare workers
-  proxy, Alist ensures a seamless and secure file management experience.
+  With features like easy installation, support for multiple storage providers (local, Aliyundrive, Onedrive, Google Drive), WebDAV support, dark mode, protected routes with password authentication, file previews for videos, audio, office files, PDFs, code, images, package and batch downloads, single sign-on, offline torrent downloads, file encryption, and additional tools like a text editor and Cloudflare workers proxy, Alist ensures a seamless and secure file management experience.
 
 
-  Deploying Alist on private cloud devices like Zima brings unmatched convenience
-  with multi-device access, ensuring your files are always within reach and secure,
-  no matter where you are.
+  Deploying Alist on private cloud devices like Zima brings unmatched convenience with multi-device access, ensuring your files are always within reach and secure, no matter where you are.
 
-  '
+'
 maintainer: Xhofe <auto-converted@casaos.io>
 name: alist
-package_name: casaos-alist-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-3.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-4.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-5.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-4.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Alist/screenshot-5.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

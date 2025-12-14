@@ -4,35 +4,18 @@ description: RomM is a self-hosted ROM manager for managing and playing game col
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/icon.png
 license: Unknown
-long_description: 'RomM is a self-hosted game collection management app designed for
-  emulator enthusiasts, offering a convenient way to scan, enrich, browse, and play
-  games. Its responsive Web interface allows users to manage collections via any modern
-  browser, supporting over 400 platforms, ideal for retro gaming fans building personal
-  game libraries.
+long_description: 'RomM is a self-hosted game collection management app designed for emulator enthusiasts, offering a convenient way to scan, enrich, browse, and play games. Its responsive Web interface allows users to manage collections via any modern browser, supporting over 400 platforms, ideal for retro gaming fans building personal game libraries.
 
 
-  The app''s core features include robust library management and seamless gameplay.
-  It fetches metadata from IGDB, Screenscraper, and MobyGames, and custom artwork
-  from SteamGridDB, enhancing the visual appeal of collections. Users can play games
-  directly in the browser using EmulatorJS and RuffleRS, with support for multi-disk
-  games, DLCs, patches, and manuals. It also enables parsing and filtering by filename
-  tags for tailored organization. Additionally, it supports multi-user accounts with
-  limited access permissions, allowing library sharing with friends and displaying
-  RetroAchievements.
+  The app''s core features include robust library management and seamless gameplay. It fetches metadata from IGDB, Screenscraper, and MobyGames, and custom artwork from SteamGridDB, enhancing the visual appeal of collections. Users can play games directly in the browser using EmulatorJS and RuffleRS, with support for multi-disk games, DLCs, patches, and manuals. It also enables parsing and filtering by filename tags for tailored organization. Additionally, it supports multi-user accounts with limited access permissions, allowing library sharing with friends and displaying RetroAchievements.
 
 
-  It can be flexibly deployed on personal servers or NAS devices, with official apps
-  for Playnite and muOS enhancing cross-device access. Users can upload, update, or
-  delete games via the Web interface, with community support documentation expanding
-  functionality. Whether managing a personal retro game library or sharing with others,
-  the app''s intuitive interface and high customizability deliver a modern game management
-  platform, meeting diverse needs.
+  It can be flexibly deployed on personal servers or NAS devices, with official apps for Playnite and muOS enhancing cross-device access. Users can upload, update, or delete games via the Web interface, with community support documentation expanding functionality. Whether managing a personal retro game library or sharing with others, the app''s intuitive interface and high customizability deliver a modern game management platform, meeting diverse needs.
 
 
   **Key Features:**
 
-  - Scan and enhance your game library with metadata from IGDB, Screenscraper and
-  MobyGames
+  - Scan and enhance your game library with metadata from IGDB, Screenscraper and MobyGames
 
   - Fetch custom artwork from SteamGridDB
 
@@ -59,17 +42,16 @@ long_description: 'RomM is a self-hosted game collection management app designed
 
   - [RomM GitHub Repository](https://github.com/rommapp/romm)
 
-  '
+'
 maintainer: rommapp <auto-converted@casaos.io>
 name: romm
-package_name: casaos-romm-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-3.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-4.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-5.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-4.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/RomM/screenshot-5.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

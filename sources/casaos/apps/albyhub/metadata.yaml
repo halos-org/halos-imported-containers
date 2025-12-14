@@ -4,19 +4,14 @@ description: Self-custodial Bitcoin Lightning wallet with integrated node and ap
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/getAlby/hub@master/frontend/public/icon-512.png
 license: Unknown
-long_description: 'Self-custodial Bitcoin Lightning wallet with integrated node and
-  app connections.
+long_description: 'Self-custodial Bitcoin Lightning wallet with integrated node and app connections.
 
 
-  Alby Hub is an open-source, self-custodial Bitcoin Lightning wallet, with the easiest-to-use
-  Lightning Network node for everyone.
+  Alby Hub is an open-source, self-custodial Bitcoin Lightning wallet, with the easiest-to-use Lightning Network node for everyone.
 
-  Whether you''re an individual, creator, or developer, Alby Hub is your centre for
-  seamless Bitcoin payments.
+  Whether you''re an individual, creator, or developer, Alby Hub is your centre for seamless Bitcoin payments.
 
-  Effortlessly connect to a variety of apps like the Alby Browser Extension or Alby
-  Go mobile app, create sub-wallets for family and friends, and take full control
-  of your funds—all within an intuitive interface and developer-ready APIs.
+  Effortlessly connect to a variety of apps like the Alby Browser Extension or Alby Go mobile app, create sub-wallets for family and friends, and take full control of your funds—all within an intuitive interface and developer-ready APIs.
 
 
   **USEFUL LINKS**
@@ -31,15 +26,14 @@ long_description: 'Self-custodial Bitcoin Lightning wallet with integrated node 
 
   - [Feedback Board, feature requests, bug reports[(https://feedback.getalby.com)
 
-  '
+'
 maintainer: Unknown <auto-converted@casaos.io>
 name: albyhub
-package_name: casaos-albyhub-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/getAlby/umbrel-community-app-store@master/alby-albyhub/images/node.png
-- https://cdn.jsdelivr.net/gh/getAlby/umbrel-community-app-store@master/alby-albyhub/images/store.png
-- https://cdn.jsdelivr.net/gh/getAlby/umbrel-community-app-store@master/alby-albyhub/images/wallet.png
+  - https://cdn.jsdelivr.net/gh/getAlby/umbrel-community-app-store@master/alby-albyhub/images/node.png
+  - https://cdn.jsdelivr.net/gh/getAlby/umbrel-community-app-store@master/alby-albyhub/images/store.png
+  - https://cdn.jsdelivr.net/gh/getAlby/umbrel-community-app-store@master/alby-albyhub/images/wallet.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

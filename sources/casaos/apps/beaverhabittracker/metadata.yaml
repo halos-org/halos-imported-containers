@@ -4,24 +4,13 @@ description: A self-hosted, goal-free habit tracking tool.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/BeaverHabitTracker/icon.png
 license: Unknown
-long_description: 'Beaver Habit Tracker is a self-hosted habit tracking tool designed
-  for users who want to effortlessly monitor daily behaviors without the stress of
-  goal-setting. Its intuitive Web interface offers a pressure-free tracking experience,
-  ideal for those focused on behavior observation and personal growth.
+long_description: 'Beaver Habit Tracker is a self-hosted habit tracking tool designed for users who want to effortlessly monitor daily behaviors without the stress of goal-setting. Its intuitive Web interface offers a pressure-free tracking experience, ideal for those focused on behavior observation and personal growth.
 
 
-  The tool''s core features include goal-free habit tracking and a minimalist interface.
-  It allows users to log multiple habits easily, without focusing on streaks or targets,
-  and provides simple visualizations to understand behavior patterns. Users can add
-  daily notes to record specific activities or reflections, with a smooth, low-effort
-  interface.
+  The tool''s core features include goal-free habit tracking and a minimalist interface. It allows users to log multiple habits easily, without focusing on streaks or targets, and provides simple visualizations to understand behavior patterns. Users can add daily notes to record specific activities or reflections, with a smooth, low-effort interface.
 
 
-  It uses a self-hosted approach, ensuring data privacy and full control, with a lightweight,
-  efficient design requiring minimal server resources. Users can manually reorder
-  habits for an optimized experience. The tool''s stress-free observation and intuitive
-  operation help users gradually improve habits, delivering a modern habit management
-  solution.
+  It uses a self-hosted approach, ensuring data privacy and full control, with a lightweight, efficient design requiring minimal server resources. Users can manually reorder habits for an optimized experience. The tool''s stress-free observation and intuitive operation help users gradually improve habits, delivering a modern habit management solution.
 
 
   **Key Features:**
@@ -43,15 +32,14 @@ long_description: 'Beaver Habit Tracker is a self-hosted habit tracking tool des
 
   - [Beaver Habit Tracker GitHub](https://github.com/daya0576/beaverhabits)
 
-  '
+'
 maintainer: daya0576 <auto-converted@casaos.io>
 name: beaverhabittracker
-package_name: casaos-beaverhabittracker-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/BeaverHabitTracker/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/BeaverHabitTracker/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/BeaverHabitTracker/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/BeaverHabitTracker/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/BeaverHabitTracker/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/BeaverHabitTracker/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

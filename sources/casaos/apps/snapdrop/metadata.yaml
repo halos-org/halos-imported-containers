@@ -4,14 +4,12 @@ description: Cross-platform file sharing made easy.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Snapdrop/icon.png
 license: Unknown
-long_description: Snapdrop is a Progressive Web App (PWA) that allows you to transfer
-  files between devices in the same network without having to install anything.
+long_description: Snapdrop is a Progressive Web App (PWA) that allows you to transfer files between devices in the same network without having to install anything.
 maintainer: Unknown <auto-converted@casaos.io>
 name: snapdrop
-package_name: casaos-snapdrop-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Snapdrop/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Snapdrop/screenshot-1.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -4,31 +4,22 @@ description: Selfhosted PDF manager, viewer and editor
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PdfDing/icon.png
 license: Unknown
-long_description: 'PdfDing is a selfhosted PDF manager, viewer and editor offering
-  a seamless user experience on multiple devices. It''s designed to be minimal, fast,
-  and easy to set up using Docker.
+long_description: 'PdfDing is a selfhosted PDF manager, viewer and editor offering a seamless user experience on multiple devices. It''s designed to be minimal, fast, and easy to set up using Docker.
 
 
-  With features like seamless browser-based PDF viewing that remembers your current
-  position, multi-level tagging, starring and archiving functionalities, PDF editing
-  with comments, highlighting and drawings, clean intuitive UI with dark mode, SSO
-  support via OIDC, PDF sharing with external audience, markdown notes, and progress
-  bars showing reading progress, PdfDing ensures an excellent PDF management experience.
+  With features like seamless browser-based PDF viewing that remembers your current position, multi-level tagging, starring and archiving functionalities, PDF editing with comments, highlighting and drawings, clean intuitive UI with dark mode, SSO support via OIDC, PDF sharing with external audience, markdown notes, and progress bars showing reading progress, PdfDing ensures an excellent PDF management experience.
 
 
-  Deploying PdfDing on private cloud devices like Zima brings unmatched convenience
-  with multi-device access, ensuring your PDF collection is always within reach and
-  secure, no matter where you are.
+  Deploying PdfDing on private cloud devices like Zima brings unmatched convenience with multi-device access, ensuring your PDF collection is always within reach and secure, no matter where you are.
 
-  '
+'
 maintainer: mrmn2 <auto-converted@casaos.io>
 name: pdfding
-package_name: casaos-pdfding-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PdfDing/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PdfDing/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PdfDing/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PdfDing/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PdfDing/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/PdfDing/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

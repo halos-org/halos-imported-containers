@@ -4,29 +4,19 @@ description: Transmission is a cross-platform BitTorrent client
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/icon.png
 license: Unknown
-long_description: 'Transmission is a BitTorrent client designed for simplicity and
-  powerful performance, delivering an efficient and user-friendly downloading experience.
-  It comes equipped with all the essential features you expect, including encryption,
-  a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding,
-  webseed support, watch directories, tracker editing, global and per-torrent speed
-  limits, and more.
+long_description: 'Transmission is a BitTorrent client designed for simplicity and powerful performance, delivering an efficient and user-friendly downloading experience. It comes equipped with all the essential features you expect, including encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.
 
 
-  With its intuitive interface, Transmission caters to both beginners and advanced
-  users. Whether you’re managing a single download or juggling complex torrent queues,
-  Transmission ensures a seamless experience with optimized resource usage and reliable
-  performance. For casual users and tech enthusiasts alike, Transmission is the ideal
-  BitTorrent solution.
+  With its intuitive interface, Transmission caters to both beginners and advanced users. Whether you’re managing a single download or juggling complex torrent queues, Transmission ensures a seamless experience with optimized resource usage and reliable performance. For casual users and tech enthusiasts alike, Transmission is the ideal BitTorrent solution.
 
-  '
+'
 maintainer: Transmission <auto-converted@casaos.io>
 name: transmission
-package_name: casaos-transmission-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Transmission/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

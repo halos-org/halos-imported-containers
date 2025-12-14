@@ -4,19 +4,15 @@ description: Download Spotify music with album art and metadata
 homepage: null
 icon: https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/casaos-icon.png
 license: Unknown
-long_description: 'With Downtify you can download Spotify musics containing album
-  art, track names, album title and other metadata about the songs. Just copy the
-  Spotify link, whether it''s a single song, an album, etc. As soon as your downloads
-  are complete you will be notified!
+long_description: 'With Downtify you can download Spotify musics containing album art, track names, album title and other metadata about the songs. Just copy the Spotify link, whether it''s a single song, an album, etc. As soon as your downloads are complete you will be notified!
 
-  '
+'
 maintainer: Henrique Sebastião <auto-converted@casaos.io>
 name: downtify
-package_name: casaos-downtify-container
 screenshots:
-- https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/screenshot-1.png
-- https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/screenshot-2.png
+  - https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/screenshot-1.png
+  - https://raw.githubusercontent.com/henriquesebastiao/downtify/refs/heads/main/assets/screenshot-2.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

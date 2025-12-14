@@ -4,15 +4,13 @@ description: Home Automation systems
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/icon.png
 license: Unknown
-long_description: ESPHome is a system to control your microcontrollers by simple yet
-  powerful configuration files and control them remotely through Home Automation systems.
+long_description: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
 maintainer: Unknown <auto-converted@casaos.io>
 name: esphome
-package_name: casaos-esphome-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ESPHome/screenshot-2.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

@@ -4,22 +4,13 @@ description: A versatile file conversion tool that supports multiple formats.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ConvertX/icon.png
 license: Unknown
-long_description: 'ConvertX is a self-hosted file conversion service that allows users
-  to convert files between different formats through an intuitive web interface. It
-  supports a wide range of file types including documents, images, videos, and audio
-  files, making it a comprehensive solution for all your file conversion needs.
+long_description: 'ConvertX is a self-hosted file conversion service that allows users to convert files between different formats through an intuitive web interface. It supports a wide range of file types including documents, images, videos, and audio files, making it a comprehensive solution for all your file conversion needs.
 
 
-  The service is designed with simplicity and ease of use in mind. Users can simply
-  upload their files, select the desired output format, and let ConvertX handle the
-  conversion process. The web interface provides a clean and user-friendly experience,
-  with drag-and-drop support and batch conversion capabilities.
+  The service is designed with simplicity and ease of use in mind. Users can simply upload their files, select the desired output format, and let ConvertX handle the conversion process. The web interface provides a clean and user-friendly experience, with drag-and-drop support and batch conversion capabilities.
 
 
-  ConvertX runs entirely on your own infrastructure, ensuring that your files remain
-  private and secure. There''s no need to upload sensitive documents to third-party
-  services, giving you full control over your data. The service is containerized for
-  easy deployment and can be integrated into existing home server setups.
+  ConvertX runs entirely on your own infrastructure, ensuring that your files remain private and secure. There''s no need to upload sensitive documents to third-party services, giving you full control over your data. The service is containerized for easy deployment and can be integrated into existing home server setups.
 
 
   **Key Features:**
@@ -41,15 +32,14 @@ long_description: 'ConvertX is a self-hosted file conversion service that allows
 
   - [ConvertX GitHub Repository](https://github.com/c4illin/convertx)
 
-  '
+'
 maintainer: c4illin <auto-converted@casaos.io>
 name: convertx
-package_name: casaos-convertx-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ConvertX/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ConvertX/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ConvertX/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ConvertX/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ConvertX/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/ConvertX/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

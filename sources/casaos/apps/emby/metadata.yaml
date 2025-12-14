@@ -4,28 +4,13 @@ description: Emby brings together your personal videos, music, photos, and live 
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
 license: Unknown
-long_description: 'Emby is a personal media management platform that brings home videos,
-  music, and photos together, automatically converting and streaming to any device.
-  An intuitive design makes it ideal for users to enjoy media content anytime, anywhere,
-  meeting family entertainment and media management needs.
+long_description: 'Emby is a personal media management platform that brings home videos, music, and photos together, automatically converting and streaming to any device. An intuitive design makes it ideal for users to enjoy media content anytime, anywhere, meeting family entertainment and media management needs.
 
 
-  Core features include cross-device media streaming and easy access. It supports
-  real-time conversion and streaming of personal media to any device for seamless
-  playback. A connection service enables easy media access while away from home. Live
-  TV functionality supports streaming, managing DVR, and accessing a library of recordings.
-  Mobile sync delivers media to smartphones and tablets for offline access, automatically
-  updating new content.
+  Core features include cross-device media streaming and easy access. It supports real-time conversion and streaming of personal media to any device for seamless playback. A connection service enables easy media access while away from home. Live TV functionality supports streaming, managing DVR, and accessing a library of recordings. Mobile sync delivers media to smartphones and tablets for offline access, automatically updating new content.
 
 
-  It offers parental controls to restrict children''s content access, set schedules
-  and time limits, and remotely monitor sessions. Chromecast support enables easy
-  streaming of videos, music, photos, and Live TV. Content is presented elegantly,
-  enhancing visual experience. Cloud sync supports backup, archiving, and multi-resolution
-  storage for optimized streaming. Web-based media management facilitates editing
-  metadata, images, and searching subtitles, while DLNA integration auto-detects network
-  devices for content streaming. With convenience and versatility at the core, the
-  platform delivers a modern media management solution.
+  It offers parental controls to restrict children''s content access, set schedules and time limits, and remotely monitor sessions. Chromecast support enables easy streaming of videos, music, photos, and Live TV. Content is presented elegantly, enhancing visual experience. Cloud sync supports backup, archiving, and multi-resolution storage for optimized streaming. Web-based media management facilitates editing metadata, images, and searching subtitles, while DLNA integration auto-detects network devices for content streaming. With convenience and versatility at the core, the platform delivers a modern media management solution.
 
 
   **Key Features:**
@@ -53,15 +38,14 @@ long_description: 'Emby is a personal media management platform that brings home
 
   - [Emby Official Website](https://emby.media/)
 
-  '
+'
 maintainer: linuxserver <auto-converted@casaos.io>
 name: emby
-package_name: casaos-emby-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-1.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-2.png
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-3.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-2.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-3.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

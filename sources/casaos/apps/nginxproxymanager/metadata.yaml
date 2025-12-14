@@ -4,16 +4,14 @@ description: Managing Nginx proxy hosts with a simple, powerful interface.
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/icon.png
 license: Unknown
-long_description: Nginx Proxy Manager is a simple, powerful tool to help you host
-  multiple websites on a single server.
+long_description: Nginx Proxy Manager is a simple, powerful tool to help you host multiple websites on a single server.
 maintainer: Nginx Proxy Manager <auto-converted@casaos.io>
 name: nginxproxymanager
-package_name: casaos-nginxproxymanager-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-1.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-2.jpg
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-3.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-1.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-2.jpg
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/NginxProxyManager/screenshot-3.jpg
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

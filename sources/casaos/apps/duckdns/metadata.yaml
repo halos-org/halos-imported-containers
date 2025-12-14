@@ -4,14 +4,12 @@ description: Dynamic DNS for your domain, supporting both IPv4 and IPv6
 homepage: null
 icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/DuckDNS/icon.png
 license: Unknown
-long_description: duckdns is a DDNS (Dynamic DNS) application that dynamically binds
-  IP addresses to domain names, supporting both IPv4 and IPv6.
+long_description: duckdns is a DDNS (Dynamic DNS) application that dynamically binds IP addresses to domain names, supporting both IPv4 and IPv6.
 maintainer: DuckDNS Team <auto-converted@casaos.io>
 name: duckdns
-package_name: casaos-duckdns-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/DuckDNS/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/DuckDNS/screenshot-1.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0

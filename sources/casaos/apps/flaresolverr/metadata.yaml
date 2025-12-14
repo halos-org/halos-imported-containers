@@ -7,10 +7,9 @@ license: Unknown
 long_description: CasaOS Container App for flaresolverr
 maintainer: Unknown <auto-converted@casaos.io>
 name: flaresolverr
-package_name: casaos-flaresolverr-container
 screenshots:
-- https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FlareSolverr/screenshot-1.png
+  - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/FlareSolverr/screenshot-1.png
 source_metadata: null
 tags:
-- role::container-app
+  - role::container-app
 version: 1.0.0
