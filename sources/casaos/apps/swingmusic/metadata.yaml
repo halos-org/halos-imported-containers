@@ -1,3 +1,4 @@
+app_id: swingmusic
 architecture: all
 debian_section: video
 description: Swing Music is a beautifully designed, self-hosted music streaming server.

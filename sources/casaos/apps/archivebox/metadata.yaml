@@ -1,3 +1,4 @@
+app_id: archivebox
 architecture: all
 debian_section: utils
 description: Self-hosted internet archiving solution

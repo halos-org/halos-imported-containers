@@ -1,3 +1,4 @@
+app_id: resilio-sync
 architecture: all
 debian_section: misc
 description: Unleash the power of seamless file synchronization.

@@ -1,3 +1,4 @@
+app_id: tautulli
 architecture: all
 debian_section: video
 description: Monitor your Plex Media Server and much more.

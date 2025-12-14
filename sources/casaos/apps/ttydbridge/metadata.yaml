@@ -1,3 +1,4 @@
+app_id: ttydbridge
 architecture: all
 debian_section: devel
 description: Easy access to the host terminal in web

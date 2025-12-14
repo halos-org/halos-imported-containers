@@ -1,3 +1,4 @@
+app_id: ragflow
 architecture: all
 debian_section: misc
 description: RagFlow ist eine Open-Source-RAG-Engine, die auf tiefem...

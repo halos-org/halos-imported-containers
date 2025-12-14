@@ -1,3 +1,4 @@
+app_id: smokeping
 architecture: all
 debian_section: net
 description: Free open source network performance monitoring tool

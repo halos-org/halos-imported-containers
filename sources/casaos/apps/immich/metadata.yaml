@@ -1,3 +1,4 @@
+app_id: immich
 architecture: all
 debian_section: misc
 description: Self-hosted media management solution

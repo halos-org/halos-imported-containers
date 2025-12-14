@@ -1,3 +1,4 @@
+app_id: ollama
 architecture: all
 debian_section: comm
 description: Get up and running with large language models locally

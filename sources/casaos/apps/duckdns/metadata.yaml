@@ -1,3 +1,4 @@
+app_id: duckdns
 architecture: all
 debian_section: utils
 description: Dynamic DNS for your domain, supporting both IPv4 and IPv6

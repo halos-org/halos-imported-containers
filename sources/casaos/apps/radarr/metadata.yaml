@@ -1,3 +1,4 @@
+app_id: radarr
 architecture: all
 debian_section: video
 description: The movie collection manager for Usenet and BitTorrent users

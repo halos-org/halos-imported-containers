@@ -1,3 +1,4 @@
+app_id: taskingai
 architecture: all
 debian_section: comm
 description: The developer-friendly cloud platform for building and running LLM agents...

@@ -1,3 +1,4 @@
+app_id: homeassistant
 architecture: all
 debian_section: misc
 description: Open source home automation that puts local control and privacy first.

@@ -1,3 +1,4 @@
+app_id: rdtclient
 architecture: all
 debian_section: misc
 description: CasaOS Container App for rdtclient

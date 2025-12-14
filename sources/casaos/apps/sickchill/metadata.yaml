@@ -1,3 +1,4 @@
+app_id: sickchill
 architecture: all
 debian_section: video
 description: Automatic video library manager for TV Shows

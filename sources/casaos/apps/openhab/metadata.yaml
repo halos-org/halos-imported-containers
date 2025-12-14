@@ -1,3 +1,4 @@
+app_id: openhab
 architecture: all
 debian_section: misc
 description: Empowering the smart home

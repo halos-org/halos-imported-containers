@@ -1,3 +1,4 @@
+app_id: langflow
 architecture: all
 debian_section: misc
 description: Open-source UI for building and debugging multi-agent and RAG applications

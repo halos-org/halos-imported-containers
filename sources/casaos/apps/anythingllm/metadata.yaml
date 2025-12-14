@@ -1,3 +1,4 @@
+app_id: anythingllm
 architecture: all
 debian_section: comm
 description: The all-in-one AI application.

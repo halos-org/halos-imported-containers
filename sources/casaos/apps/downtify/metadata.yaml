@@ -1,3 +1,4 @@
+app_id: downtify
 architecture: all
 debian_section: misc
 description: Download Spotify music with album art and metadata

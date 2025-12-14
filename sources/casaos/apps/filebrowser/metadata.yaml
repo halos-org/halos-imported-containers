@@ -1,3 +1,4 @@
+app_id: filebrowser
 architecture: all
 debian_section: net
 description: Upload, delete, preview, rename, edit and share your files.

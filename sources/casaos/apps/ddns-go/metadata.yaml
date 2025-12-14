@@ -1,3 +1,4 @@
+app_id: ddns-go
 architecture: all
 debian_section: net
 description: Simple and easy to use DDNS

@@ -1,3 +1,4 @@
+app_id: pihole
 architecture: all
 debian_section: net
 description: Network-wide Ad Blocking

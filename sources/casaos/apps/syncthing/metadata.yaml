@@ -1,3 +1,4 @@
+app_id: syncthing
 architecture: all
 debian_section: admin
 description: Open decentralized file synchronization

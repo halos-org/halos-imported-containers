@@ -1,3 +1,4 @@
+app_id: threadfin
 architecture: all
 debian_section: utils
 description: M3U proxy server

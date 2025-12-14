@@ -1,3 +1,4 @@
+app_id: pdfding
 architecture: all
 debian_section: text
 description: Selfhosted PDF manager, viewer and editor

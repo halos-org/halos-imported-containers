@@ -1,3 +1,4 @@
+app_id: flaresolverr
 architecture: all
 debian_section: net
 description: CasaOS Container App for flaresolverr

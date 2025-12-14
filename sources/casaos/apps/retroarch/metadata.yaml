@@ -1,3 +1,4 @@
+app_id: retroarch
 architecture: all
 debian_section: games
 description: Online retro games emulator

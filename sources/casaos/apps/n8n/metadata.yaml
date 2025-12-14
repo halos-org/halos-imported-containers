@@ -1,3 +1,4 @@
+app_id: n8n
 architecture: all
 debian_section: utils
 description: Workflow automation tool

@@ -1,3 +1,4 @@
+app_id: qbittorrent
 architecture: all
 debian_section: misc
 description: P2P bittorrent download

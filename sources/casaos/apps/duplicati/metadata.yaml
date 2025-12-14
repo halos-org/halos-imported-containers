@@ -1,3 +1,4 @@
+app_id: duplicati
 architecture: all
 debian_section: net
 description: Store securely encrypted backups in the cloud!

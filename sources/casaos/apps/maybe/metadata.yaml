@@ -1,3 +1,4 @@
+app_id: maybe
 architecture: all
 debian_section: misc
 description: Personal finance management application

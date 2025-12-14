@@ -1,3 +1,4 @@
+app_id: fileflows
 architecture: all
 debian_section: video
 description: File processing made easy!

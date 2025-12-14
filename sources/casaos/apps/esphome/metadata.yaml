@@ -1,3 +1,4 @@
+app_id: esphome
 architecture: all
 debian_section: misc
 description: Home Automation systems

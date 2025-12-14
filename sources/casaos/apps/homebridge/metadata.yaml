@@ -1,3 +1,4 @@
+app_id: homebridge
 architecture: all
 debian_section: misc
 description: HomeKit support for the impatient.

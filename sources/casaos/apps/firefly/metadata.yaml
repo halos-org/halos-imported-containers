@@ -1,3 +1,4 @@
+app_id: firefly
 architecture: all
 debian_section: net
 description: Firefly, the easiest using of WireGuard VPN server, plus version of wg-easy.

@@ -1,3 +1,4 @@
+app_id: uptimekuma
 architecture: all
 debian_section: net
 description: A fancy monitoring tool

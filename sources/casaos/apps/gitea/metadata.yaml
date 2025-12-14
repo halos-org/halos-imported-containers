@@ -1,3 +1,4 @@
+app_id: gitea
 architecture: all
 debian_section: devel
 description: Self-hosted software development service

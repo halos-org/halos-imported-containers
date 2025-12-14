@@ -1,3 +1,4 @@
+app_id: petio
 architecture: all
 debian_section: video
 description: A third party companion app available to Plex server owners to allow their...

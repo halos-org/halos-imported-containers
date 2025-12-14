@@ -1,3 +1,4 @@
+app_id: crafty
 architecture: all
 debian_section: games
 description: Take control of your Minecraft servers.

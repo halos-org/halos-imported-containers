@@ -1,3 +1,4 @@
+app_id: docmost
 architecture: all
 debian_section: text
 description: A modern wiki and knowledge base for teams

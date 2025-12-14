@@ -1,3 +1,4 @@
+app_id: actualbudget
 architecture: all
 debian_section: misc
 description: Privacy-first finance app with envelope budgeting and multi-device sync.

@@ -1,3 +1,4 @@
+app_id: holoplay
 architecture: all
 debian_section: misc
 description: A web app to listen Youtube audio source.

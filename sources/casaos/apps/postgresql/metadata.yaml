@@ -1,3 +1,4 @@
+app_id: postgresql
 architecture: all
 debian_section: devel
 description: PostgreSQL is an advanced, enterprise-class, and open-source relational...

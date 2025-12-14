@@ -1,3 +1,4 @@
+app_id: glances
 architecture: all
 debian_section: misc
 description: Cross-platform monitoring tool.

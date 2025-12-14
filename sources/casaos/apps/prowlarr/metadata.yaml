@@ -1,3 +1,4 @@
+app_id: prowlarr
 architecture: all
 debian_section: misc
 description: Integration of various PVR applications

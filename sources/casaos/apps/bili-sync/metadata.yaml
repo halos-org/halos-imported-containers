@@ -1,3 +1,4 @@
+app_id: bili-sync
 architecture: all
 debian_section: video
 description: bili-sync is a Bilibili synchronization tool written specifically for NAS...

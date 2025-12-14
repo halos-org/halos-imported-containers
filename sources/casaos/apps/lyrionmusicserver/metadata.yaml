@@ -1,3 +1,4 @@
+app_id: lyrionmusicserver
 architecture: all
 debian_section: video
 description: Lyrion Music Server is a streaming audio server for Squeezebox audio players.

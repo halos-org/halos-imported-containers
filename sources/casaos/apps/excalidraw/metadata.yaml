@@ -1,3 +1,4 @@
+app_id: excalidraw
 architecture: all
 debian_section: utils
 description: Virtual whiteboard for sketching hand-drawn like diagrams

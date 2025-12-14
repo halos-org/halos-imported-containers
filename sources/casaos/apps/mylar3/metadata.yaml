@@ -1,3 +1,4 @@
+app_id: mylar3
 architecture: all
 debian_section: misc
 description: Automatic comic book (cbr/cbz) downloader

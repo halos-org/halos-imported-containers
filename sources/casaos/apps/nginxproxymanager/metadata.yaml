@@ -1,3 +1,4 @@
+app_id: nginxproxymanager
 architecture: all
 debian_section: net
 description: Managing Nginx proxy hosts with a simple, powerful interface.

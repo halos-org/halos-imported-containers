@@ -1,3 +1,4 @@
+app_id: emby-nvidia
 architecture: all
 debian_section: video
 description: TAKE YOUR MEDIA ANYWHERE WITH EMBY

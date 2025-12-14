@@ -1,3 +1,4 @@
+app_id: unifi-controller
 architecture: all
 debian_section: net
 description: The Unifi-controller software is a powerful, enterprise wireless software...

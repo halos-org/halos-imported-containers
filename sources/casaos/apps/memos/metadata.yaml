@@ -1,3 +1,4 @@
+app_id: memos
 architecture: all
 debian_section: text
 description: Memos is a lightweight, self-hosted memo hub. Open Source and Free forever.

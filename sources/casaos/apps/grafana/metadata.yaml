@@ -1,3 +1,4 @@
+app_id: grafana
 architecture: all
 debian_section: net
 description: Grafana is a complete observability stack that allows you to monitor and...

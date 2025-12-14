@@ -1,3 +1,4 @@
+app_id: llama-factory-nvidia
 architecture: all
 debian_section: misc
 description: Einheitliche LLM-Feinabstimmung mit 100+ Modellen

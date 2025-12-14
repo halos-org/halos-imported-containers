@@ -1,3 +1,4 @@
+app_id: handbrake
 architecture: all
 debian_section: video
 description: Liberate your videos and unleash infinite possibilities.

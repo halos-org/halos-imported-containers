@@ -1,3 +1,4 @@
+app_id: openspeedtest
 architecture: all
 debian_section: utils
 description: HTML5 Network Speed Test Server.

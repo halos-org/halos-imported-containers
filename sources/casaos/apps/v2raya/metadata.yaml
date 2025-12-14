@@ -1,3 +1,4 @@
+app_id: v2raya
 architecture: all
 debian_section: net
 description: A web GUI client of Project V which supports VMess, VLESS, SS, SSR, Trojan

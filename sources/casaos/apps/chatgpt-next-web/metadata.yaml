@@ -1,3 +1,4 @@
+app_id: chatgpt-next-web
 architecture: all
 debian_section: utils
 description: A well-designed cross-platform ChatGPT UI.

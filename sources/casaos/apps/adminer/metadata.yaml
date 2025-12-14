@@ -1,3 +1,4 @@
+app_id: adminer
 architecture: all
 debian_section: database
 description: Database management in a single PHP file

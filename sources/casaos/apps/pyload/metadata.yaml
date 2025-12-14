@@ -1,3 +1,4 @@
+app_id: pyload
 architecture: all
 debian_section: misc
 description: Free Downloader Manager.

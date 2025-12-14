@@ -1,3 +1,4 @@
+app_id: ztnet
 architecture: all
 debian_section: net
 description: Self-hosted ZeroTier network controller with web UI for centralized management.

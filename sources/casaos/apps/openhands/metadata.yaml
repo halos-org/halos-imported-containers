@@ -1,3 +1,4 @@
+app_id: openhands
 architecture: all
 debian_section: misc
 description: Open-source AI-powered coding assistant

@@ -1,3 +1,4 @@
+app_id: dify
 architecture: all
 debian_section: comm
 description: LLM App Development Platform

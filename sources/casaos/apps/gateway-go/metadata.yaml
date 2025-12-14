@@ -1,3 +1,4 @@
+app_id: gateway-go
 architecture: all
 debian_section: net
 description: A third-party client for casaos and zimaOS, remote access management interface

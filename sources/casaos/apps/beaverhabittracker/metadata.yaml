@@ -1,3 +1,4 @@
+app_id: beaverhabittracker
 architecture: all
 debian_section: utils
 description: A self-hosted, goal-free habit tracking tool.

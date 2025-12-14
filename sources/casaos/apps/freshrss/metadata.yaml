@@ -1,3 +1,4 @@
+app_id: freshrss
 architecture: all
 debian_section: utils
 description: A free, self-hostable news aggregator…

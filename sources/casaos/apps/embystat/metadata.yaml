@@ -1,3 +1,4 @@
+app_id: embystat
 architecture: all
 debian_section: video
 description: Calculate all kinds of statistics from your (local) Emby or Jellyfin server

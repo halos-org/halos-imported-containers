@@ -1,3 +1,4 @@
+app_id: mineos-node
 architecture: all
 debian_section: games
 description: Free and easy to use Minecraft server management tool.

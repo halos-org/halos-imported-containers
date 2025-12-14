@@ -1,3 +1,4 @@
+app_id: myspeed
 architecture: all
 debian_section: utils
 description: Analysis software that shows your internet speed for up to 30 days.

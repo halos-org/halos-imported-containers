@@ -1,3 +1,4 @@
+app_id: ombi
 architecture: all
 debian_section: video
 description: Friendly media request tool, automatically syncs with your media servers!

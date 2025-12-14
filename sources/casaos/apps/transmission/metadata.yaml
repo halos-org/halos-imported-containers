@@ -1,3 +1,4 @@
+app_id: transmission
 architecture: all
 debian_section: misc
 description: Transmission is a cross-platform BitTorrent client

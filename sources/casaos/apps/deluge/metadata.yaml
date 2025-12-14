@@ -1,3 +1,4 @@
+app_id: deluge
 architecture: all
 debian_section: misc
 description: A lightweight and free BitTorrent client.

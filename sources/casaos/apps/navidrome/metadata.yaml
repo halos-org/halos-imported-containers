@@ -1,3 +1,4 @@
+app_id: navidrome
 architecture: all
 debian_section: video
 description: Music Collection and Streaming Server

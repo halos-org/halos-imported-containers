@@ -1,3 +1,4 @@
+app_id: flowise
 architecture: all
 debian_section: devel
 description: An open source generative AI development platform for building AI Agents and...

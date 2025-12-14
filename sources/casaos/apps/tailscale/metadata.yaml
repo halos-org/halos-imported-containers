@@ -1,3 +1,4 @@
+app_id: tailscale
 architecture: all
 debian_section: net
 description: Connect your devices and users together in your own secure virtual private...

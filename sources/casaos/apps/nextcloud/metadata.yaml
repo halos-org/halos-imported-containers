@@ -1,3 +1,4 @@
+app_id: nextcloud
 architecture: all
 debian_section: net
 description: Content collaboration platform

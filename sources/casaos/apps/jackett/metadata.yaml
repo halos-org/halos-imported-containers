@@ -1,3 +1,4 @@
+app_id: jackett
 architecture: all
 debian_section: net
 description: Jackett works as a proxy server

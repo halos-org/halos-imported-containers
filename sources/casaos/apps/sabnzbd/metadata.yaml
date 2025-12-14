@@ -1,3 +1,4 @@
+app_id: sabnzbd
 architecture: all
 debian_section: video
 description: Free and easy binary newsreader

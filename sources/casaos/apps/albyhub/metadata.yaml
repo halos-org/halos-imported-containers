@@ -1,3 +1,4 @@
+app_id: albyhub
 architecture: all
 debian_section: misc
 description: Self-custodial Bitcoin Lightning wallet with integrated node and app...

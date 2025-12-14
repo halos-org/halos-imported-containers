@@ -1,3 +1,4 @@
+app_id: jenkins
 architecture: all
 debian_section: net
 description: Jenkins Continuous Integration and Delivery server.

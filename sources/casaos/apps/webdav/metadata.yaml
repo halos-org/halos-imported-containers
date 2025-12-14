@@ -1,3 +1,4 @@
+app_id: webdav
 architecture: all
 debian_section: utils
 description: A web-based file sharing and management protocol

@@ -1,3 +1,4 @@
+app_id: 2fauth
 architecture: all
 debian_section: utils
 description: A web app to manage your Two-Factor Authentication (2FA) accounts and...

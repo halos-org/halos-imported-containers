@@ -1,3 +1,4 @@
+app_id: audiobookshelf
 architecture: all
 debian_section: video
 description: Audiobookshelf is a self-hosted audiobook and podcast server.

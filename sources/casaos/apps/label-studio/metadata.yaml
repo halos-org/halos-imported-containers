@@ -1,3 +1,4 @@
+app_id: label-studio
 architecture: all
 debian_section: misc
 description: Label Studio is an open source data labeling tool.

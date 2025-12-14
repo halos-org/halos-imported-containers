@@ -1,3 +1,4 @@
+app_id: vaultwarden
 architecture: all
 debian_section: utils
 description: A self-hosted Bitwarden server

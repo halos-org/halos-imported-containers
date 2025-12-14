@@ -1,3 +1,4 @@
+app_id: cloudbeaver
 architecture: all
 debian_section: devel
 description: Cloud Database Manager.

@@ -1,3 +1,4 @@
+app_id: emby
 architecture: all
 debian_section: video
 description: Emby brings together your personal videos, music, photos, and live television.

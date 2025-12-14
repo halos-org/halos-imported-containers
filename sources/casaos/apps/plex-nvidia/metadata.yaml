@@ -1,3 +1,4 @@
+app_id: plex-nvidia
 architecture: all
 debian_section: video
 description: Stream Movies & TV Shows

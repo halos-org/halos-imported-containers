@@ -1,3 +1,4 @@
+app_id: stremio
 architecture: all
 debian_section: video
 description: Stremio is a modern media center that gives you the freedom to watch...

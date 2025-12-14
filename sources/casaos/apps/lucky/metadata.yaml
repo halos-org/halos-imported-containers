@@ -1,3 +1,4 @@
+app_id: lucky
 architecture: all
 debian_section: net
 description: Powerful networking tool

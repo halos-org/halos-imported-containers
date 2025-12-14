@@ -1,3 +1,4 @@
+app_id: bazarr
 architecture: all
 debian_section: video
 description: Letter generators for Sonarr and Radarr

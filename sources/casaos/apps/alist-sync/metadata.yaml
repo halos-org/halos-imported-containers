@@ -1,3 +1,4 @@
+app_id: alist-sync
 architecture: all
 debian_section: net
 description: An Alist storage synchronization tool based on the Web interface.

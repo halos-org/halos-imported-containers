@@ -1,3 +1,4 @@
+app_id: overseerr
 architecture: all
 debian_section: video
 description: Overseerr is a request management and media discovery tool built to work...

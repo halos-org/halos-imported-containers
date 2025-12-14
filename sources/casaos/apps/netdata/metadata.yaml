@@ -1,3 +1,4 @@
+app_id: netdata
 architecture: all
 debian_section: utils
 description: Real-time Performance Monitoring

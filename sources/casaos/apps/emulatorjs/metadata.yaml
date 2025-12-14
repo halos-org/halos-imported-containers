@@ -1,3 +1,4 @@
+app_id: emulatorjs
 architecture: all
 debian_section: utils
 description: CasaOS Container App for emulatorjs

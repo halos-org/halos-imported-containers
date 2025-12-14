@@ -1,3 +1,4 @@
+app_id: snapdrop
 architecture: all
 debian_section: utils
 description: Cross-platform file sharing made easy.

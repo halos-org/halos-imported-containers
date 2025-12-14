@@ -1,3 +1,4 @@
+app_id: adguard-home
 architecture: all
 debian_section: net
 description: Blocking ads & tracking Network-widly

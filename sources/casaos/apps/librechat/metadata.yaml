@@ -1,3 +1,4 @@
+app_id: librechat
 architecture: all
 debian_section: misc
 description: A full-featured, open-source AI chat interface

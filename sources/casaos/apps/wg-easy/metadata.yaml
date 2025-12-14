@@ -1,3 +1,4 @@
+app_id: wg-easy
 architecture: all
 debian_section: net
 description: WEB UI to manage WireGuard VPN.

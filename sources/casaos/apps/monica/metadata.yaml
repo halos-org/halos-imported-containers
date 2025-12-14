@@ -1,3 +1,4 @@
+app_id: monica
 architecture: all
 debian_section: utils
 description: A Personal Relationship Management tool to help you document your social life.

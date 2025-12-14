@@ -1,3 +1,4 @@
+app_id: node-red
 architecture: all
 debian_section: devel
 description: Low-code programming for event-driven applications

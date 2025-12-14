@@ -1,3 +1,4 @@
+app_id: romm
 architecture: all
 debian_section: games
 description: RomM is a self-hosted ROM manager for managing and playing game collections.

@@ -1,3 +1,4 @@
+app_id: gopeed
 architecture: all
 debian_section: utils
 description: Open source, lightweight, native, supports (HTTP, BitTorrent, Magnet

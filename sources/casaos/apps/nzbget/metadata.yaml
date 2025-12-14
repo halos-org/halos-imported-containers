@@ -1,3 +1,4 @@
+app_id: nzbget
 architecture: all
 debian_section: misc
 description: Efficient Usenet downloader

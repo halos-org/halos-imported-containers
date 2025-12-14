@@ -1,3 +1,4 @@
+app_id: chatbot-ui
 architecture: all
 debian_section: comm
 description: Open source chat UI for AI models

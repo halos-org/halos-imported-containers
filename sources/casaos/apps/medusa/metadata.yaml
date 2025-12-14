@@ -1,3 +1,4 @@
+app_id: medusa
 architecture: all
 debian_section: video
 description: CasaOS Container App for medusa
