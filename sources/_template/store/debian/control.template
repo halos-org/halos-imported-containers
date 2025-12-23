@@ -15,9 +15,9 @@ Homepage: https://github.com/hatlabs/halos-imported-containers
 Package: {SOURCE_ID}-container-store
 Architecture: all
 Tag: role::container-store
-Description: {DISPLAY_NAME} container application store definition for Cockpit APT
+Description: {DISPLAY_NAME} container application store for Cockpit Container Apps
  This package provides the store definition and branding for the {DISPLAY_NAME}
- container application store, designed to work with cockpit-apt.
+ container application store, designed to work with cockpit-container-apps.
  .
  {DESCRIPTION_LINE_2}
  .
