@@ -1,3 +1,10 @@
+casaos-container-store (0.1.1-1) stable; urgency=medium
+
+  * Add role::container-store tag for store discovery
+  * Enables cockpit-container-apps store editor feature
+
+ -- Hat Labs <info@hatlabs.fi>  Mon, 23 Dec 2024 12:00:00 +0200
+
 casaos-container-store (0.1.0-1) stable; urgency=medium
 
   * Initial release

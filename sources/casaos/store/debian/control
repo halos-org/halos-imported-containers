@@ -8,6 +8,7 @@ Homepage: https://github.com/hatlabs/halos-imported-containers
 
 Package: casaos-container-store
 Architecture: all
+Tag: role::container-store
 Description: CasaOS container application store definition for Cockpit APT
  This package provides the store definition and branding for the CasaOS
  container application store, designed to work with cockpit-apt.

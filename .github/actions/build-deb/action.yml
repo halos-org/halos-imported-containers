@@ -103,21 +103,6 @@ runs:
           echo "::warning::Build will use placeholder logic"
         fi
 
-    - name: Install YAML validation tools
-      shell: bash
-      if: env.source-exists == 'true'
-      run: |
-        # Install yq for YAML validation (pinned version for reproducibility)
-        YQ_VERSION="v4.40.5"
-        if [ "$RUNNER_OS" == "Linux" ]; then
-          sudo wget -qO /usr/local/bin/yq "https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_amd64"
-          sudo chmod +x /usr/local/bin/yq
-          yq --version
-        elif [ "$RUNNER_OS" == "macOS" ]; then
-          brew install yq
-          yq --version
-        fi
-
     - name: Run build
       id: build
       shell: bash
