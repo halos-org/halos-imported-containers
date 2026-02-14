@@ -60,7 +60,7 @@ function build-source {
   debtools bash -c "
     set -e
     # Install container-packaging-tools from GitHub
-    uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
+    uv tool install git+https://github.com/halos-org/container-packaging-tools.git
     export PATH=\"\$HOME/.local/bin:\$PATH\"
 
     # Run the build
@@ -80,7 +80,7 @@ function build-all {
   debtools bash -c "
     set -e
     # Install container-packaging-tools from GitHub
-    uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
+    uv tool install git+https://github.com/halos-org/container-packaging-tools.git
     export PATH=\"\$HOME/.local/bin:\$PATH\"
 
     # Run the build
