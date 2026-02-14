@@ -78,7 +78,7 @@ runs:
       if: env.source-exists == 'true'
       run: |
         echo "::group::Installing container-packaging-tools"
-        uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
+        uv tool install git+https://github.com/halos-org/container-packaging-tools.git
 
         # Add to PATH (uv tools install to ~/.local/bin)
         echo "$HOME/.local/bin" >> $GITHUB_PATH

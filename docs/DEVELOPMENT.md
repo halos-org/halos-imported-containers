@@ -68,7 +68,7 @@ sudo apt install yq jq  # Debian/Ubuntu
 
 ```bash
 cd ~/projects  # or your preferred location
-gh repo clone hatlabs/halos-imported-containers
+gh repo clone halos-org/halos-imported-containers
 cd halos-imported-containers
 ```
 
@@ -258,7 +258,7 @@ For development without Docker:
 sudo apt install dpkg-dev debhelper
 
 # Install container-packaging-tools
-uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
+uv tool install git+https://github.com/halos-org/container-packaging-tools.git
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
@@ -370,7 +370,7 @@ sudo systemctl start docker
 **Solution**: The tool is installed automatically by `./run build-source`. If manual installation needed:
 ```bash
 ./run shell
-uv tool install git+https://github.com/hatlabs/container-packaging-tools.git
+uv tool install git+https://github.com/halos-org/container-packaging-tools.git
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
@@ -491,9 +491,9 @@ git push
 
 ## Getting Help
 
-- **Issues**: [GitHub Issues](https://github.com/hatlabs/halos-imported-containers/issues)
+- **Issues**: [GitHub Issues](https://github.com/halos-org/halos-imported-containers/issues)
 - **Discussions**: GitHub Discussions (for questions and ideas)
-- **HaLOS Docs**: [HaLOS Development](https://github.com/hatlabs/halos-distro)
+- **HaLOS Docs**: [HaLOS Development](https://github.com/halos-org/halos-distro)
 
 ## Contributing
 

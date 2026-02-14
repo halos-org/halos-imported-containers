@@ -35,7 +35,7 @@ halos-imported-containers/
 
 ## Conversion Process
 
-Apps are automatically converted using the [`container-packaging-tools`](https://github.com/hatlabs/container-packaging-tools) converter:
+Apps are automatically converted using the [`container-packaging-tools`](https://github.com/halos-org/container-packaging-tools) converter:
 
 1. **Upstream Sync**: Monitor multiple upstream app stores for changes
 2. **Automatic Conversion**: Run source-specific converters on all apps (currently 144/144 for CasaOS)
@@ -96,15 +96,15 @@ This repository uses fully automated CI/CD:
 
 ## Development
 
-See the [HaLOS development docs](https://github.com/hatlabs/halos-distro) for information on:
+See the [HaLOS development docs](https://github.com/halos-org/halos-distro) for information on:
 - Building packages locally
 - Testing converted apps
 - Contributing improvements
 
 ## Related Repositories
 
-- **[container-packaging-tools](https://github.com/hatlabs/container-packaging-tools)**: Converter and packaging tools
-- **[halos-marine-containers](https://github.com/hatlabs/halos-marine-containers)**: Manually curated marine navigation apps
+- **[container-packaging-tools](https://github.com/halos-org/container-packaging-tools)**: Converter and packaging tools
+- **[halos-marine-containers](https://github.com/halos-org/halos-marine-containers)**: Manually curated marine navigation apps
 - **[CasaOS-AppStore](https://github.com/IceWhaleTech/CasaOS-AppStore)**: Upstream source for app definitions
 
 ## License

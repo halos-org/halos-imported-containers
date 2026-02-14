@@ -127,8 +127,8 @@ All packages clearly indicate their source:
 ## Related
 
 - **Upstream**: [CasaOS-AppStore](https://github.com/IceWhaleTech/CasaOS-AppStore)
-- **Converter**: [container-packaging-tools](https://github.com/hatlabs/container-packaging-tools)
-- **Repository**: [halos-imported-containers](https://github.com/hatlabs/halos-imported-containers)
+- **Converter**: [container-packaging-tools](https://github.com/halos-org/container-packaging-tools)
+- **Repository**: [halos-imported-containers](https://github.com/halos-org/halos-imported-containers)
 - **APT Repository**: [apt.hatlabs.fi](https://apt.hatlabs.fi)
 
 ## License

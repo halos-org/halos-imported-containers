@@ -54,7 +54,7 @@ Before adding a source, verify that `container-packaging-tools` supports the ups
 - **CasaOS**: CasaOS App Store v2.0 format
 
 **Custom Converters:**
-If your upstream format isn't supported, you'll need to implement a converter in the [container-packaging-tools](https://github.com/hatlabs/container-packaging-tools) repository first. See the CasaOS converter as a reference implementation.
+If your upstream format isn't supported, you'll need to implement a converter in the [container-packaging-tools](https://github.com/halos-org/container-packaging-tools) repository first. See the CasaOS converter as a reference implementation.
 
 ## Step-by-Step Process
 
@@ -272,7 +272,7 @@ Create `sources/newsource/store/debian/copyright`:
 ```
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: runtipi-container-store
-Source: https://github.com/hatlabs/halos-imported-containers
+Source: https://github.com/halos-org/halos-imported-containers
 
 Files: *
 Copyright: 2024 Hat Labs
@@ -851,10 +851,10 @@ sources/newsource/
 - **[SPEC.md](./SPEC.md)**: Technical specification
 - **[ARCHITECTURE.md](./ARCHITECTURE.md)**: Architecture overview
 - **[IMPLEMENTATION_CHECKLIST.md](./IMPLEMENTATION_CHECKLIST.md)**: Implementation guidelines
-- **[container-packaging-tools](https://github.com/hatlabs/container-packaging-tools)**: Converter documentation
+- **[container-packaging-tools](https://github.com/halos-org/container-packaging-tools)**: Converter documentation
 
 ## Getting Help
 
-- **Issues:** [GitHub Issues](https://github.com/hatlabs/halos-imported-containers/issues)
+- **Issues:** [GitHub Issues](https://github.com/halos-org/halos-imported-containers/issues)
 - **Template Files:** Check `sources/_template/` for examples
 - **Reference:** Use `sources/casaos/` as a complete example
