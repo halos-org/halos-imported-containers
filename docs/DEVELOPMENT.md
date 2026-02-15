@@ -493,7 +493,7 @@ git push
 
 - **Issues**: [GitHub Issues](https://github.com/halos-org/halos-imported-containers/issues)
 - **Discussions**: GitHub Discussions (for questions and ideas)
-- **HaLOS Docs**: [HaLOS Development](https://github.com/halos-org/halos-distro)
+- **HaLOS Docs**: [HaLOS Development](https://github.com/halos-org/halos)
 
 ## Contributing
 

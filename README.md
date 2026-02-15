@@ -96,7 +96,7 @@ This repository uses fully automated CI/CD:
 
 ## Development
 
-See the [HaLOS development docs](https://github.com/halos-org/halos-distro) for information on:
+See the [HaLOS development docs](https://github.com/halos-org/halos) for information on:
 - Building packages locally
 - Testing converted apps
 - Contributing improvements
