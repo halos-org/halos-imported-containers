@@ -115,7 +115,7 @@ All packages clearly indicate their source:
 
 - **Package prefix**: `{PREFIX}-` identifies {DISPLAY_NAME} origin
 - **Metadata**: Includes upstream URL and original {UPSTREAM_NAME} repository link
-- **Maintainer**: Hat Labs (as package maintainer)
+- **Maintainer**: Matti Airas (as package maintainer)
 - **Upstream License**: Preserved from original app definition
 
 ## Related

@@ -54,7 +54,7 @@ sync:
 # Package metadata defaults
 defaults:
   origin: "Hat Labs"
-  maintainer: "Hat Labs <info@hatlabs.fi>"
+  maintainer: "Matti Airas <matti.airas@hatlabs.fi>"
   section: "admin"
   priority: "optional"
 

@@ -119,7 +119,7 @@ converter:
 # Package defaults (standard for all sources)
 defaults:
   origin: "Hat Labs"
-  maintainer: "Hat Labs <info@hatlabs.fi>"
+  maintainer: "Matti Airas <matti.airas@hatlabs.fi>"
   section: "admin"
   priority: "optional"
 ```
@@ -207,7 +207,7 @@ Create `sources/newsource/store/debian/control`:
 Source: runtipi-container-store
 Section: admin
 Priority: optional
-Maintainer: Hat Labs <info@hatlabs.fi>
+Maintainer: Matti Airas <matti.airas@hatlabs.fi>
 Build-Depends: debhelper-compat (= 13)
 Standards-Version: 4.6.2
 
@@ -262,7 +262,7 @@ runtipi-container-store (0.1.0) trixie; urgency=medium
   * Add Runtipi store definition
   * Configure package filters for runtipi-*-container packages
 
- -- Hat Labs <info@hatlabs.fi>  Fri, 29 Nov 2024 12:00:00 +0000
+ -- Matti Airas <matti.airas@hatlabs.fi>  Fri, 29 Nov 2024 12:00:00 +0000
 ```
 
 #### 5.4: Create `copyright` file
