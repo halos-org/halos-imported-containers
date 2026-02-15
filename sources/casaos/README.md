@@ -121,7 +121,7 @@ All packages clearly indicate their source:
 
 - **Package prefix**: `casaos-` identifies CasaOS origin
 - **Metadata**: Includes upstream URL and original CasaOS repository link
-- **Maintainer**: Hat Labs (as package maintainer)
+- **Maintainer**: Matti Airas (as package maintainer)
 - **Upstream License**: Preserved from original app definition
 
 ## Related

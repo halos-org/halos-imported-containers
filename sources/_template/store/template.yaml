@@ -27,7 +27,7 @@ icon: /usr/share/container-stores/{SOURCE_ID}/icon.svg
 # Package filters - define which packages appear in this store
 filters:
   # Repository origins (from APT Release file "Origin:" field)
-  # Usually "Hat Labs" for all halos-imported-containers sources
+  # Usually "Matti Airas" for all halos-imported-containers sources
   include_origins:
     - "Hat Labs"
 

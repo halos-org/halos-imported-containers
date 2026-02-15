@@ -92,7 +92,7 @@ sync:
 # These values are used for all packages from this source
 defaults:
   origin: "Hat Labs"  # APT package origin
-  maintainer: "Hat Labs <info@hatlabs.fi>"  # Package maintainer
+  maintainer: "Matti Airas <matti.airas@hatlabs.fi>"  # Package maintainer
   section: "admin"  # Debian section (admin is standard for container apps)
   priority: "optional"  # Debian priority (optional is standard)
 
