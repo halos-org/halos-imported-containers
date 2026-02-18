@@ -118,14 +118,14 @@ jobs:
             ### Packages
 
             This release contains Debian packages for all CasaOS apps.
-            These packages are automatically published to apt.hatlabs.fi unstable channel.
+            These packages are automatically published to apt.halos.fi unstable channel.
 
             ### Installation
 
             ```bash
             # Add HaLOS APT repository (if not already added)
-            curl -fsSL https://apt.hatlabs.fi/halos-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/halos-archive-keyring.gpg
-            echo "deb [signed-by=/usr/share/keyrings/halos-archive-keyring.gpg] https://apt.hatlabs.fi trixie-unstable main" | sudo tee /etc/apt/sources.list.d/halos-unstable.list
+            curl -fsSL https://apt.halos.fi/halos-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/halos-archive-keyring.gpg
+            echo "deb [signed-by=/usr/share/keyrings/halos-archive-keyring.gpg] https://apt.halos.fi trixie-unstable main" | sudo tee /etc/apt/sources.list.d/halos-unstable.list
 
             # Update and install
             sudo apt update
@@ -139,7 +139,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.APT_REPO_PAT }}
-          repository: hatlabs/apt.hatlabs.fi
+          repository: halos-org/apt.halos.fi
           event-type: package-updated
           client-payload: |
             {
@@ -159,5 +159,5 @@ jobs:
           echo "Channel: unstable"
           echo "Component: main"
           echo ""
-          echo "Dispatched to hatlabs/apt.hatlabs.fi"
-          echo "Packages will be available via apt.hatlabs.fi unstable channel"
+          echo "Dispatched to halos-org/apt.halos.fi"
+          echo "Packages will be available via apt.halos.fi unstable channel"
