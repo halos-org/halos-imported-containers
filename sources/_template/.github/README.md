@@ -114,7 +114,7 @@ yamllint .github/workflows/release-runtipi.yml
 
 **Publishing**:
 - Creates GitHub pre-release with tag format `YYYY-MM-DD+N`
-- Dispatches to `hatlabs/apt.hatlabs.fi` repository (unstable channel)
+- Dispatches to `halos-org/apt.halos.fi` repository (unstable channel)
 - Requires `APT_REPO_PAT` secret
 
 ### Release Workflow (`release-{source}.yml`)
@@ -135,7 +135,7 @@ yamllint .github/workflows/release-runtipi.yml
 
 **Publishing**:
 - Attaches .deb packages to GitHub release
-- Dispatches to `hatlabs/apt.hatlabs.fi` repository (stable channel)
+- Dispatches to `halos-org/apt.halos.fi` repository (stable channel)
 - Requires `APT_REPO_PAT` secret
 
 ## Placeholders Reference
@@ -194,7 +194,7 @@ The workflows require the following repository secret:
 
 ### APT_REPO_PAT
 
-**Purpose**: GitHub Personal Access Token with write access to `hatlabs/apt.hatlabs.fi` repository
+**Purpose**: GitHub Personal Access Token with write access to `halos-org/apt.halos.fi` repository
 
 **Used by**:
 - `main-{source}.yml` (publish-unstable job)
@@ -287,7 +287,7 @@ Before merging workflows for a new source:
 
 **Check**:
 - `APT_REPO_PAT` secret is configured in repository settings
-- PAT has write access to `hatlabs/apt.hatlabs.fi` repository
+- PAT has write access to `halos-org/apt.halos.fi` repository
 - PAT has not expired
 
 ### Release workflow doesn't trigger

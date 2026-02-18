@@ -40,7 +40,7 @@ Apps are automatically converted using the [`container-packaging-tools`](https:/
 1. **Upstream Sync**: Monitor multiple upstream app stores for changes
 2. **Automatic Conversion**: Run source-specific converters on all apps (currently 144/144 for CasaOS)
 3. **Package Generation**: Build Debian packages with proper metadata and source prefixes
-4. **Repository Publishing**: Publish to apt.hatlabs.fi
+4. **Repository Publishing**: Publish to apt.halos.fi
 
 ## Package Format
 

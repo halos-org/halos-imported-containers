@@ -66,7 +66,7 @@ The automated sync workflow will:
 4. **PR Creation**: Create pull request with converted apps
 5. **Validation**: CI validates all converted app definitions
 6. **Merge**: After approval, merge triggers package builds
-7. **Publication**: Packages published to apt.hatlabs.fi
+7. **Publication**: Packages published to apt.halos.fi
 
 ## Conversion Details
 
@@ -129,7 +129,7 @@ All packages clearly indicate their source:
 - **Upstream**: [CasaOS-AppStore](https://github.com/IceWhaleTech/CasaOS-AppStore)
 - **Converter**: [container-packaging-tools](https://github.com/halos-org/container-packaging-tools)
 - **Repository**: [halos-imported-containers](https://github.com/halos-org/halos-imported-containers)
-- **APT Repository**: [apt.hatlabs.fi](https://apt.hatlabs.fi)
+- **APT Repository**: [apt.halos.fi](https://apt.halos.fi)
 
 ## License
 

@@ -100,7 +100,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 
 ### 4. Repository Publication
 
-**Feature**: Publish packages to apt.hatlabs.fi APT repository
+**Feature**: Publish packages to apt.halos.fi APT repository
 
 **Behavior**:
 - Push to unstable channel on merge to main
@@ -173,7 +173,7 @@ The multi-source architecture allows each source to maintain its own identity, v
 
 1. **Git Repository**: Private repository in hatlabs organization
 2. **GitHub Actions**: Standard CI/CD workflows for PR, main, release
-3. **APT Repository**: Integration with apt.hatlabs.fi
+3. **APT Repository**: Integration with apt.halos.fi
 4. **Docker**: Build environment requires Docker support
 
 ## Key Constraints and Assumptions
