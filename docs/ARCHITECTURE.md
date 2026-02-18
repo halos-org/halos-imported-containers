@@ -45,7 +45,7 @@ This design enables:
 
 **Build System** processes converted apps and store definitions to create Debian packages. The build process is source-aware, applying correct naming prefixes and dependencies.
 
-**APT Repository** (apt.hatlabs.fi) receives packages through the CI/CD pipeline, making them available for installation on HaLOS systems via standard APT mechanisms.
+**APT Repository** (apt.halos.fi) receives packages through the CI/CD pipeline, making them available for installation on HaLOS systems via standard APT mechanisms.
 
 **Cockpit UI** discovers stores through installed store packages and filters apps based on package name patterns defined in each store's configuration.
 
@@ -143,7 +143,7 @@ Upstream source configuration defines sync behavior:
 - **Debian Packaging**: Standard .deb package format for distribution. Uses dpkg-buildpackage, debhelper, and dh-python.
 - **Python 3.11+**: Runtime for container-packaging-tools and build scripts. Uses uv for dependency management.
 - **Docker**: Required at runtime for container execution. Not used in build process.
-- **APT Repository**: Custom repository at apt.hatlabs.fi for package distribution.
+- **APT Repository**: Custom repository at apt.halos.fi for package distribution.
 
 ### Build Tools
 
@@ -192,7 +192,7 @@ Packages are published through:
 - **Unstable channel**: Automatic on merge to main branch via repository_dispatch
 - **Stable channel**: Manual via GitHub release creation and repository_dispatch
 - **Repository structure**: Organized by distribution (trixie) and component (main)
-- **Authentication**: GitHub PAT (APT_REPO_PAT) with write access to apt.hatlabs.fi repository
+- **Authentication**: GitHub PAT (APT_REPO_PAT) with write access to apt.halos.fi repository
 
 ### Cockpit UI Integration
 
@@ -330,13 +330,13 @@ The repository uses per-source workflows for build isolation. Each source has it
 The main-casaos.yml workflow:
 - Builds packages using repository-specific actions
 - Creates pre-release directly via GitHub API
-- Triggers repository_dispatch to apt.hatlabs.fi for package publishing
+- Triggers repository_dispatch to apt.halos.fi for package publishing
 - Includes all publishing logic inline for transparency and debugging
 
 The release-casaos.yml workflow:
 - Builds packages for stable release
 - Creates GitHub release directly
-- Triggers repository_dispatch to apt.hatlabs.fi for stable channel publishing
+- Triggers repository_dispatch to apt.halos.fi for stable channel publishing
 
 **Benefits of Inline Publishing**:
 - Complete control over publishing process
@@ -378,7 +378,7 @@ The release-casaos.yml workflow:
 
 ### Secrets and Configuration
 
-**APT_REPO_PAT**: GitHub personal access token with write access to apt.hatlabs.fi repository (shared across all source workflows)
+**APT_REPO_PAT**: GitHub personal access token with write access to apt.halos.fi repository (shared across all source workflows)
 
 **Per-Source Workflow Configuration**:
 - apt-distro: trixie (Debian 13)
@@ -444,7 +444,7 @@ All packages include:
 - **Upstream URL**: Link back to original upstream definition
 - **License information**: Recorded from upstream metadata
 - **Maintainer**: Hat Labs as package maintainer
-- **Signature**: APT repository signing (handled by apt.hatlabs.fi)
+- **Signature**: APT repository signing (handled by apt.halos.fi)
 
 ### Upstream Trust
 
@@ -511,7 +511,7 @@ Build resource usage:
 - **GitHub Actions minutes**: ~5-10 minutes per source build, runs in parallel across sources
 - **Selective triggering**: Path filtering means only changed sources consume CI minutes
 - **Storage**: Build artifacts cleaned after upload
-- **APT repository size**: Grows with number of packages (managed by apt.hatlabs.fi)
+- **APT repository size**: Grows with number of packages (managed by apt.halos.fi)
 - **Network**: Minimal during build, higher during upstream sync
 - **Parallel efficiency**: Multiple sources building simultaneously doesn't increase wall-clock time
 

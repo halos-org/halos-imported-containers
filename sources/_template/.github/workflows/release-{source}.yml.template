@@ -123,7 +123,7 @@ jobs:
           ls -lh build/*.deb
 
       # STEP: Dispatch to APT repository
-      # Sends event to apt.hatlabs.fi repository to trigger package import
+      # Sends event to apt.halos.fi repository to trigger package import
       # Only runs if packages exist
       - name: Dispatch to APT repository
         if: steps.check.outputs.has-packages == 'true'
@@ -131,7 +131,7 @@ jobs:
         with:
           # REQUIRED: Ensure APT_REPO_PAT secret is configured in repository settings
           token: ${{ secrets.APT_REPO_PAT }}
-          repository: hatlabs/apt.hatlabs.fi
+          repository: halos-org/apt.halos.fi
           event-type: package-updated
           # Payload tells APT repo what to import and where
           client-payload: |
@@ -154,6 +154,6 @@ jobs:
           echo "Channel: stable"
           echo "Component: main"
           echo ""
-          echo "Dispatched to hatlabs/apt.hatlabs.fi"
-          echo "Packages will be available via apt.hatlabs.fi stable channel"
+          echo "Dispatched to halos-org/apt.halos.fi"
+          echo "Packages will be available via apt.halos.fi stable channel"
           echo "Release URL: https://github.com/${{ github.repository }}/releases/tag/${{ github.event.release.tag_name }}"

@@ -451,7 +451,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.APT_REPO_PAT }}
-          repository: hatlabs/apt.hatlabs.fi
+          repository: halos-org/apt.halos.fi
           event-type: package-updated
           client-payload: |
             {
@@ -521,7 +521,7 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.APT_REPO_PAT }}
-          repository: hatlabs/apt.hatlabs.fi
+          repository: halos-org/apt.halos.fi
           event-type: package-updated
           client-payload: |
             {
